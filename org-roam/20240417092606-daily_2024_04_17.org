@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       3227ff95-291d-4729-9fd4-f5d60ced973b
+:END:
+#+title: daily-2024-04-17
+#+filetags: :daily:
+* Daily - Wednesday, April 17, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+ - discussions on commissions and product search
+ - investigating product search fields
+ - quick PR for default commission value in modal
+ - investigating patch shopify shop
+ - testim videos
+
+archive a SUP is no longer blocked
+
+** Morning Brain Dump
+continue discussion about product search with Kimia and Alex Kite. need to read up on comms to see what they've been saying there.
+
+make Asana ticket for default removal in pre-approval modal for commission.
+
+might be a good day to go back and watch the video Simon and Wally and I made to take notes.
+
+need to go through org-roam docs lol.
+
+Surya country picker is in stasis til he works on that.
+
+keep on with E2E Testim learning.
+
+look into github pages for startup page

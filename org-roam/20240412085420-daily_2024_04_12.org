@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       744f7f81-018b-4b36-a247-84c6aedf7eab
+:END:
+#+title: daily-2024-04-12
+#+filetags: :daily:
+* Daily - Friday, April 12, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+ - country picker
+   - finishing up some stuff from PR review
+   - after the all-hands will remove STUB data and final PR commit
+ - shopify shop setup with Simon
+   - thank you!!!
+   - super helpful
+ - referral commission rate
+   - sent message to Kimia
+ - approved products missing from uninstalled profile
+   - still no details here
+ - prepopulate proposal message
+
+** Morning Brain Dump
+first thing i should do is fix up the country picker and possibly practice doing that presentation.
+
+once that's done i can get back to checking referral stuff. that was pretty tough to reproduce yesterday so i'll take some diligent notes today about steps.
+
+oh also at some point i want to read the org-roam info manual.

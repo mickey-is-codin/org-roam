@@ -1,0 +1,225 @@
+:PROPERTIES:
+:ID:       01413422-3bec-450b-b825-5c8e547794e2
+:END:
+#+title: read-receipts
+#+filetags: :asana-ticket:
+* Read Receipts on Proposals and Messages
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1206490183386259][ticket link]]
+
+** Loom Link
+ - [[https://www.loom.com/share/21c3b40d76b1405282b8f10c4193cd9c][loom link]]
+
+** Summary
+ - display read receipts on both ~messages~ and ~proposals~
+
+** DONE respond on timeline with Alex
+** DONE grey color of read receipt
+** DONE space underneath read receipt
+** DONE function documentation
+** DONE full functionality walkthrough with proposal
+** DONE fix types
+** DONE supplier see read receipts
+** DONE spacing between message and receipt
+** DONE dot in communication container
+
+** Thursday, April 4, 2024
+ - chris assertion: "all proposal actions come with a message even if it's not explicit"
+ - i'll have to provide proof that that's true but the message itself is just text
+   - ~lastMessageSent~ does not update
+
+i can't truly determine which message is the most recent message in the timeline. this means i can't determine whether or not a receipt should show on a given message. i'm having trouble with this because messages can be contained on ~lastMessageSent~, ~lastRequestResult~, or ~latestSampleRequest~. for ~lastMessgeSent~ since its ~id~ can easily line up with the ~message~ variable's ~id~ value, i can trivially determine if the last /message/ sent matches a given message in the timeline. but that doesn't mean that something later than a ~lastMessageSent~ hasn't happened. if the most recent action is on ~lastRequestResult~ i have no real way to determine where that action happened in the timeline.
+
+if i can determine which message is the latest to display then i should be able to prevent the other issue where we're showing read receipts because of stale ~lastMessageSent~ values.
+
+** Wednesday, April 3, 2024
+ - explanation of the difficulty:
+   - a ~CommunicationContainer~ can have 3 fields on it:
+     - ~lastMessageSent~
+     - ~lastRequestResult~
+     - ~latestSampleRequest~
+   - read receipts seem, in principle, to be built from ~lastMessageSent.recipientViewedAt~
+   - but sometimes ~lastMessageSent~ is outdated
+   - how?
+     - sometimes ~lastRequestResult~ represents a later messaging event
+     - that's fine if the proposal action comes with a message
+       - since ~lastMessageSent~ gets updated
+     - but if there's no message
+       - ~lastMessageSent~ can be tied to something way too early
+       - and ~lastRequestResult~ doesn't really have ~recipientViewedAt~ information
+   - main solutions i see:
+     - stop showing read receipts on everything after proposal creation
+     - have backend include read receipt information in ~lastRequestResult~ and ~latestSampleRequest~
+       - if we can include ~lastUpdateMessage~ i don't see why this would be hard
+
+** Tuesday, March 26, 2024
+ - behavior:
+   - left panel showing read receipts on proposals
+   - left panel showing read receipts on messages after proposals
+   - left panel showing read receipts on proposal rejections/approvals
+
+** Friday, March 22, 2024 Notes
+ - desired behavior
+   - read message
+     - receipt in timeline, receipt in container
+   - send proposal
+     - receipt in timeline, receipt in container
+   - approve proposal
+     - receipt in timeline, receipt in container
+   - reject proposal
+     - receipt in timeline, receipt in container
+   - send sample request
+     - no receipt in timeline, no receipt in container
+ - current behavior
+   - read message
+     - receipt in timeline, receipt in container
+   - send proposal
+     - receipt in timeline, receipt in container
+   - approve proposal
+     -
+   - reject proposal
+     - receipt in timeline, no receipt in container
+   - send sample request
+ - notes
+   - reject proposal
+     - receipt working in timeline
+     - container showing receipt for sender of the proposal
+     - but not the person who declines it
+     - so the container is "back a message"
+     - i think all of this might be because of the container logic
+
+** Thursday, March 21, 2024 Notes
+ - prod issues
+ - no details in container
+   - conditional logic was wrong, fixed
+ - read receipts showing up in container but not timeline
+   - looks like the container will always show its last message
+   - even if it's a long-running conversation with the brand...?
+   - having trouble reproducing what Jess is seeing
+
+** Monday, March 18, 2024 Notes
+ - PR feedback
+   - spacing underneath receipt, have to update ~calculateMessageRowHeight~
+   - remove commented out ~MessageContainer~ type def
+ - ~calculateMessageRowHeight~
+   - bad practices abound here
+   - i'm just going to ship something off
+ - confirming behavior
+   - lingering doubts around which message receipts are showing on
+   - should the approval of the proposal show a read receipt?
+   - currently last message shown is just the proposal, not its approval
+ - true last
+   - ~communicationContainer~ objects have ~lastMessageSent~ and ~lastRequestResult~
+   - we need to actually figure out which of those to display the receipt on
+   - i think we flush read receipts the second a ~lastRequestRestult~ exists?
+   - seems like maybe as long as status is pending we show the ~lastRequestResult~
+   - but might have to do comparison to see what event is most recent
+ - proposal workflow
+   - sk sends a proposal to supplier
+   - supplier views proposal
+   - sk sees read receipt on proposal message to supplier
+   - after supplier approves or rejects proposal sk stops seeing read receipt
+
+*** Workflow
+**** Messages
+ - SK sends message to SUP
+ - SUP views message
+ - SK sees read receipt on message
+ - SUP sends message to SK
+ - SK views message
+ - SUP sees read receipt on the message they sent
+ - SK no longer sees read receipt on message they sent
+**** Proposals
+ - SK sends proposal to SUP
+ - SUP views proposal
+ - SK sees read receipt on proposal message
+ - SUP accepts/rejects proposal
+ - SK no longer sees read receipt on message
+ - SUP sends message (maybe explanation)
+ - SK opens new message
+ - SUP sees read receipt on message
+**** Sample Requests
+ - i think these are just generally not meant to be covered?
+
+** Friday, March 15, 2024 Notes
+ - [[id:92a936b6-19fb-434a-af88-cf0a5d96472b][communication-container-queries]]
+
+** Thursday, March 14, 2024 Notes
+ok i think i've got things finished up to the point that the banner is the last thing that needs work. need to check in on Jess's discussion on the Figma to see if there's been any movement on suggested implementations for that.
+
+let's get the message preview receipts set up as well.
+
+*** Possible Banner Ideas
+ - show the first time a user receives a message. dismiss when user closes.
+ - show the first time a user receives a message. dismiss when user closes or respond to a message
+ - show the first time a user receives a message. dismiss when user closes or views 3 messages with banner
+ - show the first time a user receives a message as a tooltip. dismiss after they click "Got it"
+ - [[id:3a7fba69-5f8b-47f3-9fea-d9634698102f][chameleon]] message that shows message first time user navigates to inbox since update
+
+*** Implementation Notes
+ - ~MessageRow~ is the component that we visually want the read receipt to show on
+ - we only want the message to show on the =the most recent message= sent by =the current user=.
+ - at a minimum we need ~MessageRow~ (and likely its inner ~PureMessageRow~) to accept a ~readReceipt~ prop
+ - whether we send that prop in is a different matter that should be determined externally
+ - ~CommunicationContainer~ is a block in the left sidebar for messages
+ - the actual component that displays the conversation is ~Timeline~
+ - so within ~Timeline~ will likely be where i have to calculate the read receipt itself
+
+*** Chris Message
+ - there's a ~lastMessage~ field on the ~communicationContainer~
+ - criteria to show read receipt status:
+   - ~loggedInShop~ is sender of the ~lastMessage~
+   - ~lastMessage~ value is non-null
+ - suggests a boolean field like ~isLoggedInShopSenderOfLastMessage~
+   - note: i think we have this just from ~lastMessageSent.senderShop.id~
+
+** Wednesday, March 13, 2024 Notes
+yesterday ended up kind of stumped on figuring out ~isSenderYou~. was a bit confused because of the messages that Simon had sent on his system. i'm seeing "seen" on messages that were sent to me and not the other way around. once i get that i should at least have message previews taken care of.
+
+going to have to create a segment. something along the line of "first time someone is receiving a message in the inbox". segment links up with [[id:3a7fba69-5f8b-47f3-9fea-d9634698102f][chameleon]].
+
+going to start local work on this again and get a commit up that does everything except for banner functionality.
+
+*** Banner Call Braindump
+Jess and i touched base about read receipts and she let me know that there needs to be a banner that indicates that inboxes will show read receipts. this is sort of a user-by-user privacy notification so that people know if they see something that another brand will be notified of that. worth calling out that this wasn't mentioned in the Asana ticket at all and in general i'll have to do a lot more reproducing based on Figma documentation to see what actually needs to get implemented.
+
+during the call Garrett brought up [[id:3a7fba69-5f8b-47f3-9fea-d9634698102f][chameleon]]. Chameleon seems like it's used mainly to communicate product updates to our users or big pieces of company information about a new feature. it can be turned on in specific locations within the app. but to me this doesn't feel specifically like something for Chameleon since that's more about notifying people about updates to our app. this feels more like a privacy update that tells an individual user "hey be careful with this area of the app, if you see a message the sender will know."
+
+then beyond that we need to consider how this message gets dismissed. some ideas that were pitched around were just remove it after a user has seen it 3 times, remove it automatically after a timer elapses, and just show it forever. the idea is that once this is dismissed it's dismissed permanently for a user.
+
+only other consideration is when we should show it. we need to account for if they've dismissed the banner before but also it should only show when they are viewing a new message for the first time.
+
+** Tuesday, March 12, 2024 Notes
+having some difficulty around knowing what to display.
+
+i am very dumb and Chris pointed out that i should be using the ~recipientViewedAt~ field
+
+*** Basis
+we only want to see read receipts on messages that we have authored
+
+*** Data We're Getting
+each message has ~skViewedLatestUpdateAt~ and ~supViewedLatestUpdateAt~
+
+*** Shopkeep->Supplier Message Sent
+we want to view ~supViewedLatestUpdateAt~
+
+*** Supplier->Shopkeep Message Sent
+we want to view ~skViewedLatestUpdateAt~
+
+*** Supplier->Supplier Message Sent
+we want to view.....? if we view ~supViewedLatestUpdateAt~ won't that present the risk of just showing the last time /we/ viewed the message? unless the BE has accounted for this and made it so that the author of a message does not contribute to its ~...ViewedLatestUpdateAt~ data.
+
+*** Shopkeep->Shopkeep Message Sent
+we want to view.....?
+
+** Monday, March 11, 2024 Notes
+want to add read receipts on entities that can be interacted with by multiple parties. that means ~messages~ and ~proposals~. both are areas within the application into which i have not ventured.
+
+looks like we need to make a mutation that indicates when something has been "seen". need to save which user "saw".
+
+Chris completed a [[https://app.asana.com/0/1199696369468912/1206408222752852][backend ticket]] for this functionality. looks like it added a ~viewed_at~ field to messages and proposals.
+
+having a bit of trouble tracking down where this should be plucked off the message but i'm determined.
+
+would love someone to define the term "communication container" for me. may ask Chris to fill in some details around this.

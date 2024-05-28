@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       b4ec8b11-418e-49f9-be5e-e0820f4795f4
+:END:
+#+title: draft-proposals-inaccessible
+#+filetags: :asana-ticket:
+* Thursday, May 16, 2024
+
+** Asana Link
+[[https://app.asana.com/0/0/1207337106478476/f][ticket link]]
+
+** Tasks
+*** TODO submit PR
+*** TODO merge PR
+
+** Thursday, May 16, 2024 Notes
+ - smartlook notes
+   - cart side panel opens up
+   - user clicks "Review proposal"
+   - links right to brand instead of ...?
+   - i assume some sort of proposal page should open
+ - code notes
+   - offending component: ~src/components/shared/cart/CartBrandItem.tsx~
+   - looks like the ~onSubmit~ function isn't acting right
+   - looks like the code is doing what it should...
+   - ~await openShopkeepRoute('discoverShop', shopId, { state: 'create' });~
+ - desired behavior
+   - even if is shopkeep just set review proposal

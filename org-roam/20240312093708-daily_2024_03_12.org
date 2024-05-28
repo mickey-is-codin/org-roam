@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       ba65eebc-2eb2-4a0f-9a84-e7ee28056abc
+:END:
+#+title: daily-2024-03-12
+#+filetags: :daily:
+* Daily - Tuesday, March 12, 2024
+
+** Brain Dump
+yesterday EOD Conner and i had some back and forth on [[id:2e40ed66-412d-499b-9515-2ac0e85d28f4][asana-ticket-expose-customer-email]]. talking about conditional rendering leading to weird padding. should address that first thing. otherwise i think Molly Hunter is out today so i might have to get in touch with someone else about the line items download. [[id:01413422-3bec-450b-b825-5c8e547794e2][asana-ticket-read-receipts]] should be an easy win that i can get a PR up for almost immediately though.
+
+** Standup Notes
+ - customer email ticket
+   - back and forth with Conner on that
+   - PR updated
+ - should unblock adding tracking number
+   - PR up for that as soon as first ticket is in
+ - adding line item download
+   - had some ticket discussion
+   - REST endpoint for line items download
+   - GQL mutation for orders download
+   - in touch with Chris about adding filters
+ - read receipts on messages
+   - bit of ambiguity -- messaged Molly
+   - and Chris
+ - today: badges ticket

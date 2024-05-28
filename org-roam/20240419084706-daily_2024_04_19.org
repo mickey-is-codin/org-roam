@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       4749bb67-3e22-4a07-b624-9cb5917c3971
+:END:
+#+title: daily-2024-04-19
+#+filetags: :daily:
+* Daily - Friday, April 19, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+ - country picker
+ - products discover search
+   - starting to work on switching over resolvers
+ - testim
+   - PR is updated
+   - have a notion doc started
+   - it's pending figuring out dev vs prod dotfiles
+
+random thought: we could add all patchShopifyShop queries into one file and just do a switch based on a string entered. that would give us the ability to do ~const updateClaimProfile = usePatchShopifyShop('claimProfile');~
+
+** Morning Brain Dump
+Kimia is ready for me to start using the new resolvers for product search. so i'll get started on that today and hopefully can have something together soon or at least give her a timeline for what will have to change.
+
+Garrett got back to me and Simran on the design for [[id:bc47fd0f-9338-4b9a-8034-dd8f4a867b18][archive-a-sup]] but it's seeming like there will need to be a BE change for it. so i'm kind of in a holding pattern there.
+
+[[id:77c0707d-5f0c-4cd6-8c74-f40b65984034][override-shipping-locations]] is also blocked until Surya is back to create a BE endpoint for that.
+
+at this point [[id:0431ad8e-2244-45ab-a78a-316b2ec9cc56][testim]] is all but finished up for the introductory task except i need to get a file to the develop and prod branches for ~.testimrc.json~. perhaps individual PRs for that?

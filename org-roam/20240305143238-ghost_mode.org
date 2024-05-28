@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       9b6d8262-a7da-4c13-8427-cd030be1ace8
+:END:
+#+title: ghost-mode
+* Ghost Mode
+
+ghost mode is a tool/process used for testing data for organizations without viewing any data.
+
+it is managed by an internal Canal tool called [[id:16834cef-2e1a-4d1d-b856-86a5c2dea15c][spyglass]]

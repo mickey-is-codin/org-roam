@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       02362f29-1738-4deb-94f2-c395b5d8e05f
+:END:
+#+title: daily-2024-03-22
+#+filetags: :daily:
+* Daily - Friday, March 22, 2024
+
+** EOD Brain Dump
+ - read receipts
+   - fix went to main, hopefully works for Jess
+ - order line items merged
+ - supplier order fulfillment (Molly)
+   - PR merged to develop
+ - badges
+   - QA session moved
+   - Garrett turned on feature flag
+ - sfcc integration PR merged to develop
+
+** Standup Notes
+ - read receipts
+   - fixed an issue Jess and Katherine noticed yesterday
+   - that's merged to prod
+   - let me know if you're still seeing it
+ - badges
+   - QA session today
+   - need to set feature flags
+ - brand list view
+   - PR up
+   - need QA session
+   - need to set feature flags
+ - trial plan users limit messaging
+   - PR up
+ - sfcc integration fulfillment action
+   - PR merged to develop
+ - fix for sfcc integration actions (expand whole orders page)
+   - PR up
+ - fulfillment info for SUPs
+   - PR up
+ - line items CSV download
+   - PR up
+
+** Beginning of Day Brain Dump
+Garrett requesting entire orders page for SFCCs to match orders page for platform shops. should be very easy, just need a new PR up for it.
+
+going to do some learning about using Copilot with Cursor so i can get a bit stronger there today. also want to fully watch the Figma getting started videos today.
+
+read receipts are merged, need to make sure that those are working with Jess and Katherine.
+
+QA scheduled today for badges so that PR should get merged.
+
+brand list view PR is approved so should be able to merge that. need a QA session for that likely as well.
+
+trial plan messaging should be first priority ticket after sfcc work.
+
+oh and so i don't forget, need to set up bluetooth for my home keyboard so i can free up ports. also super key on keyboard not working. [[https://www.reddit.com/r/emacs/comments/q2p41m/opt_key_from_an_external_keyboard_is_not_working/][helpful link]].
+
+also want to update my templates a bit so that dailies have headings and new tickets include default TODOs

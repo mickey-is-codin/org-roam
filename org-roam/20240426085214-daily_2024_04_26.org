@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       112d4190-ab79-49a5-a954-d797fae5cf15
+:END:
+#+title: daily-2024-04-26
+#+filetags: :daily:
+* Daily - Friday, April 26, 2024
+
+** EOD Brain Dump
+ - need to update hook to accept "other shop" for archiving, hook should get relationship
+ - need to add ability to unarchive from actions in list view of suppliers
+ - settings should be ready to actually get in, just need to accept boolean to finish
+ - search should be top priority becaues Kimia is also working that
+   - kimia put in title fix, need to wait for that to make it to develop
+
+** Standup Notes
+
+** Morning Brain Dump
+ - ah fuck have to updgrade to PG15
+ - need from Chris:
+   - on ~loggedInShopifyShop~ query: ~shouldShowSupTakeAsPriceOnSupOrders~
+   - on ~patchSupControlledRelationship~ mutation: ~showInMyShopkeepsView~
+ - other stuff i can do:
+   - bug Surya for country picker
+   - set things up for product search resolvers QA

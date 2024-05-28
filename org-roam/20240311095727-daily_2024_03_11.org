@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       97e24b4a-31af-4748-a280-fbffc87cf034
+:END:
+#+title: daily-2024-03-11
+#+filetags: :daily:
+* Daily - Monday, March 11, 2024
+
+** Brain Dump
+end of last week the main things that were up in the air were the 3 tickets i was working on.
+
+ - [[id:2e40ed66-412d-499b-9515-2ac0e85d28f4][asana-ticket-expose-customer-email]] first is in PR
+ - [[id:0bebcb50-695c-4f21-8a05-de435d034272][asana-ticket-tracking-number-supplier-order-task]] blocked by first
+ - [[id:ffe52a55-03ec-4a06-aaf0-b040a6b33a61][asana-ticket-order-line-download-btn]] blocked by Panama knowledge
+
+otherwise i left some comments on Alex Kite's PR. it was very late in the day so no responses on it that i saw but hoping i didn't step over any boundaries or anything there.
+
+** PostgreSQL Start Issues
+brew service wasn't starting. fix ended up being to remove the postmaster.pid file from ~/opt/homebrew/var/postgresql@14/postmaster.pid~.
+
+also ran into some weirdness with pgvector -- was able to fix this just by re-running ~make install~ in the pgvector directory.
+
+** Figma ~Dropdown~ Pattern
+ - [[https://www.figma.com/file/W2DNg23sx0QaPgjFenEI2g/Panama-UI?type=design&node-id=2366-94584&mode=design&t=tleaa0VyhdhmTEBc-0][link]]
+ - confusion:
+   - the document claims that...something...the pattern itself? uses both a ~Dropdown~ component and an ~ActionList~ component.
+
+** Standup Notes
+ - customer email add to orders still in PR review
+   - waiting on Conner review for that i believe
+ - that will unblock tracking number PR i have locally
+ - end of last week worked on line items download from Orders page
+   - some back-and-forth on ticket for that
+   - basically just making sure i'm using ~ActionList~ correctly
+   - may push up a branch and ask a FE dev for early pseudo-review
+   - have this finished except the actual download action itself
+ - starting read receipts on proposals ticket
+ - finishing up last outstanding onboarding tasks
+
+** End of Day Brain Dump
+Conner brought up a good point about formatting if data is not present. need to figure out a way to gracefully solve that. hopefully he hits back on the ticket. beyond that i'm almost finished with showin read receipts, just need to format that but the data is being sent through so should be able to make an easy PR for that tomorrow. also updated the props doc string that was annoying me locally on the customer email ticket.

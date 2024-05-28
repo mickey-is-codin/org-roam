@@ -1,0 +1,162 @@
+:PROPERTIES:
+:ID:       3e3fe8d0-5ac8-4ae1-9b94-f6edf0e01803
+:END:
+#+title: discover-search
+* Discover Search
+
+** Asana Ticket "Switch over to new resolver for discover search"
+*** Summary
+Kimia has finished creating new resolver for the ~GetDiscoverableProductsProductLevel~ query. need to update the FE to use those resolvers.
+
+*** Monday, April 22, 2024 Notes
+ - infinite collection fetch, details on that
+   - there's an error: =can't resolve keyword 'title' into field=
+   - repeating query: ~GetCuratedCollectionFeed~
+   - what happens if i only try to resolve the ~id~ field?
+   - going to run ~codegen~ first
+   - same thing happens but new error: =response 400=
+   - not some sort of caching thing -- happens when i open a new browser
+   - =ApolloError: Response not successful: Received status code 400=
+   - is this happening on dev? /no/
+   - happens after a rebase
+   - have the query actually returning
+   - at the real point of this where refactoring happens
+ - questions/refactor stuff
+   - ~wishlistsIncludedIn~
+     - need to fetch this probably but not sure what endpoint
+   - ~shop.*~
+     - imagine that there's a hook that i can just use to fetch shop details
+   - ~hasAllFreeShippingVariants~
+     - this seems to have been changed to ~hasOnlyFreeShippingVariants~
+     - this might literally just be a variable name change
+   - ~variants~
+     - now called ~discoverableVariants~
+     - will ultimately likely make life easier
+     - but need to figure out exact differences in calculation needed here
+   - ~isInstantlyAddable~
+     - don't we pass this in to the fetch?
+     - seems like we should have it available then
+   - ~supplierProductMetrics~
+   - ~storefrontsThatCanInstantAddProduct~
+ - implementation notes
+   - not happy with ~...New~ on everything
+   - not happy with wishlists slowing down loading -- those should fetch their own
+ - need to investigate where the discoverable products hook is used
+ - also where the other components are being used
+
+*** Friday, April 19, 2024 Notes
+ - looks like the ~GetAllCommunicationContainers~ query is failing.
+ - looks like the brunt of the change is ~shopifyProducts~ -> ~discoverableProducts~
+ - need to figure out how to recreate the query using fields in ~discoverableProducts~
+ - Kimia has indicated that there might be more overhead to this than i'm considering
+**** What Needs to Be Done
+ - trying to figure out what's different between this query and the old one
+ - Kimia removed wishlist logic so that will have to be refactored in some capacity
+ - otherwise i might not know til i start moving
+**** Implementing
+ - finally able to get some results back by just hard-coding a ~searchQuery~
+ - should i use ~usePaginatedItems~ to paginate query results or not?
+
+** Asana Ticket "Investigate what fields are needed/used in Discover search query"
+*** Summary
+Kimia has been improving the discover search feature of the app. in her efforts to speed up that search she's flagged that some of the fields that are fetched when we display search results are not in fact being used in the FE. she wants me to go through and figure out which fields are currently bloating the search feature.
+
+*** DONE categorize resolver fields
+
+*** Tuesday, April 16, 2024 Kimia Discussion
+ - ~src/components/shopkeepapp/discover/results/products/ProductDiscoverTile.tsx~
+
+we think there are three categories of fields in the query currently:
+ - (kill) fields that are on the query and not being used anywhere at all
+ - (want) fields that are on the query and being used in the app but not for search
+ - (need) fields that are on the query and being used in the app for search
+
+*** Field Breakdown
+**** Used In Search
+**** Used Downstream
+**** Not Used
+
+*** Card Fields
+ - ~id~
+ - ~title~
+ - ~imageSrc~
+ - ~shop.logo~
+ - ~shop.productImageFill~
+ - ~shop.productImageBackgroundColor~
+ - ~wishlistsIncludedIn~
+**** Overlay (maybe?)
+ - ~id~
+ - ~shop.id~
+ - ~handle~
+ - ~shop.domain~
+ - ~wishlistsIncludedIn~
+
+*** Info Fields
+ - ~shop.id~
+ - ~shop.name~
+ - ~shop.supportEmail~
+ - ~id~
+ - ~title~
+ - ~variants~ (price) (maybe there's extra here?) calling out
+   - ~minimumPrice~
+   - ~maximumPrice~
+   - ~minimumEarnings~
+   - ~maximumEarnings~
+   - ~minSkCommissionAsPercentage~
+   - ~maxSkCommissionAsPercentage~
+ - ~hasAllFreeShippingVariants~
+ - ~isCustomProduct~
+ - ~customProductTurnaroundTimeWeeks~
+ - ~isBestsellingProduct~
+ - ~storefrontsThatCanInstantAddProduct~ (maybe?)
+ - ~discoverableOptions~
+
+*** Ideas
+ - lazy load information in the overlay?
+ - evil to have a consistent behavior in the app like "calculate commission"?
+ - variants be calculated on the fly
+
+#+begin_src javascript
+fragment SKDiscoverableProduct on ShopifyProduct {
+  id // used in product tile
+  title // used in product tile
+  handle // used in product tile
+  vendor // used in product tile
+  imageSrc // used in product tile
+  ...ProductWishlistsIncludedIn
+  discoverableOptions { // used in product tile
+    count
+    name
+    values
+  }
+  hasAllFreeShippingVariants // used in product tile
+  isCustomProduct // used in product tile
+  customProductTurnaroundTimeWeeks // used in product tile
+  supplierProductMetrics { // used in product tile
+    isSuppliersBestSeller
+    totalOrders
+  }
+  isInstantlyAddable // used in product tile
+  isApprovedForLoggedInShop // used in product tile
+  isPendingForLoggedInShop // used in product tile
+  isAffiliateMulletProduct // used in product tile
+  variants(onlyListedOrApprovedVariants: true) { // used in product tile
+    ...SkDiscoverableProductVariantFields
+  }
+  storefrontsThatCanInstantAddProduct { // used in product tile
+    id
+    name
+    instantAddSkCommissionForProduct
+  }
+  shop { // used in product tile
+    id
+    name
+    logo
+    domain
+    canalContactEmail
+    supportEmail
+    productImageBackgroundColor
+    productImageFill
+  }
+}
+#+end_src

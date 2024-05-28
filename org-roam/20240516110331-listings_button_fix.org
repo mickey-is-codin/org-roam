@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       657fad50-239a-4304-be00-2d361fa51931
+:END:
+#+title: listings-button-fix
+#+filetags: :asana-ticket:
+* Listings download button fix
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1207319790797480][ticket link]]
+
+** Tasks
+*** DONE submit PR
+*** TODO merge PR
+

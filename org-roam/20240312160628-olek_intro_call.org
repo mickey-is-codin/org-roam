@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       f29d0b3c-b052-4114-9297-e8992dc28d2b
+:END:
+#+title: olek-intro-call
+* Olek Intro Call
+
+** Notes
+ - the most used MIME data source is Segment
+ - used for event tracking

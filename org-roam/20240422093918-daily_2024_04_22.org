@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       00abab86-d8fa-4305-8592-20fc9d047151
+:END:
+#+title: daily-2024-04-22
+#+filetags: :daily:
+* Daily - Monday, April 22, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+need to put in some serious work on the resolvers for product discover search.
+
+when that's done i can turn attention to the E2E tests and get things really professional there.

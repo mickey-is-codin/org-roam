@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       98fc3f80-a76c-4d86-ac67-9fda4ea4867e
+:END:
+#+title: daily-2024-04-02
+#+filetags: :daily:
+* Daily - Tuesday, April 02, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+ - Molly, saw that you added tasks around brand list view
+   - does that need immediate action?
+   - how is the feature flag working for that?
+ - read receipts
+   - sigh
+   - consolidated the logic around determining read receipt
+   - so it always comes from the container
+   - lots of logic around last message type
+   - i'll want to get in touch with a BE eng to see how much of this could be ported to BE
+   - but priority is immediate fix
+ - uninstalled profile quick loading state fix
+ - badges merged
+ - calendar merged
+ - this afternoon looking at country picker hopefully
+ - on call starting tomorrow
+
+** Morning Brain Dump
+main thing i want to have done to start the day is the read receipt issues that i promised i would get in early.
+
+fulfilled by fixes that Wallace suggested.
+
+Molly wanted something copied over to SUPs that i did early.
+
+then nothing blocking country picker.

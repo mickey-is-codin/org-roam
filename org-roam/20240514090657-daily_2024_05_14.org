@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       55e84360-88f8-41ed-991a-7dec8cd5901e
+:END:
+#+title: daily-2024-05-14
+#+filetags: :daily:
+* Daily - Tuesday, May 14, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - inbox fixes
+   - content 24px below searchbar
+   - results counter at top right right aligned with timestamp text
+   - loading state for inbox arrow is kind of odd
+   - 16px between bottom of nav container and top of inbox container
+   - padding within folder buttons should be 8px
+   - search bar width match designs
+ - then back to bulk proposals

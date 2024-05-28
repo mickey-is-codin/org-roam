@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       3a7fba69-5f8b-47f3-9fea-d9634698102f
+:END:
+#+title: chameleon
+* Chameleon
+
+used for product update communication to clients

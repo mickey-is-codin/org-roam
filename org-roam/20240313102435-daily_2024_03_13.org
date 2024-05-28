@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       95813799-582c-4ac5-8661-05c0e5d91611
+:END:
+#+title: daily-2024-03-13
+#+filetags: :daily:
+* Daily - Wednesday, March 13, 2024
+
+** Brain Dump
+yesterday worked on...a lot. but got the customer email PR merged so now need to focus on =getting the PR up for tracking number=. i think the line items download issue is still blocked by Chris getting the backend PR up for a GQL endpoint for that. but i do need to =sign into AWS= and then test S3 CSV downloads. then at 3 i have a call or just =meeting time with Jess= to go over styling for the message read receipts. the code side of that was presenting some difficulties yesterday so i'll have to figure out how to move forward on that as well. then will get to badges and some other miscellanea.
+
+** Standup Notes
+ - customer email on orders merged!
+ - tracking number on orders PR up
+ - got S3 access to test Orders CSV download
+   - i think Chris has a ticket to mimic the GQL mutation for line items
+ - read receipts prototyping
+   - discussing design with Jess this afternoon
+   - just getting familiar with the query
+   - making sure /last/ message is getting the receipt
+ - badges
+   - did not get much change to look into that yesterday
+   - want to actually get some work done on that today
+   - slight discussion of overall vision with Garrett
+
+** End of Day Brain Dump
+tomorrow need to set up shopify apps. need to continue working on read receipts. got types working for read receipts but they should be fragments instead of full types. also need to make sure that the only message that gets sent with a read receipt is the final one by comparing IDs. otherwise need to start taking a look at badges. oh and Conner's review of my PR is finished for supplier tracking numbers but i'll want to make sure devs get eyes on that.
+
+might do /one final/ restart on the work for read receipts lol. but tomorrow i have to get to the actual banner work.

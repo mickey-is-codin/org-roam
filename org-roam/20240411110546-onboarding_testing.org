@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       f18f5458-21c3-405a-b2a4-7cf4b6ff985c
+:END:
+#+title: onboarding-testing
+* Onboarding Testing
+onboarding is the process of an SK sending a SUP a referral link and then that SUP becoming a Canal SUP. the suppliers tab has an "invite" option that allows an SK to generate a referral link.
+
+when accepting that link, locally it's easiest to onboard as a CSV shop since that prevents the need to create a new shopify store.

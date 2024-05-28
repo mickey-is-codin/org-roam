@@ -1,0 +1,71 @@
+:PROPERTIES:
+:ID:       feb84bfd-90eb-4c0a-9061-e2f904530613
+:END:
+#+title: inventory-sfcc-link
+#+filetags: :asana-ticket:
+* Inventory Remove SFCC External Link
+
+** Asana Link
+[[https://app.asana.com/0/1206724427991868/1206815229551847][ticket link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+
+** Monday, March 25, 2024 Notes
+ - looks like just an extra condition on whether this action shows or not
+ - getting an error after adding the field i'm looking for
+ - this will be a great learning opportunity for GQL best practices
+ - want to be able to understand things better than just randomly adding a field
+ - need to know the consequences of what it does to add that field
+ - goal:
+   - add the ~remotePlatform~ field
+   - to ~OriginSupplierVariantShop~ variant
+   - in ~src/lib/hooks/graphql/queries/fragments/SkInventoryShopifyProduct.ts~
+ - consequences:
+   - if i add that field what will happen to the fragment ecosystem?
+   - exports ~SK_INVENTORY_SHOPIFY_PRODUCT_FIELDS~
+   - places this constant is used:
+     - ~src/components/inventory/alerts/hooks/updateShopifyProductStatus.ts~
+     - ~src/components/shopkeepapp/inventory/updateBulkShopifyProductStatus.ts~
+     - ~src/lib/hooks/graphql/mutations/useAddOriginProductsToSkShop.ts~
+     - ~src/lib/hooks/graphql/mutations/useResyncShopkeepProduct.ts~
+     - ~src/lib/hooks/graphql/mutations/useUpdateShopifyProductStatus.ts~
+     - ~src/lib/hooks/graphql/queries/useGetPreapprovedProductsForInventoryPerSup.ts~
+     - ~src/lib/hooks/graphql/queries/useGetShopifyProductsForInventory.ts~
+     - ~src/lib/hooks/graphql/queries/useGetShopifyProductsForInventoryBySupplier.ts~
+   - structure of the fragment:
+     - ~SkInventoryShopifyProduct~ -> ~variants~ -> ~SkInventoryShopifyProductVariants~ -> ~shop~ -> ~OriginSupplierVariantShop~
+   - so anywhere that uses the ~SkInventoryShopifyProduct~ fragment will need to be altered...
+ - GQL notes
+   - fragment constant files can contain multiple fragments
+ - tracing errors
+   - add ~remotePlatform~ to ~OriginSupplierVariantShop~ fragment
+   - error shows up in ~InventoryAlertTable.tsx~
+   - ~lazyPaginatedItems~ can't be passed to ~InventoryTable~ component as ~lazyPaginatedItemsFromInventoryAlerts~
+   - ~InventoryTable~ expects ~lazyPaginatedItemsFromInventoryAlerts~ to be based on ~ShopifyProductBySupplier~ type
+   - ~ShopifyProductBySupplier~ is an alias of the fragment ~SkInventoryShopifyProductFragment~
+   - this fragment is defined in the original ~SkInventoryShopifyProduct~ file
+     - (one level up from ~variants~)
+   - ~lazyPaginatedItems~ comes from ~useGetShopifyProductsForInventoryAlerts~
+   - that hook builds its query with the fragment ~SK_INVENTORY_ALERT_PRODUCT_FIELDS~
+   - that constant comes from ~SkInventoryAlertProduct~
+   - within that fragment we can see ~variants->originSupplierVariant->shop~ has no ~remotePlatform~ field
+   - this explains the issue and lets us at least fix type errors
+ - but is best practice just to blindly add that field to two places?
+
+saving some code
+#+begin_src javascript
+const getHideViewSupplierOption = (
+  belongsToMyShop: boolean,
+  originSupplierProducts: ShopifyProduct['originSupplierProducts'],
+  productDisplayUrl: string | null,
+  originSupplierShop: OriginSupplierVariantShopFragment | null,
+): boolean => {
+  if (!belongsToMyShop) return true;
+  if (originSupplierShop?.remotePlatform === WebShopifyShopRemotePlatformChoices.INTEGRATION_SETTING_TYPE_SFCC) return true;
+  if (originSupplierProducts && originSupplierProducts.length > 0) return false;
+  if (typeof productDisplayUrl === 'string') return false;
+  return true;
+};
+#+end_src

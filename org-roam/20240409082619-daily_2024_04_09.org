@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID:       bd1b1ce6-134a-4ae4-bb5d-8ea8110df700
+:END:
+#+title: daily-2024-04-09
+#+filetags: :daily:
+* Daily - Tuesday, April 9, 2024
+
+** EOD Brain Dump
+ - country picker
+ - useDimensions fix
+ - table url params for storefront filter
+ - spyglass repeat brand names
+ - onboarding incorrect status
+ - uninstalled products add to storefront
+ - select all products button not working
+ - wrong commissions populating in proposal
+ - error connecting bank account
+ - resolve_plaid_token wrap in try-catch
+
+** Standup Notes
+ - country picker
+ - adding filter to sup orders
+   - blocked by BE?
+   - url doesn't persist shopkeepIds on refresh
+ - brand list view ready for launch
+   - PR up
+ - products added to store should show up uninstalled
+   - QQ: is this from uninstalled state QA?
+ - learn more button on brand profile not showing up
+   - "see more"
+   - wondering if it should be abstracted
+
+** Morning Brain Dump
+going to start work on the brand list view removing multi-select so that we can launch that.
+
+country picker i think at this point PR review is the main thing i need.
+
+should start grabbing some other sprint tickets.
+
+asana sprint notes:
+ - [[id:156d32b2-e409-4608-b30a-cb26cbdb12b6][products-added-to-store-sup-profile]]
+ - storefront filter to SUP orders page

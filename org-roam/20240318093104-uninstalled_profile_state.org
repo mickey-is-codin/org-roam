@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID:       58cbddcb-a0eb-4acb-bb78-3c2bdd3bbcd8
+:END:
+#+title: uninstalled-profile-state
+#+filetags: :asana-ticket:
+* Uninstalled Profile State
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1205817713864652][ticket link]]
+
+** Tasks
+*** DONE make PR
+*** DONE merge PR
+*** DONE correct "learn more" link
+*** DONE follow up on Molly question
+*** DONE follow up on Simran question
+*** DONE remove from my suppliers
+*** DONE filter table to just products added to store
+*** DONE update availability to indicate "unlisted"
+
+** Thursday, March 28, 2024 Notes
+ - which tab does the figma table align with?
+
+** Wednesday, March 27, 2024 Notes
+ - Simran sent a note:
+   - ~shop_status~ on the Shop Modal
+ - what sort of fun errors will show up if i add ~shopStatus~ to this query?
+
+** Monday, March 25, 2024 Notes
+ - "profile page for SK/SUP who uninstalled"
+ - badge: "<brand> is no longer available on Canal"
+ - design notes
+   - fade assets to 50%
+   - keep brand name
+   - remove all other content (description, etc)
+   - display warning banner ("banner"?)
+     - inspo from badge
+   - table show only products that have been added to viewer's store
+ - hmm, is this still blocked by BE?
+   - oh yeah, still blocked
+   - can see the icon on the Asana ticket
+ - BE says just use ~shopStatus~ field

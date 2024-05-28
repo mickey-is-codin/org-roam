@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       e7a9324b-5c0c-45ed-a23c-27bb756082d7
+:END:
+#+title: trial-plan-single-message
+#+filetags: :asana-ticket:
+* Trial Plan Users Single Message
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1206817676368068][ticket link]]
+
+** DONE submit PR
+** DONE merge PR
+
+** Friday, March 22, 2024 Notes
+ - investigating proposal blocking
+ - key to the kingdom: ~useCanInteractWithBrand~
+ - list of "Message" buttons
+   - suppliers page
+
+** Thursday, March 21, 2024 Notes
+ - this is unblocked now
+ - [[https://app.asana.com/0/1199696369468912/1205535780026995][backend ticket link]]
+ - where should logic live?
+   - everywhere that a "message" button appears?
+ - my guess of implementation
+   - update ~MessageButton~ to not display if:
+     - user is trial plan
+     - recipient is not who invited them
+ - proposals
+   - proposals are already limited to one per brand
+   - i should be able to recreate some very similar logic
+   - hopefully they're using the modal appropriately
+
+** Wednesday, March 20, 2024 Notes
+ - not sure if BE is finished with what blocks this
+ - ~shop.canalPlan~
+ - plan types:
+   - ~'CANAL'~
+   - ~'TRIAL'~
+ - i assume BE will be filtering queries that show "who a user can message"
+ - BE has not gotten to this yet

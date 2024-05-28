@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       f35e591e-5072-42e9-9bde-cdb689889657
+:END:
+#+title: daily-2024-05-06
+#+filetags: :daily:
+* Daily - Monday, May 6, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - priority one going to be messages redesign
+ - bulk proposals probably soon too

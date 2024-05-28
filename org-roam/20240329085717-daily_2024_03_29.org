@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID:       8f9d8bcf-b25a-47df-8c0e-9b99887bae13
+:END:
+#+title: daily-2024-03-29
+#+filetags: :daily:
+* Daily - Friday, March 29, 2024
+
+** EOD Brain Dump
+
+** Wally Call
+ - what gets you really excited when you're working?
+ - tell me about your sketch journal
+ - what do you like to do outside of work?
+ - what's ideal time off for you?
+ - do you write code in your free time?
+
+** Standup Notes
+ - badges
+   - mini QA session yesterday
+   - if that looks good we can merge to develop
+ - calendar
+   - QA session today
+   - should be quick and simple
+   - Garrett you can be optional on there
+ - surface SUP customer support email to SKs
+   - took a look this morning at specs
+   - should have a PR up soon
+ - uninstalled profile state
+   - PR up
+   - does this need QA?
+ - PR review yesterday
+
+** Morning Brain Dump
+during FE weekly i talked about optional null values in functions. want to experiment with that today. might work around in a playground project a bit.
+
+yesterday sent the video-QA for badges at EOD so hopefull Jess and Garrett get back to me on that.
+
+QA for calendar date ranges today. before the actual QA session i want to go through and make sure that's working.
+
+Molly assigned me a ticket that should be a shipping orders clone but moved to SKs instead of just SUPs (or vice versa, idk).
+
+uninstalled profile state should be merged to develop, i know the PR got approved. don't /think/ that will need QA but i suppose it's worth asking.

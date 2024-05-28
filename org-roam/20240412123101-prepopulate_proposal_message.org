@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       abb045b0-5bc0-4717-a9cb-d2e2720a0c3b
+:END:
+#+title: prepopulate-proposal-message
+#+filetags: :asana-ticket:
+* Prepopulate Proposal Message
+
+** Asana Link
+[[https://app.asana.com/0/home/1206724427991858/1206985728555560][ticket link]]
+
+** Tasks
+*** DONE submit PR
+*** TODO merge PR
+
+** Monday, April 15, 2024
+ - should take literally 3 seconds

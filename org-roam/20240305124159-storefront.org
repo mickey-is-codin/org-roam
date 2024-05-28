@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       1e98e5ad-cfe6-48df-9608-476c98f3a0cd
+:END:
+#+title: storefront
+* Storefront
+
+a storefront is a brand or expert that /sells products/. the products that it sells are created by a [[id:6cf5ede9-9a0b-41f5-a226-569a9ada3c1e][supplier]].
+
+this term is a bit contentious, people might be trying to shift away from this or even [[id:d18b1845-5cf7-4de6-bded-c251f4befb09][shopkeep]]

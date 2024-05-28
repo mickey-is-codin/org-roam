@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       c7578556-d833-47ba-93b2-20f7359c8a43
+:END:
+#+title: supplier-fulfillment-info
+#+filetags: :asana-ticket:
+* Supplier Fulfillment Info
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1206909368102135/f][ticket link]]
+
+** Loom Link
+[[][loom link]]
+
+** DONE submit PR
+** DONE PR review
+** DONE merge PR
+
+** Friday, March 22, 2024 Notes
+ - Molly requested this
+ - clone of [[id:0bebcb50-695c-4f21-8a05-de435d034272][asana-ticket-tracking-number-supplier-order-task]]
+ - but for suppliers

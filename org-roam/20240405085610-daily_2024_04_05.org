@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       09de4ac4-4313-4258-ae18-07795283e43c
+:END:
+#+title: daily-2024-04-05
+#+filetags: :daily:
+* Daily - Friday, April 5, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+ - on-call
+   - fix copy for EDI onboarding
+   - no referral account creation loading state
+   - struggling with dropdown sizing for state field
+ - country picker
+   - EOD yesterday worked on making it /recursive/
+ - read receipts
+   - think Chris finally set me straight
+   - probably good to do some final testing on that
+
+** Morning Brain Dump
+got some [[id:4797cb9f-b54d-4873-b48c-575aa7bb756e][on-call]] stuff that needs to be taken care of.
+
+continuing work on country picker.
+
+did read receipt stuff get merged? will check and have Jess test.
+
+going to order a charging HDMI and expense it.
+
+need to take a look at referrals commission unlocking since that should be unblocked

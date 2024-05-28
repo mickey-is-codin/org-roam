@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       4272be91-28f5-47e9-aa6d-bc15b158ea1d
+:END:
+#+title: fulfilled-by-settings
+#+filetags: :asana-ticket:
+* Storefront Settings: Toggle On/Off "Fulfilled By Our Friends"
+
+** Asana Link
+[[https://app.asana.com/0/1206745120406344/1206823590350441][ticket link]]
+
+** Loom Link
+[[][loom link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+
+** Monday, April 1, 2024 Notes
+ - good first ticket of the week task i'm thinking
+ - existing piece of copy "Fulfilled by our friends at <sup>"
+   - should go at the /end/ of product descriptions
+     - this is handled by backend
+   - copy should be controlled via settings
+ - note: Conner added a bunch of styled components to this directory, use em
+ - looks like that line of text is literally sent as HTML by the BE
+   - comes on ~bodyHtml~ on ~ShopifyProduct~
+   - now predicated on ~show_fulfilled_by_message_in_pdp_setting~
+ - [[https://github.com/shopcanal/canal/pull/8194][link to BE PR]]
+ - gist of ticket:
+   - add section to settings page

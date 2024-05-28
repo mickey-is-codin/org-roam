@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       e75510cf-8843-418d-9035-08ef6f67010c
+:END:
+#+title: bug-priority
+* Bug Priority
+
+bugs can be =mitigated= or =fixed=. mitigation means that users are no longer affected. this can happen as the result of reversing a PR, hiding a page, etc. fixing means that the full intended functionality is returned to the product.
+
+if the priority of a bug is disputed, bring to the attention of Clay or Liam.
+
+note: SLA = Service Level Agreement -- an agreement for how long something should take to be addressed.
+
+bugs should be handled /if at all possible/ using the CRM (Django admin). this provides a platform for fixing customer data in a way that doesn't require writing any code and safely interacts with customer data.
+
+** Level P0
+mitigation SLA: ASAP
+fix SLA: ASAP within business hours
+
+breaks core functionality. on-call may be woken up at 2AM to deal with this.
+
+requires a [[https://www.notion.so/shopcanal/Postmortems-7d471f4c1dff4591acf555b48565c17d?pvs=4][post-mortem]]
+
+** Level P1
+mitigation SLA: 4 hours
+fix SLA: 24 hours
+
+significant flaw in product that impacts subset of userbase and could harm the Canal brand. worth upgrading to a P0 if it impacts all users or if it completely blocks a user from all services.
+
+** Level P2
+mitigation SLA: 8 hours
+fix SLA: 1 week
+
+minor problems like misaligned images, etc. should not require coordination between FE and BE.
+
+** Level P3
+mitigation SLA: N/A
+fix SLA: when possible
+
+catch-all for bugs with no urgency. usually cosmetic and non-blocking and/or experienced by a trivial number of users.

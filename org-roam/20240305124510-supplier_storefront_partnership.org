@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       24f23db7-db92-4308-b077-a93ba729bd94
+:END:
+#+title: supplier-storefront-partnership
+* Supplier-Storefront Partnership
+
+Canal is a network that allows a [[id:6cf5ede9-9a0b-41f5-a226-569a9ada3c1e][supplier]] and a [[id:1e98e5ad-cfe6-48df-9608-476c98f3a0cd][storefront]] to partner. the supplier creates goods and the storefront sells the goods. this adds an additional revenue stream for the storefront because of profit-sharing and it adds an additional distribution channel for the supplier.

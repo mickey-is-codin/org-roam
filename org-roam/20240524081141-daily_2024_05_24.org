@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       a9c678a8-887d-4ba4-a17b-e38a3f41c7f8
+:END:
+#+title: daily-2024-05-24
+#+filetags: :daily:
+* Daily - Friday, May 24, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - bulk proposal fixes
+ - should really look into currency selection
+ - search bar to table is same as add brands modal
+ - sections (terms) is only one elsewhere

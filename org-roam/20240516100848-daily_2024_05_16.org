@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       b54a4ff8-9b6c-4ee0-a945-4e224a82e17a
+:END:
+#+title: daily-2024-05-16
+#+filetags: :daily:
+* Daily - Thursday, May 16, 2024
+
+** EOD Brain Dump
+ - you can add types to the query object itself huh
+
+** Standup Notes
+
+** Morning Brain Dump
+ - [[id:7702b8ac-83ca-44aa-87be-3c42ed6ca669][bulk-proposals]] (edit commissions modal)
+ - [[id:657fad50-239a-4304-be00-2d361fa51931][listings-button-fix]]
+ - [[id:1684083f-74ad-458f-8c52-fc16d6a66239][waived-fees-banner]]
+ - [[id:1522dc6d-6601-4a0e-bcec-d4c1dfc91eb8][request-line-item-total-count]]
+ - inbox fixes? follow up with Molly
+ - [[id:e2fb9bf5-e989-45ef-bfcd-980fa8b38144][pending-relationships-display]]
+ - [[id:713a7fbd-313c-4b1f-87bc-4b6752c26ceb][country-picker-external-data]] (external data, internally hold countries)
+ - [[id:b4ec8b11-418e-49f9-be5e-e0820f4795f4][draft-proposals-inaccessible]]
+ - want to watch simon videos
+ - either some vim learning or org-roam

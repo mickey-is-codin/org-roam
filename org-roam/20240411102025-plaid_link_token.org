@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       c171ba13-257c-4837-998b-60b407f7d6aa
+:END:
+#+title: plaid-link-token
+#+filetags: :asana-ticket:
+* Plaid Link Token
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1207041477331407/f][ticket link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+
+** <date> Notes

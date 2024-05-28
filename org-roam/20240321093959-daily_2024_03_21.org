@@ -1,0 +1,66 @@
+:PROPERTIES:
+:ID:       8953a991-366b-4863-af3b-a801b905e588
+:END:
+#+title: daily-2024-03-21
+#+filetags: :daily:
+* Daily - Thursday, March 21, 2024
+
+** EOD Brain Dump
+ - read receipts
+   - once that gets merged to prod i'll ask Jess and Katherine to check things again
+ - single message trial plan
+   - figure out use of gating hook/modal
+ - sfcc integration csv upload
+   - read through Molly's comments and implement
+ - brand list view
+   - get PR merged
+ - badges
+   - schedule QA
+   - get PR merged
+ - order line items download
+   - get PR merged
+
+** Product Design Review Notes
+ - choosing currency for a shop
+ - banner to prompt suppliers to install the storefront app
+ - banner updates to approving to sell
+ - archive partnership
+
+** Alex 1:1
+ - feel like i'm really getting more comfortable with the codebase
+ - starting to figure out some longterm things that would be good to work on
+ - only updating locally so not updating our doc on that
+ - is there anything i could be doing that woul make life easier for you?
+ - what can i do to make sure i'm watering relationships with ENG team?
+   - considering something like scheduling 1:1 lunches or something
+
+** Standup Notes
+ - read receipts
+   - everything is merged to develop
+   - should clear up the develop flush if people want
+ - badges
+   - waiting on approval to go to develop
+   - added feature flag logic
+   - feature flags aren't turned on in the CRM
+   - figured maybe do that during a QA session?
+   - need to schedule QA session
+ - order line items
+   - PR up ready to review to get to develop
+ - brand list view
+   - visually almost complete
+   - just need to know if actual bulk proposal creation is possible
+   - have everything but "what that button does"
+   - unimplemented "returns" modal
+   - not sure if that's in scope
+ - sfcc enable fulfillment CSV upload
+   - going to fully target this this afternoon
+   - not on roadmap yet tho
+ - trial plan ticket is unblocked
+
+** Morning Brain Dump
+ - still waiting on single message for trial plan users BE updates
+ - need to add feature flags to dev and prod for badges
+ - Garrett pulled me towards [[id:49bf8be6-2be1-4000-a0e5-e2a1a25918dd][asana-ticket-fulfillment-csv-upload]]
+ - need to confirm where PRs stand for read receipts
+ - brand list view table is working well
+   - need to wait on PM updates to see how much i have to do

@@ -1,0 +1,4 @@
+#+title: shopkeep
+* Shopkeep
+
+alias for [[id:1e98e5ad-cfe6-48df-9608-476c98f3a0cd][storefront]].

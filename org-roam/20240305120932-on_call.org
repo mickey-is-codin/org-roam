@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       4797cb9f-b54d-4873-b48c-575aa7bb756e
+:END:
+#+title: on-call
+* On-Call
+
+** DONE April 3, 2024 - April 10, 2024
+ - [X] p1: [[id:e3604042-ee36-4525-b8e2-53a5c29fd2aa][product-search-timeout]]
+ - [X] p?: [[id:e9c410cc-0880-486b-bd31-2e4bebd7b100][herstory-commissions-issue]]
+ - [X] p?: liam request for add contract button in spyglass
+ - [X] p?: simon issue with search for products bar
+ - [X] p2: [[id:6239f58d-6846-4c87-9eed-0b8aa90c034e][sup-onboarding-loading-state]]
+ - [X] p2: [[id:644796df-c06e-402e-af74-d8800c5b37c1][isa-id-field-preview-text]]
+ - [X] p2: [[id:e5de2606-483e-4d40-9026-fe757dfeb07d][edi-csv-state-field-sizing]]
+ - [X] p2: emails about products not on Canal
+ - [X] p2: [[id:0c18bb55-fd77-4f6c-a8e1-a4808405d7b7][read-receipt-timestamp-bug]]
+ - [X] p1: fellow sup orders unfulfilled
+ - [X] p2: [[id:a7323db0-710b-4bed-b493-43a0c0385d01][brand-description-see-more-text]]
+ - [ ] p2: [[id:5b230ad5-4aa4-4c61-a4f0-f40a8a2b8c58][supplier-onboarding-incorrect-status]]
+ - [ ] p2: [[id:96ade4fc-acce-4d8a-86f9-ace41bf99f22][spyglass-partnership-repeat-brand-name]]
+ - [ ] p2: [[id:156d32b2-e409-4608-b30a-cb26cbdb12b6][products-added-to-store-sup-profile]]
+
+on-call processes fit in with the process of determining bug priority.
+
+results of ad-hoc bug reporting:
+ - quality of the product is unknown (regressing or improving?)
+ - engineering frequently interrupted by "high priority" bugs that interrupt workflows
+ - product and go-to-market are frustrated that high-priority tasks fall away
+
+bug-reporting process goals:
+ - clarify how and where to report bugs
+ - create a single repository of issues
+ - provide sufficient details in every bug for an engineer to address them
+ - don't distract all of engineering, just the ones who are on-call
+
+good reasons to trade on-call shifts:
+ - you expect to be offline during work hours PST during your shift
+ - won't have access to high-speed internet for the duration of the shift
+ - emergency
+
+good to refer to the [[https://www.notion.so/shopcanal/Runbook-1554fa062ef74f69a0a1f0df74323088][runbook]] during on-call shifts
+
+timeline for dealing with a bug can be determined based on [[id:e75510cf-8843-418d-9035-08ef6f67010c][bug-priority]].

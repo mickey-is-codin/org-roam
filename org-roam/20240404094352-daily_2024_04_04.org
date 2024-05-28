@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       a72626f5-0f11-49cc-be4f-597960a227fa
+:END:
+#+title: daily-2024-04-04
+#+filetags: :daily:
+* Daily - Thursday, April 4, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+ - commissions display fix for Shaylee
+ - Add Contract button fix in spyglass for Liam
+ - no other on-call stuff yet -- let me know if that's incorrect
+ - working on country picker in between
+   - going with basically just a modal wrapping a ~CollapsibleChecklist~
+   - if that's something that people think exists already please let me know
+   - because it's fairly "from scratch" at this point
+ - read receipts
+   - chatting with Chris a bit
+   - running into some trouble in situations where actions happen with no message
+   - difficult to determine which action is the last one
+
+** Morning Brain Dump
+ - reproduce commission issue
+ - merge commission issue
+ - read receipts reproduction for Chris
+ - Liam fix for Add Contact
+ - country picker
+ - Garrett ticket

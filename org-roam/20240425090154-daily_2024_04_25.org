@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       a8b4ca25-87db-41cc-857a-3ec823c5052d
+:END:
+#+title: daily-2024-04-25
+#+filetags: :daily:
+* Daily - Thursday, April 25, 2024
+
+** EOD Brain Dump
+ - need QA session for product discover search
+ - need Chris to add field to mutation for archive changes
+ - need Chris to add dispatch field to loggedInShopifyShops for settings change
+
+** Standup Notes
+
+** Morning Brain Dump
+ - Chris updated Simran's branch for archiving a SUP
+   - should be able to get a PR out for that today
+ - continuing work on settings update
+   - generalizing things
+   - so hopefully that cleans up nicely
+ - country picker, need to get in touch with Surya for mutation
+ - new resolvers can probably be merged
+   - including removal of wishlist

@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       a7323db0-710b-4bed-b493-43a0c0385d01
+:END:
+#+title: brand-description-see-more-text
+#+filetags: :bug:
+* Brand Profily "See more" Text Cutoff
+
+** Priority - P2
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1207038414821394][ticket link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+
+** Notes
+ - looks like this is due to how we determine to show the text
+ - checks the actual HTML element to see if it's truncated...
+ - seems like something we could add a general abstraction around
+ - i know it would've been useful for partnership status reasoning
+ - recreated
+   - make page big
+   - refresh so text goes away
+   - make page small
+   - see more button gone

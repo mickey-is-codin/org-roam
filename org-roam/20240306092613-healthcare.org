@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       d6f9fbd7-5aeb-47b5-873e-795fc2a37fc6
+:END:
+#+title: healthcare
+* Healthcare
+
+open enrollment starts early April. my sign-on enrollment period ends late April.
+
+** Selected Plan
+=Anthem Gold PPO 30/500/20%=
+
+ - copay: $30
+ - coinsurance: 20%
+ - deductible: $500
+ - family deductible: %1,500
+ - OOP max: $7,900
+ - OOP max (fam): $15,800
+ - no HSA
+ - specialist copay: $60
+ - emergency room: $250 (after deductible)
+ - urgent care: $30
+ - inpatient stay: 20% after deductible
+ - outpatient stay: $200 plus 20% after deductible
+
+also enrolled in:
+ - dental
+ - waived vision
+ - life insurance
+
+total cost: $156/month

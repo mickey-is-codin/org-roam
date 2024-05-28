@@ -1,0 +1,86 @@
+:PROPERTIES:
+:ID:       3df4a733-8f0b-407b-a614-9e8a3a92c39a
+:END:
+#+title: daily-2024-04-01
+#+filetags: :daily:
+* Daily - Monday, April 1, 2024
+
+** EOD Brain Dump
+ - Molly assigned me a new messsage template ticket
+   - this takes the place for now of messages from orders (?)
+ - badges merged
+ - calendar merged
+ - uninstalled profile state merged
+   - and fix!
+ - should be able to start tomorrow on country picker
+ - fulfilled by setting still in PR
+
+** Current State of Read Receipts (sigh)
+vanilla messages:
+ - showing read receipts in timeline
+ - showing read receipts in left panel
+proposals:
+ - proposal request showing receipts in timeline
+ - proposal request showing receipts in left panel
+ - proposal rejection/approval showing receipts in timeline
+ - proposal rejection/approval showing receipts in left panel
+ - message after proposal response showing receipts in timeline
+ - message after proposal response showing receipts in left panel
+ - counter to proposal ? in timeline
+ - counter to proposal ? in left panel
+sample requests:
+ - sample request showing receipts in timeline
+ - sample request NOT showing receipts in left panel
+ - sample request rejection/approval showing receipts in timeline
+ - sample request rejection/approval NOT showing receipts in left panel
+
+** Sprint Planning
+ - get in touch with Molly about prioritization
+ - i get to work on the country picker
+
+** Standup Notes
+ - badges
+   - PR up ready to go
+ - uninstalled profile state
+   - PR up ready to go
+ - calendar
+   - PR up ready to go
+ - working on "fulfilled by" message setting
+
+** Morning Brain Dump
+need to think of a way to prank Molly, possibly Ben. Ben is in town, need to look into events that we could do together, possibly check New Yorker.
+
+end of last week i was really just kind of ironing out stuff around badges and the calendar so should check if those are ready to go to develop. badges need to see sign off from Jess and Garrett then calendar i think is just good to merge as soon as Jess says so.
+
+first on call shift this week. that actually kind of blows for movie week and Ben being in town but oh well.
+
+oh also need to finalize my movie list.
+
+GitHub state:
+ - uninstalled state not merged
+ - badges not merged
+ - calendar not merged
+
+Ben ideas
+ - Haam, Williamsburg - vegan Trinidadian food
+ - baby's all right
+   - cab ellis
+   - takuya nakamura
+ - enemy of the people
+ - young fathers
+ - whitney biennial
+ - Moma
+ - Brooklyn Museum 100 views of Edo
+ - metrograph
+ - Japan society
+ - minetta lane (dead outlaw)
+ - Here theater - ten transcendental etudes
+ - film forum
+   - le samourai
+   - classe tous risques
+   - limbo
+ - soho gallery tour
+
+need to move all my Sprint stuff over so i don't look a fool.
+
+need to start on the messages from orders feature that's in my Asana.

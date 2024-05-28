@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       5d940b90-7ca9-462f-a4b4-7ba0b10aab16
+:END:
+#+title: daily-2024-03-07
+#+filetags: :daily:
+* Thursday, March 7, 2024
+
+** General Braindump
+yesterday was first day of actually writing some code and getting familiar with the pull request system. main hurdle that i found was actually reproducing things. it sounds like developing locally is the main difficulty, people seem to defer to testing things against the develop backend with their deployments. which is fine unless i'm, for example, trying to console log something. getting a local environment set up in a way that actually has orders and things available will be something that i want to make sure i ask an engineer about today.
+
+what else did i learn about yesterday? i guess i'm getting more familiar with the actual graphql system within the application. also slowly getting up to speed on how users interact with the application.
+
+i'm really liking the project management, Asana seems like a dream come true. yesterday i tried to get a template set up for creating asana ticket org-roam notes. today i'll try to improve that a bit to get it to the point that it assists me with making PRs.
+
+note: i should learn more about the [[id:6cf5ede9-9a0b-41f5-a226-569a9ada3c1e][supplier]] and [[id:1e98e5ad-cfe6-48df-9608-476c98f3a0cd][storefront]] split within the application. are users suppliers? can users be both? i have most of the pieces there but still need to synthesize some info.
+
+** Standup Update
+ - worked on adding customer emails to storefront orders
+ - code is finished
+ - worked with Simon to get the prerequisite backend change
+ - PR is up for FE changes
+ - BE changes are merged to develop
+ - want to reproduce on deployed app
+ - want to reproduce locally as well
+   - even if only for my own edification
+
+next task up is [[id:0bebcb50-695c-4f21-8a05-de435d034272][asana-ticket-tracking-number-supplier-order-task]]. will try to get a PR up for that around lunchtime, even if the first PR [[id:2e40ed66-412d-499b-9515-2ac0e85d28f4][asana-ticket-expose-customer-email]] is still in flight.
+
+** Local Testing
+had to go into local CMS to figure out which users might have orders. we went to the Orders table and found which users were associated, then changed the password for that user so i could use them to login. pw changing fine because local.
+
+** End of Day Dump
+big todo tomorrow: actually format the date for the tracking info ticket. feel like there is something i've forgotten to circle back to. oh well. Simon is going to generate a DB dump for me to be able to reproduce our fulfillment scenarios. hopefully tomorrow morning i can restore that then recreate. lots of new info around rebasing, need to remember to codegen while rebasing after conflicts are hit. at some point i'll add yabai to this machine but /zero/ rush for that. big set of info for seeing null data within the application and operating around it. great that the type system prevents it but can make things hard to operate on if the resolvers aren't pretty close to perfect. oh also need to update props descriptions to be a bit better tomorrow. hopefully from PR review people can tell me if the null returning that i'm doing makes sense.
+
+overall good day, lots of learning.

@@ -1,0 +1,50 @@
+:PROPERTIES:
+:ID:       9e130a4b-4eee-423c-a3f6-7f4b130f49e8
+:END:
+#+title: project-lifecycle
+* Project Lifecycle
+
+lifecycle split into four different categories:
+1) product
+2) design
+3) engineering
+4) launch
+
+once projects are initiated by a PM they get added to a backlog. before they live in a specific pod they go to the [[https://app.asana.com/0/1200343545577918/1200343545577918][general backlog within Asana]].
+
+pods that projects can be sorted into:
+ - projects
+ - product briefs
+ - connection projects
+
+question: what view in Asana do we go over during frontend standup? is that a roadmap for a specific project?
+
+=TODO=
+
+bi-weekly product review for PMs happens every other wednesday at 3:30PDT
+
+bi-weekly product review for design happens every other wednesday at 3:00PDT
+
+** Engineering Project Lifecycle
+the first step is to spend some time exploring the technical lift. this exploration will be performed with a tech spec. i'm not sure if there is a template for a tech spec document within Notion but i would have to imagine it should be relatively formulaic.
+
+this tech spec helps lock in the scope of the project and solve any challenging design problems ahead of time.
+
+once technical exploration is finished, everyone should be able to agree on a launch date.
+
+that launch date goes into the [[https://www.notion.so/Monthly-Project-Retros-ae94dae16d134d55a588adf2879cfbad?pvs=4][Monthly Project Retro]]
+
+when roadblocks inevitably crop up, engineers should let a PM and/or engineering manager and/or designer right away.
+
+ideally 1 line of tests per line of code.
+
+** Launch
+engineer completes PR which causes their branch to get merged to ~develop~ branch. at this point the engineer flags to their PM that the branch is merged and the PM and ~QA manager~ tests out the functionality manually within the develop environment.
+
+when develop looks good the ~release manager~ decides to merge it to prod. important when we push to prod to check the uptime dashboard. this can tell us if there are any changes to uptime or latency.
+
+testing still goes on in post-launch QA since the prod and dev developments are necessarily different.
+
+post-launch QA minimum:
+ - test on an internal production account
+ - [[id:9b6d8262-a7da-4c13-8427-cd030be1ace8][ghost-mode]] into one or more external production accounts to make sure the code works as expected for customers.

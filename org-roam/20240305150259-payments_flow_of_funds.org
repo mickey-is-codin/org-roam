@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       8695d4c2-98a3-42a7-aa03-341d7a741505
+:END:
+#+title: payments-flow-of-funds
+* Payments & Flow of Funds
+
+MSRP = Manufacturer's Suggested Retail Price
+
+overall flow:
+ - a customer purchases a [[id:6cf5ede9-9a0b-41f5-a226-569a9ada3c1e][supplier]]'s item from the [[id:1e98e5ad-cfe6-48df-9608-476c98f3a0cd][storefront]]
+ - funds are collected by the [[id:1e98e5ad-cfe6-48df-9608-476c98f3a0cd][storefront]] just like a normal product
+ - the storefront is charged for the [[id:6cf5ede9-9a0b-41f5-a226-569a9ada3c1e][supplier]]'s cut
+ - storefront is left with their agreed-upon commission (Canal average 30% storefront comm.)
+ - Canal dispurses funds to the [[id:6cf5ede9-9a0b-41f5-a226-569a9ada3c1e][supplier]]
+ - Canal takes cut and payment processing fees
+ - the [[id:6cf5ede9-9a0b-41f5-a226-569a9ada3c1e][supplier]] receives their agreed-upon cut of MSRP
+
+storefront transaction:
+ - $100 MSRP with $30 [[id:1e98e5ad-cfe6-48df-9608-476c98f3a0cd][storefront]] commission (varies but this is average)
+ - [[id:6cf5ede9-9a0b-41f5-a226-569a9ada3c1e][supplier]] receives $70 cut
+ - [[id:1e98e5ad-cfe6-48df-9608-476c98f3a0cd][storefront]] commission is $30
+ - Canal collects service fee (5% of MSRP)
+ - Canal collects $.40 payment processing fee
+ - [[id:1e98e5ad-cfe6-48df-9608-476c98f3a0cd][storefront]] nets $24.60
+ - shipping cost defaults to the [[id:6cf5ede9-9a0b-41f5-a226-569a9ada3c1e][supplier]]'s rate
+ - sales tax is collected by the [[id:1e98e5ad-cfe6-48df-9608-476c98f3a0cd][storefront]] at checkout
+
+supplier transaction:
+ - $100 MSRP with $30 [[id:1e98e5ad-cfe6-48df-9608-476c98f3a0cd][storefront]] commission (varies but this is average)
+ - [[id:6cf5ede9-9a0b-41f5-a226-569a9ada3c1e][supplier]] receives $70 cut
+ - Canal collects service fee (20% of [[id:1e98e5ad-cfe6-48df-9608-476c98f3a0cd][storefront]] commission)
+ - Canal collects $.40 payment processing fee
+ - [[id:6cf5ede9-9a0b-41f5-a226-569a9ada3c1e][supplier]] nets $64.60
+ - [[id:6cf5ede9-9a0b-41f5-a226-569a9ada3c1e][supplier]] collects $5 shipping fee (or whatever their rate is)

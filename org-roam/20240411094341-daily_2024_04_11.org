@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       56f37660-1cec-4c6d-9ab0-d7e60630c1d2
+:END:
+#+title: daily-2024-04-11
+#+filetags: :daily:
+* Daily - Thursday, April 11, 2024
+
+** EOD Brain Dump
+ - referral commission issue
+   - still have not referred
+   - need to seriously consider reproduction steps
+ - country picker
+   - only note from Alex visually was change all countries to white
+
+message Kimia about prod dump
+
+** Standup Notes
+ - plaid link token PR merged
+ - Molly flagged an issue with referrals in onboarding
+   - going through this a bit slowly
+   - just want to make sure that i'm able to recreate referral process really well
+   - actually creating a shopify shop, etc
+   - seeing "develop supplier" is under review
+ - inventory not showing up when viewing uninstalled suppliers
+ - worked on storefront filter in supplier order page, that's merged
+
+** Morning Brain Dump
+ - molly ticket about commissions
+   - this blocked her reproducing uninstall state issues
+ - can probably merge storefront filter PR
+ - country picker continue work
+ - don't remember otherwise -- need to triage on-call and Asana stuff
+ - could probably clean up my Asana tasks generally
+   - check assigned to me and bug board

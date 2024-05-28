@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       40f91073-b3b2-467a-aada-fe67f5cd43a3
+:END:
+#+title: simon-sup-6
+* Simon SUP 6
+
+** Command for Sample Requests and Inventory
+ShopifyShop.objects.get(name='Simon SUP 6').integration_settings.update(pk_of_shopify_app='82c1f4daecff18ad202ac4455fe5dfcf')
+
+** Command for Sample Requests
+IntegrationSetting.objects.filter(pk_of_shopify_app='6c3309b414b8d29c4da66f2109b41892').update(
+    pk_of_shopify_app='cf5d3aa955e1f14f0599fccd50b6e54a'
+)

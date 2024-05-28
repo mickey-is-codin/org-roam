@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       16834cef-2e1a-4d1d-b856-86a5c2dea15c
+:END:
+#+title: spyglass
+* Spyglass
+
+spyglass is an internal tool that allows for QA-testing production environments. i assume it allows us to login to accounts that simulate a brand without viewing their actual data.
+
+[[https://www.notion.so/shopcanal/Spyglass-Handbook-a443d30fa02a4ba5afb105d9bf87aae4][spyglass handbook link]]

@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       80f6c899-3ed0-4d58-a258-01bb74d8f4e1
+:END:
+#+title: daily-2024-05-10
+#+filetags: :daily:
+* Daily - Friday, May 10, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - bulk proposals lets get it done
+ - need to fix csv export for listings

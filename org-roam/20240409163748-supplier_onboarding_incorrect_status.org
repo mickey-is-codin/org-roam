@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       5b230ad5-4aa4-4c61-a4f0-f40a8a2b8c58
+:END:
+#+title: supplier-onboarding-incorrect-status
+#+filetags: :bug:
+*  Supplier onboarding incorrect status
+
+** Priority - P2
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1207040855477819][ticket link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+
+** Notes

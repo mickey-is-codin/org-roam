@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       99372823-92ab-4a97-8ee1-921a0c1297ad
+:END:
+#+title: panama-ui
+* Panama UI
+
+Canal's internal component library
+
+[[https://www.figma.com/file/W2DNg23sx0QaPgjFenEI2g/Panama-UI?type=design&node-id=0-1&mode=design][Figma docs]]

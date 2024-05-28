@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       013336bb-841d-466d-b97f-fa9c9fa2c8e7
+:END:
+#+title: daily-2024-04-13
+#+filetags: :daily:
+* Daily - Monday, May 13, 2024
+
+** EOD Brain Dump
+ - ow my brain
+
+** Standup Notes
+
+** Morning Brain Dump
+ - bulk proposals continue after inbox tangent
+ - self sprint planning (need 30 points for this week)
+   - bulk proposals

@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       4241ba37-67a4-4a08-877f-7b144b8c1b2b
+:END:
+#+title: daily-2024-05-21
+#+filetags: :daily:
+* Daily - Tuesday, May 21, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - helping Kimia with order query fix up
+ - PR is out for bulk proposals
+   - should schedule QA for that i suppose
+ - vim learning
+ - org-roam learning
+ - set up writing GH a bit better
+ - products showing out of stock

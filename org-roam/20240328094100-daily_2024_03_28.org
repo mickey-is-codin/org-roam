@@ -1,0 +1,41 @@
+:PROPERTIES:
+:ID:       3024d814-5d1b-456c-83b0-993d0ad6731e
+:END:
+#+title: daily-2024-03-28
+#+filetags: :daily:
+* Daily - Thursday, March 28, 2024
+
+** EOD Brain Dump
+
+** 1:1 Notes
+ - my first on-call is Wednesday!!!
+
+** FE Scoping Meeting
+ - country picker bulk of discussion
+ - email template update
+ - override shipping location in supplier profile
+ - adding/editing market for intl sellers
+
+** Standup Notes
+ - read receipts
+   - are things looking good there?
+   - couldn't reproduce bug from yesterday
+ - badges
+   - QA today
+   - had to fix the SVG positioning
+   - should be all set and ready for QA now
+ - calendar date ranges
+   - PR is up, ready for an informal QA session
+ - uninstalled profile state
+   - have that all finished up as a prototype
+   - just need to confirm some details with BE
+   - PR should be good to go this afternoon
+ - good amount of PR review yesterday
+
+** Morning Brain Dump
+ - badges
+   - positioning hell :(
+ - read receipts
+   - confirm with Jess that this is working
+ - uninstalled profile state
+   - follow up with Molly

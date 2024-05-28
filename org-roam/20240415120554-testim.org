@@ -1,0 +1,58 @@
+:PROPERTIES:
+:ID:       0431ad8e-2244-45ab-a78a-316b2ec9cc56
+:END:
+#+title: testim
+* TestIM
+
+an end-to-end testing framework, largely driven by LLM AI interaction. going to be writing E2E tests for our app with this in the hopes that on git pushes we can run UI tests.
+
+[[https://vercel.com/guides/how-can-i-run-end-to-end-tests-after-my-vercel-preview-deployment][GitHub actions on Vercel preview links]]
+
+** Local vs. Deployed Running
+tests can be run locally by overriding the Base URL. so i think the idea should be that we always write tests with the intention that they will run against the develop DB. then if we want to run them locally we can do so by overriding the Base URL to localhost:3000.
+
+hmmm but i guess that doesn't solve the issue of different DB data locally vs on develop. need to find a way to make a test conditionally use a different test data file.
+
+the configurations option could very well be the answer here. but can you set params from the config?
+
+skeleton key: ~--params-file~
+
+** Initial Tasks
+ - setup Testim to run on branch pushes via GitHub actions
+ - write single "login" test
+ - create docs for "how to add a test"
+ - figure out develop/prod split
+
+** Scoping Questions
+ - what do steps look like?
+   - get account setup for Canal
+   - get GitHub actions created with single login test
+   - create tests over time after that
+ - how should i set things up?
+ - should components be tested or workflows?
+ - when should tests run?
+ - should this be a GitHub tag?
+
+** Tuesday, April 23 2024 Notes
+ - what do i need for this to get merged comfortably?
+   - review my GH Action
+   - write up exactly what would go in a dotfile on prod and dev
+   - bolster documentation
+   - figure out organization sharing
+
+** Tech Talk Agenda
+ - Testim overview
+   - directories for tests
+   - test labels
+   - shared steps
+   - plans?
+ - Testim editor
+   - test data (variables)
+   - base URL
+   - recording test steps
+   - locator logic
+   - validation
+ - Testim in Canal workflow
+   - show GitHub action
+   - running test locally
+   - 5,000 runs per month

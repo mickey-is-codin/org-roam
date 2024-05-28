@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       01fbce8f-cb0a-4476-9122-232d9bd79c1f
+:END:
+#+title: daily-2024-05-09
+#+filetags: :daily:
+* Daily - Thursday, May 9, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - fixes for inbox UI
+ - bulk proposals
+ - PR review

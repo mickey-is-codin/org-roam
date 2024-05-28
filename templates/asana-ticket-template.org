@@ -1,0 +1,9 @@
+* <ticket title>
+
+** Asana Link
+[[][ticket link]]
+
+** Tasks
+*** TODO complete ticket
+
+** <date> Notes

@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       3f3de289-f096-491a-8898-01b98bbbe8b3
+:END:
+#+title: sk-customer-support-email
+#+filetags: :asana-ticket:
+* Surface Supplier's Customer Support Email to SKs
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1206954418668863][ticket link]]
+
+** Loom Link
+[[][loom link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+
+** Friday, March 29, 2024 Notes
+ - thought this was something else
+ - looks like it's just displaying an email link
+ - should live on the "side mini profile" are of the profile page
+ - looking for that in the app:
+   - path: ~src/components/shared/inbox/CommunicationContainerView/BrandDetail/index.tsx~

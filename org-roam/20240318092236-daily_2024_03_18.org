@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       bfa71f3f-5cc4-4740-8057-6c3cd39fc94c
+:END:
+#+title: daily-2024-03-18
+#+filetags: :daily:
+* Daily - Monday, March 18, 2024
+
+** End of Day Brain Dump
+i think in general i should just always be logging in via the CMS -- "log in as user". seems like the best way to set up testing environments.
+
+badges are pretty much done except for figuring out where the logo should show a badge and the actual mutation to update partnership status. just need to combine the two hooks that i've found that seem pertinent.
+
+read receipts is still in PR and when it gets merged to develop we'll do a quick QA session on it.
+
+** Brain Dump
+order Mom birthday gifts. order Molly birthday gift.
+
+people responded on my PR for [[id:01413422-3bec-450b-b825-5c8e547794e2][asana-ticket-read-receipts]] so need to address that. otherwise the main thing at the end of the week was working out the badge CSS to get that applied to logos. i know my main priority ticket for the week is going to be [[id:e7a9324b-5c0c-45ed-a23c-27bb756082d7][asana-ticket-trial-plan-single-message]]. still waiting on the Chameleon UI updates for read receipts anyway so can't move on that immediately.
+
+need to check the status of Chris' ticket for [[id:ffe52a55-03ec-4a06-aaf0-b040a6b33a61][asana-ticket-order-line-download-btn]]. looks like Kimia's taking that over actually. either way it's blocking and i'll be able to get back on that once it's finished.
+
+have a few tickets assigned today that i need to get to as well. main thing for this morning will be read receipts getting the PR fixed and then merging the PR once the chameleon updates are done and getting badges very finished.

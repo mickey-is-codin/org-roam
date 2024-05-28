@@ -1,0 +1,57 @@
+:PROPERTIES:
+:ID:       d8530385-ee1a-4770-aa76-fa2e086e8554
+:END:
+#+title: daily-2024-03-25
+#+filetags: :daily:
+* Daily - Monday, March 25, 2024
+
+** EOD Brain Dump
+ - PR up for SFCC prevent "sale price syncing" sections
+ - PR merged for SFCC external link in inventory
+ - p1 bug with Chris -- orders page request empty string
+ - need to follow up on read receipts stuff with Chris
+ - badges QA session turned up bugs
+ - feature flags big PR
+
+** Standup Notes
+ - read receipts
+   - end of last week worked on fix for this
+ - line items CSV download merged
+ - fulfillment info on orders for /suppliers/ merged
+ - badges
+   - QA session today
+   - so i guess requesting PR review on that
+ - brand list view
+   - merged to develop
+   - do we want to do a quick QA session on that?
+   - in general is default feature flag behavior turned off?
+ - today sfcc external link removal
+   - kind of using this as a GQL best practices punching bag
+   - Simon had to clean up a fragment definition for me
+   - s/o merging to frontend repo
+ - uninstalled profile view blocked...i think?
+ - taking a look through other sprint tickets
+
+** Misc Notes
+ - migrations are failing locally
+   - trying to run migrate with manage.py is throwing an error
+   - i feel /very/ confident that this could be solved with a dump
+   - going to do that and hope i don't mess anything up
+ - if a ticket has no due date should i just avoid doing it?
+ - Jess noting issues that are not regressions with RRs
+   - 1 left panel shows request as last message
+   - 2 sample requests don't show read receipts on left
+   - first one a bit harder because it requires frontend date comparison
+ - p1 ticket for empty supplier ids
+   - ~src/components/shopkeepapp/orders/components/Table/index.tsx~
+
+** Morning Brain Dump
+looked like some bugs this weekend around fulfillments. all P2s but i should check out the warroom channels for things there. Simon also had to do some cleanup on one of my fragments in a PR so i want to go about getting really opinionated about how fragments should look in the codebase.
+
+today i think we finally have the actual badges QA session. should also likely come with a QA session for the brand list view. i believe that view should be turned off but i'll need to make prod feature flags for both. i think the default behavior if you have a gated feature and don't make a feature flag is that the feature just won't show up so hopefully we're good there.
+
+line item download PR should be good to merge, two approvals on it.
+
+need to finally get started on uninstalled profile state.
+
+=want to schedule coffee meetings with FE team=

@@ -1,0 +1,104 @@
+:PROPERTIES:
+:ID:       92a936b6-19fb-434a-af88-cf0a5d96472b
+:END:
+#+title: communication-container-queries
+* Communication Container Queries
+
+making this to figure out data flow for [[id:01413422-3bec-450b-b825-5c8e547794e2][asana-ticket-read-receipts]]
+
+note:
+i'm considering just making the props in ~MessageRow~ into a union of ~MessagesContainer~ and ~CommunicationContainer~ lol
+
+need to write out another overview of this damn problem:
+ - everything in ~MessageRow~ expects every ~container~ object to be a ~MessagesContainer~
+ - everything above that component passes in a ~CommunicationContainer~ type
+ - ~MessagesContainer~ has less metadata but fuller fields in ~messages~
+ - ~CommunicationContainer~ has more metadata and less fields in ~messages~
+ - this is feeling fundamentally incompatible
+ - going to check out what's happening on dev (again)
+
+what's on dev (again):
+ - ~Timeline.tsx~ has ~communicationContainer~ of type ~FullCommunicationContainerFragment~
+ - ~MessagesActivity.tsx~ has ~container~ of type ~MessagesContainerFragment~
+ - ~MessageRow~ defines a ~MessageContainer~ type:
+   - fields: ~status~, ~lastRequestResult~, ~latestSampleRequest~
+   - ~MessagesContainerFragment~ has these keys but ~lastRequestResult.supShopifyShop~ and ~.skShopifyShop~ have ~id~ fields
+   - ~FullCommunicationContainerFragment~ has these keys and is more comprehensive
+   - so it seems like it more closely matches ~FullCommunicationContainerFragment~
+   - but it's generally a Frankenstein of the two
+
+components in this system that i know about:
+ - communication containers
+   - holds communication containers
+ - communication container
+   - what displays message previews at screen left
+ - communication container view
+   - holds the timeline
+ - timeline
+   - a list of messages in a conversation when a message container is selected
+ - message row
+   - an individual message within the timeline
+ - messages activity
+   - when viewing a proposal there is a "Comments & Activity" block
+
+data flow:
+ - inbox view (~Inbox/index.tsx~)
+   - fetch communication containers from ~useGetCommunicationContainers~
+   - pass ~communicationContainers~ into ~CommunicationContainers~
+   - don't pass anything into ~CommunicationContainerView~
+   - ~CommunicationContainerView~ fetches single container from ~useGetCommunicationContainer~
+     - it passes that to ~Timeline~
+     - ~Timeline~ gets messages from ~useGetCommunicationContainerMessages~
+ - proposals view (~ActivityColumn.tsx~)
+   - fetch /messages/ from ~useGetCommunicationContainerMessages~
+
+condensed data flow:
+ - ~Inbox/index.tsx~                -> ~useGetCommunicationContainers~
+ - ~CommunicationContainerView.tsx~ -> ~useGetCommunicationContainer~
+ - ~Timeline.tsx~                   -> ~useGetCommunicationContainerMessages~
+ - ~ActivityColumn.tsx~             -> ~useGetCommunicationContainerMessages~
+
+hook/fetch explanations:
+ - ~useGetCommunicationContainers~
+   - each edge-node is a ~CommunicationContainers~ -> ~CommunicationContainer~
+   - fragments:
+     - ~CommunicationContainerProposal~ on ~CanalEncapsulatingRequest~
+     - ~CommunicationContainerSampleRequest~ on ~SampleRequestType~
+     - ~CommunicationContainer~ on ~CommunicationContainer~ :herm:
+ - ~useGetCommunicationContainer~
+   - edge-node is a ~FullCommunicationContainer~
+   - fragments (defined in ~FULL_COMMUNICATION_CONTAINER_FRAGMENT~):
+     - ~FullCommunicationContainerProposal~ on ~CanalEncapsulatingRequest~
+     - ~FullCommunicationContainerBrandDetails~ on ~ShopifyShop~
+     - ~FullCommunicationContainer~ on ~CommunicationContainer~
+ - ~useGetCommunicationContainerMessages~
+   - edge-node is a ~MessagesContainer~
+   - fragments:
+     - ~MessagesContainer~ on ~CommunicationContainer~
+     - defined in ~FULL_MESSAGE_FRAGMENT~:
+       - ~FullMessage~ on ~Message~
+
+data flow notes:
+ - why does ~FullCommunicationContainer~ exist?
+   - shouldn't it just use ~CommunicationContainer~
+   - i feel like that itself is /full/ by definition
+
+random note:
+ - i'm pretty confused about the paradigm of ~<fragment-name> on <thing-here>~
+ - how do we know what the fragment is ... /on/?
+ - in general i know that a fragment is built "on" a DB entity i guess
+ - so those types have to come from the schema types
+ - you can just view those types in the GQL explorer
+
+let's take a look at the way i set things out on my branch:
+ - i updated ~useGetCommunicationContainers~ to have more details on ~lastMessageSent~
+ - changed the ~MessageContainer~ type within ~MessageRow~
+   - instead of a custom type it just aliases ~FullCommunicationContainer~
+ - updated the ~FullCommunicationContainer~ type to include ~lastMessageSent~ fields
+ - the error(s) this caused:
+   - ~MessagesActivity~ complains because its container items are missing ~lastMessageSent~ fields
+
+some takeaways:
+ - it seems like inbox should 100% use a separate query from proposals
+ - within each of those flows things can flow downwards
+ - but they should not borrow fragments between each other i would say

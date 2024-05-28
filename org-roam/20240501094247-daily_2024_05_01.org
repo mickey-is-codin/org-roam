@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       9a19543d-dedd-4e59-bcbf-f208461847e5
+:END:
+#+title: daily-2024-05-01
+#+filetags: :daily:
+* Daily - Wednesday, May 1, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+ - PRs in flight
+   - archive a SUP - Simran updating with me
+   - product search resolvers - ready for review
+   - new radio button settings grouping - need to make change for review
+   - brand list view post QA - ready for review
+ - stuff for Testim today
+ - new inbox UI
+   - have the basic building blocks done
+   - need to make it actually look pretty
+
+** Morning Brain Dump
+ - Testim presentation
+ - archive a SUP QA tickets
+ - want to start on messages UI fixup

@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       63f9bf4d-dc96-4f22-b679-ccca89519925
+:END:
+#+title: local-dev
+* Local Development
+
+[[][link to Simon SK setup video]]
+
+** run server
+~python manage.py runserver~
+
+** shell plus
+~python manage.py shell_plus~
+
+** run celery
+~celery -A canal worker -l INFO~
+
+** run ngrok
+~ngrok start --all~
+
+** run hookdeck
+~hookdeck listen 8000 shopify-dev~

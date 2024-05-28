@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       ff9a58f3-c79e-4cd3-b7f1-ea66e2d2cbff
+:END:
+#+title: garrett-pm-intro-call
+* Garrett PM Intro Call
+
+** Notes
+ - sales force commerce cloud = sfcc
+ - another integration
+ - communicate often -- unclear designs maybe
+ - engr pet peeve: something is unclear and going down a rabbit hole
+ - sr engr: leadership in terms of good practice (what should we do)
+   - understand UI best practices
+   - "normally people do it this way"
+   - input into product roadmap
+   - what's missing, low hanging fruit
+
+** Questions
+ - what makes a sr eng?
+ - what are some things that excellent contributors do?
+ - what are some of your pet peeves?
+ - walk through the roadmap
+ - what helped you get up to speed on everything Canal?

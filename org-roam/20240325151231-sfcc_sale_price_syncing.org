@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       5af9e0af-36ce-4428-8e06-b240fca029c4
+:END:
+#+title: sfcc-sale-price-syncing
+#+filetags: :asana-ticket:
+* Sale Price Syncing for SFCC SUPs
+
+** Asana Link
+[[https://app.asana.com/0/1206638458613086/1206815229551851][ticket link]]
+
+** Loom Link
+[[][loom link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+
+** Monday, March 25, 2024 Notes
+ - hide it from:
+   - proposals
+   - relationship terms tab
+   - settings!

@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       9743856b-d70a-46e4-adcd-21c9cdaf0286
+:END:
+#+title: shopify
+* Shopify
+
+** Shopify Usage Tips/How-to
+ - login to partners.shopify.com
+ - select ShopCanal Inc
+ - i have two stores, a supplier and a storefront:
+   - Mickstopher Storefront
+   - Mickstopher Supplier
+ - logging in with either of those can be tough
+
+** Simon Video Notes
+ -

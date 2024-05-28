@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       175038b6-01af-4f78-93f4-fd1beb409974
+:END:
+#+title: daily-2024-04-30
+#+filetags: :daily:
+* Daily - Tuesday, April 30, 2024
+
+** EOD Brain Dump
+ - QA stuff for archiving
+ - Testim presentation
+
+** Standup Notes
+
+** Story Points
+ - archive a SUP: 10
+ - new product resolvers: 20
+ - dispatch setting: 20
+ - brand list view QA: 5
+ - inbox UI update: 20
+
+** Morning Brain Dump
+ - update PRs to have descriptions and Looms
+   - everything should be ready for QA
+   - need to reschedule product search QA
+ - PR review for things i'm tagged on
+ - Testim walkthrough setup
+   - have next steps prepared like adding people to project
+ - be better about plotting out story points

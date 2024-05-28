@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       791b528b-8b2f-46b3-ac98-5aface609f9f
+:END:
+#+title: daily-2024-05-07
+#+filetags: :daily:
+* Daily - Tuesday, May 7, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - working on ui redesign, finishing up soon
+ - ticket on product listing CSV export
+ - get started on bulk proposals

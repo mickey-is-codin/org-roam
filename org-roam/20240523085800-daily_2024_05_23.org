@@ -1,0 +1,23 @@
+:PROPERTIES:
+:ID:       06219059-b1fa-4fd4-a828-dcd02eaca05d
+:END:
+#+title: daily-2024-05-23
+#+filetags: :daily:
+* Daily - Thursday, May 23, 2024
+
+** EOD Brain Dump
+ - fix shop name spacing in msgs!!
+
+** Standup Notes
+
+** Morning Brain Dump
+ - QA session this afternoon for bulk proposals
+   - come up with checklist
+   - run it before the QA session
+   - figure out how to reproduce
+ - lower case P thing
+ - back arrow nav
+ - badges banner missing
+ - my suppliers widget not working
+ - what if two params have same name?
+ - chance it gets huge?

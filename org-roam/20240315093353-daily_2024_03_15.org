@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       1a8cfe8c-27cc-4d4b-8ed8-0c9c315b1638
+:END:
+#+title: daily-2024-03-15
+#+filetags: :daily:
+* Friday, March 15, 2024
+
+** Standup Notes
+ - read receipts
+   - main thing i've been working on
+   - behavior all working well
+   - blocked by Chameleon updates from design
+   - only implementation detail left is massaging these stupid types
+   - going to get a hack together for it and ask that it get torn apart in code review
+ - badges
+   - been investigating the actual components involved a bit
+   - got some Figma help from Jess
+   - just need to get past read receipts to have some time to implemenet
+   - think i can have a PR up early Monday likely
+ - line items download
+   - created BE ticket for this, once that's done should be fast
+
+** Morning Brain Dump
+very first order of business is to understand the whole ecosystem of how GraphQL queries and fragments are working for communication containers [[id:92a936b6-19fb-434a-af88-cf0a5d96472b][communication-container-queries]]. once i have that parsed a bit and figured out i'm going to see how i can most performantly update my read receipts PR. [[id:01413422-3bec-450b-b825-5c8e547794e2][asana-ticket-read-receipts]]
+
+when that's done i'll still be waiting on the Chameleon UI updates from Jess.
+
+otherwise i'll have to start getting some boots on the ground with [[id:2a70738a-b91c-459d-b2a8-8a1bf19ca637][asana-ticket-badges]] but i'm honestly pretty excited about that since it'll be my first foray into really adding significant UI.
+
+keep in mind all day, being senior means having intuition and doing the research into best practices around design of these things.
+
+otherwise i'll check Asana but i think the main thing is i'm blocked on [[id:ffe52a55-03ec-4a06-aaf0-b040a6b33a61][asana-ticket-order-line-download-btn]].

@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       39eeec9b-88be-4850-8f06-5495c82db307
+:END:
+#+title: acronyms
+* Acronyms
+
+** sfcc = Salesforce Commerce Cloud
+** cms = content management system
+** crm = customer relationship management
+*** [[id:2ecf97c6-f013-41bc-bc93-c81f675e5382][django-admin]]
+** sk = shopkeep
+** edi = electronic data interchange
+*** standard by which two companies exchange information about an order
+** isa = interchange control header....whut
+** cvrli = canal variant request line item

@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       13d689c2-16e0-42df-9a24-76f4e5cd0442
+:END:
+#+title: daily-2024-04-16
+#+filetags: :daily:
+* Daily - Tuesday, April 16, 2024
+
+** EOD Brain Dump
+
+** Surya Country Picker Discussion
+ - need need need storybook files for CountryPickerModal
+
+** Standup Notes
+ - country picker
+   - talking with Surya a bit after standup to figure out next steps on our tickets
+ - product search
+   - talked with Kimia yesterday
+   - been gathering notes on what fields are used in search and which can be removed
+   - going to send her a rundown of my thoughts after standup
+ - testim research
+   - been watching some videos on that today
+ - commissions discussion today
+
+** Country Picker
+curious what's unblocked now that this is finished. looks like one [[https://app.asana.com/0/1206724427991868/1206798315795699][generalized asana ticket]] about overriding shipping locations. Shopify has their own shipping location settings but now need to make it so we can override that info.
+
+** Simran Discussion
+my main point of confusion is around her use of ~useRef~ over ~useState~ and her direct use of the ~.mutate()~ method on the GraphQL client instead of exporting a ~useMutationWithErrorHandling~ invocation. there's a chance she just doesn't know about those things (only hint at this was the mention that "other files had 'async' in them") which is totally fine and would be a great chance to explain! but if there's a specific reason then i'm curious to learn what it is.
+
+** Morning Brain Dump
+first order of business is figuring out those fields for Kimia. had a rough start to it yesterday as all of them seem to be referenced but i'm sure i can figure something out.
+
+after that want to start doing some good research on [[id:0431ad8e-2244-45ab-a78a-316b2ec9cc56][testim]].
+
+i should respond to Simran. done.

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       6cf5ede9-9a0b-41f5-a226-569a9ada3c1e
+:END:
+#+title: supplier
+* Supplier
+
+a supplier is a brand that /creates products/

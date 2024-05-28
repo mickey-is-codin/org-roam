@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       976ac09c-6e0a-4211-abe2-b67f67e1f961
+:END:
+#+title: longterm-todo
+* Longterm TODO
+
+** DONE look into graphql query syntax
+** slackbot for PR description template
+** VSCode project run options
+** DONE setup Donut
+** chrome profiles for SUPs and SKs
+** fragment over-fetching
+** merge conflicts that appear on every type change
+** feature flags
+** A/B testing
+** functions with pre-applied arguments based on supplier vs shopkeep
+** add ngrok urls into local config
+** remove message height calculation
+** add caching library to avoid custom cache implementations
+** undo toast implementation
+** feature flag big enum or string union
+** global table column
+** handle ~| null~ appearing everywhere
+** adding field to query causes so many downstream issues
+** bot to comment on a ticket when a FE branch is merged
+** Dockerfile to run FE + BE + services
+** settings abstraction for radio group
+** feature flags by branch
+** query params parsing function

@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       bf1b67ec-31af-4df6-b695-f6f8fc714fd7
+:END:
+#+title: daily-2024-04-24
+#+filetags: :daily:
+* Daily - Wednesday, April 24, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+new resolvers can't go in until we confirm removal of wishlist buttons with product.
+
+E2E tests should be good to go kind of whenever.
+
+archive a supplier should be ready after Simran's changes.
+
+Chris unblocked me on the settings ticket.

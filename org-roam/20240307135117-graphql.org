@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       cc29e43c-b552-42d3-9141-937908fc984f
+:END:
+#+title: graphql
+* GraphQL
+
+[[https://graphql.org/learn/queries/][GraphQL queries and mutations docs]]
+
+** Bits and Bobs
+the nature of fields in GQL queries makes it kind of hard to not overfetch just because of how easy fetching is. for example if i have to display a table of items, i should have 2 queries: one to show minimal information about each object so that the table can display all of them, and one to get details of an individual object once it has been clicked. GQL can sometimes make it easy when fetching to add fields to the table fetch and not the details fetch.
+** Queries
+*** Fields
+ - ~fields~ in GraphQL queries result in objects returned that have those fields on them
+ - requests have the same shape as their results
+ - the fact that ~fields~ can refer to /objects/ as well as primitives like strings is a really powerful abstraction
+   - it means that you can declaratively ask for things that are related but don't necessarily live together
+   - this is because GraphQL can traverse related objects and /their/ ~fields~
+   - performance benefit: traversal occurs instead of multiple requests to the backend
+ - we can know what a ~field~ sends back based on the schema
+*** Arguments
+ - ~arguments~ can be passed to ~fields~
+ - in a REST API you can only pass "global" URL params as arguments to a GET request
+ - with GraphQL you can include ~arguments~ for /every/ ~field~ that you fetch
+ - imagine making multiple specific GET requests all at once
+*** Aliases
+ - scenario: you want to query the same ~field~ twice, each time with different ~arguments~
+ - to accomplish this you have to ~alias~ the two argument-bound queries to a new field name
+*** Fragments
+ - what if we have multiple queries going on at once to get similar data?
+   - we would have to repeat the fields at least once, right?
+   - you're so stupid!
+ - you can construct a ~fragment~ which is a set of fields that you'll use in multiple queries
+ - you then spread those fields into a query when you want those fields in a query
+ - ~fragments~ can also include variables declared in the query
+*** Operation Name
+ - operation type is either ~query~, ~mutation~, or ~subscription~
+ - good to include them to make things less ambiguous (i think default is to query)
+ - shorthand syntax doesn't let you provide a query name or variables
+*** Variables
+ - prefixed with a ~$~
+ - must be declared in the query definition
+ - can then be passed to fields
+ - can be made required with the use of a ~!~
+ - can be defaulted
+*** Directives
+ - prefixed with a ~@~
+ - would be useful to see a list of these
+ - they include things like ~@include(if: Boolean)~ and ~@skip(if: Boolean)~
+ - can be attached to a ~field~ or ~fragment~ inclusion within a query
+ - server implementations can define their own directives
+
+** Mutations
+*** Inline Fragments

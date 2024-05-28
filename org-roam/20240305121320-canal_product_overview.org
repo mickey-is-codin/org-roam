@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       1dff9658-146b-4db4-a1c6-b6caf2f5ec31
+:END:
+#+title: canal-product-overview
+* Canal Product Overview
+
+Canal is a network that allows [[id:6cf5ede9-9a0b-41f5-a226-569a9ada3c1e][supplier]]s and [[id:1e98e5ad-cfe6-48df-9608-476c98f3a0cd][storefront]]s to enter into a [[id:24f23db7-db92-4308-b077-a93ba729bd94][supplier-storefront-partnership]].
+
+a sentence that makes sense: "a customer purchases a supplier's item from the storefront."

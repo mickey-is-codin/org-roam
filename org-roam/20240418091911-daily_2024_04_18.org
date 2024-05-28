@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       29ef29e7-c21d-41a1-bbb1-0b559b4b34ac
+:END:
+#+title: daily-2024-04-18
+#+filetags: :daily:
+* Daily - Thursday, April 18, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+ - testim setup
+   - created an actual test
+   - setup a GitHub action
+   - need to figure out accounts + billing
+ - archive a SUP
+   - PR by EOD
+ - think product search resolvers are ready
+   - will move over to those
+ - change countries ship to
+   - finished locally but no mutation to set that
+   - accusation: found out that Wally added ~countries.json~
+
+** Morning Brain Dump
+made good progress on Testim.
+
+next Testim steps:
+ - split tests into local and develop
+ - figure out billing and account usage
+ - write documentation for adding a test
+
+unblocked on archiving a SUP.
+
+should possibly be unblocked on country selection via the json useCountries hook.

@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       3f393e55-3b24-4c53-82e1-ad16930d69ee
+:END:
+#+title: db-clone-process
+* DB Clone Process
+
+ - make sure redis is running: ~USE_LOCAL_REDIS_CACHE=true && docker run -p 6379:6379 -d redis~
+ - backend dev sends a ~blah.dump~ file
+ - copy that file into ~backend-canal/.pgclone/local/default/shared-dev/blah.dump~
+ - run restore command: ~python manage.py pgclone restore local/default/shared-dev/blah.dump~
+
+** Simon Commands
+after running ~python manage.py shell_plus~
+#+begin_src python
+ShopifyShop.objects.get(name='Simon SUP 6').integration_settings.update(pk_of_shopify_app='82c1f4daecff18ad202ac4455fe5dfcf')
+#+end_src
+
+#+begin_src python
+IntegrationSetting.objects.filter(pk_of_shopify_app='775e77fb5e393ad1326dc187d499d91f').update(
+    pk_of_shopify_app='82c1f4daecff18ad202ac4455fe5dfcf'
+)
+IntegrationSetting.objects.filter(pk_of_shopify_app='6c3309b414b8d29c4da66f2109b41892').update(
+    pk_of_shopify_app='cf5d3aa955e1f14f0599fccd50b6e54a'
+)
+#+end_src
+
+** Stuff Isn't Working (Need to Revert to Dump)
+ - make sure redis is running: ~USE_LOCAL_REDIS_CACHE=true && docker run -p 6379:6379 -d redis~
+ - run restore command: ~python manage.py pgclone restore local/default/shared-dev/blah.dump~
+
+** DB Dump
+ - [[https://github.com/shopcanal/canal?tab=readme-ov-file#dumping-local-dbf][README instructions]]

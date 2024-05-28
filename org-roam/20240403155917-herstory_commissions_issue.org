@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       e9c410cc-0880-486b-bd31-2e4bebd7b100
+:END:
+#+title: herstory-commissions-issue
+#+filetags: :asana-ticket:
+* HerStory Commissions Issue
+
+** Wednesday, April 3, 2024 Notes
+   - summary:
+     - 100% commission for herstory
+     - listings page for products showing 43% commission
+   - where does that 43% come from?
+     - is "desired commission" different than agreed commission?
+   - "desired commission" is specific to a brand for their partnerships
+     - their ideal commission when making partnerships
+   - investigating
+     - other brands not seeing this issue in the table
+     - tough to track because lots of partnerships result in the desired commission
+   - potentially helpful location: ~src/components/shopkeepapp/inventory/getStandardColumns.tsx~
+   - [[https://api.shopcanal.com/admin/web/shopifyproduct/756167a1-0c86-4300-829a-6b566576ce3e/change/?_changelist_filters=q%3DLuxury%2BFace%2BCream][link to product in CRM]]
+   - creating a proposal: ~CreateSkProposal~
+   - Toby thinks FE bug

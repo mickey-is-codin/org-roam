@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       f3d34911-0704-4818-9969-2865af99a84f
+:END:
+#+title: daily-2024-05-28
+#+filetags: :daily:
+* Daily - Tuesday, May 28, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - bulk proposals is fixed
+   - need to look into actual proposal creation
+ - inbox sent folder waiting on CT changes
+ - override shipping location
+   - think i need to get on this ASAP
+ - Testim
+   - have to get in touch with sales team for upgrade or something
+   - did that

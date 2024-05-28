@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       6194424b-54bf-4a98-8e01-f7b1ad2bca88
+:END:
+#+title: null-utility-types
+* Null Utility Types
+
+** Problem Statement
+the nature of GraphQL makes essentially every object in our codebase look like the following:
+
+#+begin_src javascript
+type Data = {
+  fieldOne: string | null;
+  fieldTwo: string | null;
+
+} | null;
+#+end_src

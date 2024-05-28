@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       56986064-113a-45ca-9127-3b6c8fbd887f
+:END:
+#+title: daily-2024-05-08
+#+filetags: :daily:
+* Daily - Wednesday, May 8, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+ - inbox design update
+ - download product listings PR up
+ - bulk proposals starting
+
+** Morning Brain Dump
+ - inbox ui update copy that Wally suggested
+ - product listing csv export (hopefully fast)
+ - bulk proposals

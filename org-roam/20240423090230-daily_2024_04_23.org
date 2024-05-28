@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       e65f16f8-6deb-4689-9452-9dc723b17e8e
+:END:
+#+title: daily-2024-04-23
+#+filetags: :daily:
+* Daily - Tuesday, April 23, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+still finishing up product discover search. want to have a PR up before stand-up at a minimum.
+
+until stand-up any interstitial time should go into making E2E tests more professional.
+
+when Simran gets done with the BE i can start on the archiving work.
+
+should get in touch with Surya about country picker mutation.
+
+Chris unblocked ticket for setting to dispatch order at net amount.

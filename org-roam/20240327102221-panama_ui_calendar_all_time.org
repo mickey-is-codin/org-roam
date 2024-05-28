@@ -1,0 +1,44 @@
+:PROPERTIES:
+:ID:       2c7b005b-84ac-448f-b294-3c599781d007
+:END:
+#+title: panama-ui-calendar-all-time
+#+filetags: :asana-ticket:
+* Panama UI Calendar Add All Time Option
+
+** Asana Link
+[[https://app.asana.com/0/1206638458613086/1206559232558003][ticket link]]
+
+** Loom Link
+[[][loom link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+*** DONE match selected text color
+*** DONE remove border on hover (lol)
+*** DONE QA session
+*** DONE remove borders from buttons
+*** DONE button color highlighting
+
+** QA Information
+ - [[https://canal-i8tcwm6mn-canal.vercel.app/login][deployment link]]
+ - sk user:
+   - username: cx+claire-sk-proposals.myshopify.com@shopcanal.com
+   - password: C#stExP@ssw0rd
+ - sup user:
+   - username: cx+chris-sup-proposals.myshopify.com@shopcanal.com
+   - password: C#stExP@ssw0rd
+ - workflow:
+   - main location i know of was ~/insights~
+
+** Wednesday, March 27, 2024 Notes
+ - example of where the calendar is used:
+   - ~/shopkeep/insights~
+ - what currently exists:
+   - no actual range selection, i believe
+ - summary of behavior
+   - to left of actual range picker calendar show list of amounts of time
+   - today sets date range to just today
+   - 30 days sets date range to 30 days ago -> today
+   - just so 60, 90, last year
+   - want to add an All time option as well

@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       7b0caa91-b7f2-40b6-9468-b66ff85ceb0c
+:END:
+#+title: daily-2024-03-27
+#+filetags: :daily:
+* Daily - Wednesday, March 27, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+ - read receipts
+   - Chris got a fix for this!
+ - issue with CSV downloading
+   - turned out just to be a ghost mode issue
+   - which is very deceiving!
+ - badges
+   - finished everything from QA except for modal state ystrdy
+   - today added local storage logic
+ - feature flags
+   - in PR
+   - going to make badges PR once this gets merged
+ - calendar add date range options
+   - have this finished up locally
+   - can get a PR right after standup
+ - Simran got in contact about profile uninstalled state
+   - finally going to get to this after standup
+
+** Morning Brain Dump
+going to add local storage logic for homepage badges banner. but Conner and Kimia brought up the idea that modal state could be something managed at an application level by the backend and i quite like that idea.
+
+my feature flags PR is up and in my opinion that should probably go in /before/ the badges changes if possible. that will require a rebase and additional commit to my badges PR.
+
+sort of running out of tasks on Asana. that means i could either voice that or start turning my attention to codebase-level things. the latter of course excites me a bit more.
+
+i think Chris fully took care of the previews issue for read receipts. however we still have the issue that previews on the left won't show read receipts --- wait scratch that, i think they will.
+
+started to read about Bantu peoples yesterday during slow periods lol.
+
+want to go through Molly's travel plans for the summer just to figure out eyes on everything. also should add CJs bachelor party to my calendar. [[id:1f7b896e-6c82-47d3-8a10-29d49b960e21][summer-2024-travel]]
+
+might take a crack at the panama UI calendar component update that's in my sprint. [[id:2c7b005b-84ac-448f-b294-3c599781d007][panama-ui-calendar-all-time]]
+
+should also start thinking about plans for Molly's birthday. where to go, what to do on the day, etc.
+
+also going to look into expensing Cursor pro account. i have GPT with Clay's API key but still need to upgrade if i want to use tab completion, etc.
+
+the time has come to consider april fools

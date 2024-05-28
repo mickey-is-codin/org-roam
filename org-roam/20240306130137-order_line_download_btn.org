@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       ffe52a55-03ec-4a06-aaf0-b040a6b33a61
+:END:
+#+title: order-line-download-btn
+#+filetags: :asana-ticket:
+* Order Line Download Button
+
+[[https://app.asana.com/0/1199696369468912/1206638763298778][ticket link]]
+
+[[https://www.loom.com/share/a6c5f054da9a4cd79b54afe88e0495af][loom link]]
+
+** DONE BE ticket to convert line items REST endpoint to GQL mutation (assign to Garrett)
+
+** Summary
+looks like the goal is to expand the functionality of the button on the orders page that downloads a CSV of orders. instead of just automatically downloading when that button is pressed there should be a dropdown that allows CSV download but also a button that downloads /line items/.
+
+** Backend Ticket Details
+ - analogous GQL mutation: ~generateSkOrderTliSummaryCsv~
+ - current REST endpoint: ~/platform/csv/download_shopkeep_line_items/~
+ - [[https://app.asana.com/0/1206724427991868/1206841830339133][asana link]]
+
+** Simon Discussion Around Download
+ - S3 errors on trying to download
+ - turns out the mutation ~generateSkOrderTliSummaryCsv~ uses S3
+ - i don't have S3 creds
+ - BUT there's also a REST endpoint:
+   - ~/platform/csv/download_shopkeep_line_items/~
+ - Simon thinks this REST endpoint should be used for the download
+ - looks like as a prototype that works
+ - but will wait to see if Chris has suggestions for syncing those
+
+** Wednesday, March 20, 2024 Notes
+Kimia got the BE ticket merged for this. just need to figure out the name of the mutation then hopefully very very much mimic the existing one.
+
+** Wednesday, March 13, 2024 Notes
+now that i've got [[id:03a8d920-9408-4838-b69b-c5ccc70fde11][aws-s3-credentials]] from Abhi, i'm able to test out order downloads as a CSV. but at this point i'm still blocked by Chris being able to get the GQL analogy endpoint up. once that's there i should be set to go.
+
+** Tuesday, March 12, 2024 Notes
+Toby seems pretty adamant that i figure out a way to do this that deprecates the REST endpoint. RIP that means i need to get S3 access so i can download the file. hopefully Abhi and Clay get in touch at some point today.
+
+Chris is picking up the backend of this to replace the REST endpoint for line items download with a GQL one.
+
+** Monday, March 11, 2024 Notes
+i'm leaning towards using an ~ActionList~ component for this. i'm not sure how anchoring will work for that but it seems to loosely follow the Pattern outlined in the Figma doc. though i'll admit i couldn't make much sense of the point of that pattern. seemed like a description more of how the ~Dropdown~ component was built than for how to use it.
+
+ok after digging into ~ActionList~ component it seems like exactly what i'll need. trying to get the intricacies of that figured out now with the ~activator~ prop.
+
+looks like ~actionItems~ values can accept a ~children~ prop that lets you render React components instead of just ~Text~ that could be useful in case we need to leave in the tooltips.
+
+potentially important question: what is "line items"? or at least, how are line items different than orders? i know that the ~myOrders~ request contains line items but i'm not necessarily sure what that entails.
+
+potentially very dumb answer: line items are individual items within an order fkn duh. so an order with 2 items mixed with an order with 3 items has 5 line items.
+
+when i try to download line items as a CSV i'm getting an error that credentials can't be located. i'm definitely logged into the app so i imagine that would be an issue with other things. since this feature includes email functionality i imagine it has something to do with that.
+
+ok final state of things. i'm going to get in touch with the PMs on the ticket. there is in fact an existing REST endpoint that shoul dbe doing what i'm looking for (~/platform/csv/download_shopkeep_line_items/~). but it isn't equipped to handle filtering like the GraphQL existing mutation. i'm going to get in touch to ask the best plan of attack to either make a new mutation endpoint for this or otherwise alter the REST endpoint in such a way that those filters can be applied.
+
+** Friday, March 8, 2024 Notes
+think i should be using the ~Dropdown~ component from [[id:99372823-92ab-4a97-8ee1-921a0c1297ad][panama-ui]]. but running into some weirdness around the concept of a ~Dropdown~'s behavior being pretty different from an action list. i think perhaps doing something with the ~ActionList~ component might make more sense? just because we're not /selecting something/ with the ~Dropdown~ but performing an action when it's clicked. otherwise we would have to alter the ~DropdownOption~ type to further extend the ~ActionItem~ type so that it accepts an ~onClick~ argument. which...feels like it could be messy.
+
+considering something like a ~Dropdown~ component used purely to open an ~ActionList~ component. the ~Dropdown~ component has the proper view, i wouldn't know what to use to achieve the down carat otherwise.

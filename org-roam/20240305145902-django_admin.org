@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       2ecf97c6-f013-41bc-bc93-c81f675e5382
+:END:
+#+title: django-admin
+* Django Admin
+
+django admin is the CRM tool that Canal uses.
+
+CRM = Customer Relationship Management. the goal of a CRM is to allow a business to handle customer data in a way that fixes issues or resets things appropriately for them without having to sit down with a customer or imeratively fix something directly in the DB.
+
+CMS = Content Management System. these acronyms can be a bit confusing because both seem to be used to refer to django admin.
+
+any time an engineer is [[id:4797cb9f-b54d-4873-b48c-575aa7bb756e][on-call]] it seems like they should be referring to the [[https://www.notion.so/shopcanal/Runbook-1554fa062ef74f69a0a1f0df74323088][runbook]] to determine how to fix a given issue.
+
+** local link: http://localhost:8000/admin
+*** user: clay+canalshopkeep@shopcanal.com
+*** pw: cmsprodP@ssword1
+** develop link: https://api-develop.shopcanal.com/admin
+*** user: clay+canalshopkeep@shopcanal.com
+*** pw: cmsprodP@ssword1
+** prod link: https://api.shopcanal.com/admin

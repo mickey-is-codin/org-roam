@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       2a40665f-f623-4a32-9f2c-ffd447f01fd4
+:END:
+#+title: daily-2024-03-19
+#+filetags: :daily:
+* Daily - Tuesday, March 19, 2024
+
+** EOD Brain Dump
+ - PR updated for badges
+ - need to fix read receipts first thing tomorrow morning
+   - potentially after a revert
+
+** Standup Notes
+ - read receipts
+   - merged
+ - badges
+   - everything finished except the reasoning popup
+   - Simran helpful for getting that mutation up (thank you!)
+ - trial plan users single message
+   - after Kimia gets BE up
+ - finally take a look at brand list view
+ - line item csv order download (thank you Kimia!)
+
+** Morning Brain Dump
+*** Read Receipts
+need to check on that PR and merge if things are approved. otherwise continue PR approval process.
+
+*** Badges
+need to add logos on pages they should appear. first hurdle though will be the mutation for updating shopify shops.
+
+*** Rate Limiting
+Simon added me as a collaborator on a ticket for this. probably because of my complaints about Slack showing errors in the server.
+
+*** Order Line Items CSV Download
+Kimia seems to have unblocked this so i can get something together quickly for it.
+
+*** Single Message for Trial Plan Users
+should be able to start this but might be blocked by BE

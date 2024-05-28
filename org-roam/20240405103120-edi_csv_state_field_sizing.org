@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       e5de2606-483e-4d40-9026-fe757dfeb07d
+:END:
+#+title: edi-csv-state-field-sizing
+#+filetags: :bug:
+*  EDI CSV SUP Onbaording State Field Sizing
+
+** Priority - P2
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1207005221112791][ticket link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+
+** Notes
+ - state field isn't the same height as the other address fields

@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       e3604042-ee36-4525-b8e2-53a5c29fd2aa
+:END:
+#+title: product-search-timeout
+#+filetags: :asana-ticket:
+* Product Search Timeout
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1206983952199797][ticket link]]
+
+** Loom Link
+[[][loom link]]
+
+** Wednesday, April 3, 2024 Notes
+ - any chance it could have something to do with...latency? location?
+
+*** Reproduction
+ - searching the phrase =woman's contemporary apparel=
+ - url: ~/shopkeep/discover/products?search=...~
+ - GQL query: ~GetDiscoverableProductsProductLevel~

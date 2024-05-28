@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       082a0da5-4767-4d9d-b1aa-84680371ea84
+:END:
+#+title: devops
+* DevOps
+
+can't remember the name of the channel that Abhi exists in...
+
+~opszero-shopcanal~

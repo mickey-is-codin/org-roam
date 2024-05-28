@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       96815487-11e8-4f8a-809d-7ecde7b28d6c
+:END:
+#+title: commission-calculation
+* Commission Calculation
+
+** Tuesday, April 16, 2024 Notes
+*** Team Commissions Discussion
+ - goals
+   - what's currently possible on the BE
+   - how the FE matches that logic
+ - a lot of pre-approved code will be going away with partnerships
+   - from pre-approvals to suppliers creating and approving proposals
+ - outcome
+   - remove default on that modal
+   - get people up to speed on how partnerships will work
+   - still need to move commission calculation to the backen

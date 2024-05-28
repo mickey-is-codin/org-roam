@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       602fa2a4-bb33-4482-998d-12fe0f1238c1
+:END:
+#+title: daily-2024-03-08
+#+filetags: :daily:
+* Daily - Friday, March 8, 2024
+
+** Morning Brain Dump
+yesterday EOD Simon sent me a dump file that i can restore with data to test my code for [[id:0bebcb50-695c-4f21-8a05-de435d034272][asana-ticket-tracking-number-supplier-order-task]]. he's OOO today so i'll have to make do without him. he recommended creating a dump of my current database first. honestly i think that's pretty unnecessary because i have a copy of it before i messed around with it right when Kimia sent it to me. so this morning i'll restore that and log in with the user he gave me. first things first will probably have to pull everything but if i can restore the DB before having to do that that would be a win.
+
+otherwise main things i have to get together are making sure the FE team reviews my first PR and unblocks that ticket. hopefully at standup i can make it clear that i'm on schedule at least locally....

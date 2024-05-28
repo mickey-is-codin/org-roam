@@ -1,0 +1,68 @@
+:PROPERTIES:
+:ID:       9c5d7f41-be31-4928-8532-ef371bcbef9d
+:END:
+#+title: daily-2024-04-15
+#+filetags: :daily:
+* Daily - Monday, April 15, 2024
+
+** EOD Brain Dump
+ - need to find more info on these fields for Kimia
+ - discussion tomorrow on commission calculation
+ - didn't look into E2E tests
+
+** TestIM Notes
+we're using this framework for E2E testing with the app. goal is for these to run on git pushes. perhaps a GitHub actions? should poll the team to figure out the exact scope for this.
+
+** Kimia Context for Product Search Query
+ - ~useGetDiscoverableProducts~
+ - whether we use categories is feature flagged
+ - feature flag can pretty much be turned off, it's default on everywhere
+ - "what i want to know"
+   - figured out what's actually used and what's not
+   - SKDiscoverableProduct fragment
+   - of all of these fields what's being used and what's not being used
+   - in particular, is it used in the discover search
+   - basically just come up with the minimal data to display the table
+   - or not even that but just any fields that are straight up not used
+ - 3 categories
+   - totally used and in the table, we need it for results
+   - need but don't need it until after search results
+   - not being used at all
+
+** Sprint Planning Notes
+ - blocked but high priority
+   - supplier setting
+   - bulk proposals
+ - can start
+   - new resolver for sped upproduct discover search
+ - commissions fixes
+   - should put all into one ticket i think
+ - end-to-end tests
+   - work on it if nothing else in the way
+
+** Standup Notes
+ - country picker
+   - seems like priority is growing
+   - added search to PR
+   - PR review and merge this?
+   - next backend steps? Surya?
+ - pre-populate proposal message
+   - quick PR up
+ - lots of blocked tickets
+   - is there anything that i can prioritize?
+ - E2E tests
+ - use dimensions hook fix
+
+** Asana Notes
+ - pre-populate proposal message
+
+** Morning Brain Dump
+i should check in on what's going on with the referral commission situation with Simran and Wally.
+
+we have sprint kickoff today so should make sure my board looks ok.
+
+country picker can probably get merged today. looks like the title got updated on this to emphasize priority. kind of odd, didn't get any pressure on it at all when i was working on it but i'm sure it's a low stakes thing. but in general i'll try to work on the subsequent tasks a bit quicker. ...also i was on-call for almost the entirety of the ticket's lifespan and it sat unread in PR for like a week and a half.
+
+still need to send that recording to Clay once Simon finishes it.
+
+still want to review org-roam info manual page.

@@ -1,0 +1,40 @@
+:PROPERTIES:
+:ID:       2e40ed66-412d-499b-9515-2ac0e85d28f4
+:END:
+#+title: expose-customer-email
+#+filetags: :asana-ticket:
+* Expose Customer Email
+
+[[https://app.asana.com/0/1199696369468912/1206684989402018][ticket link]]
+
+** DONE dummy email logic
+** DONE ~emailPassthrough~ logic
+
+** Alex Discussion Notes
+ - ticket ended up expanding a bit
+ - touched on the difference between a default order and a connected order
+ - the default order includes customer email
+ - BUT the connected orders don't include customer objects
+ - this has to be updated on the backend so i'm blocked
+ - [X] need to include a comment on the ticket so PMs know what's going on there
+ - [X] need to send a message to the backend channel asking to update the ~myOrder~ resolver
+
+** Message to Backend
+hey yinz, i'm taking a look at [link] this ticket to add the customer email to orders and it looks like the ~myOrder~ resolver might need to be updated. the overall order itself includes the ~customer~ object and ~email~ nested within that but the connected orders don't seem to include ~customer~ objects. is there a chance that anyone could get a branch up to update that resolver so that i can test what i've got written locally for the FE?
+
+** Update Post-PR
+PR is submitted but looks like there are conflicts. i'll try to fix with a rebase.
+
+** Thursday, March 7, 2024
+still having some trouble reproducing. i think that the orders that Conner populated for my account are only /supplier/ orders so email still won't show up. this might be worth bringing up in case i should add customer email to those as well. either way i can't see what i added until this account has storefront orders. maybe that's because my account is a supplier?
+
+looks like after getting local testing setup things are looking good. Wallace helped give me some info on using the ~Stack~ Panama UI component.
+
+** Friday, March 8, 2024
+tried to rebase this and running into errors when i try to generate types with ~yarn codegen~. Simon's first branch was merged to develop, but not his second. which is making me confused, i'm pretty sure my types match up with his first branch's changes.
+
+let's see if running ~yarn codegen~ with develop for FE and BE works....yes it works fine. one thing that's a bit odd is that ~graphql.ts~ shows changes from develop after running ~codegen~. in my head those should always be in sync, no?
+
+and now for absolutely no reason ~codegen~ has worked on my branch. i'll add that as a commit and see if it helps the rebase. but when i run ~codegen~ /during the rebase/ when conflicts are encountered it fails. which...this sort of makes sense because it's running codegen after a single commit which isn't the final proper state... so i'll just resolve the gql file conflict manually for now.
+
+ok everything seems to be working fine now after a rebase. seems like the sort of main takeaway from all this is run ~codegen~ early and often!

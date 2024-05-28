@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       38aed0a8-41cd-4c32-9d44-8c6fc18e948f
+:END:
+#+title: daily-2024-03-20
+#+filetags: :daily:
+* Daily - Wednesday, March 20, 2024
+
+** EOD Brain Dump
+Garrett wants me to detour and work on [[id:49bf8be6-2be1-4000-a0e5-e2a1a25918dd][asana-ticket-fulfillment-csv-upload]]
+
+** Standup Notes
+ - read receipts PR after QA session is up
+ - badges PR is up
+ - order line items CSV download PR is up
+ - single message for trial users
+   - going to work on this immediately after standup
+ - brand list view
+   - finally going to start work on this
+
+** Morning Brain Dump
+read receipt fixes need to get in. hopefully the main logical one is just an issue of adding things to the supplier/storefront side. big thing will be reproducing that locally to see. then otherwise i think it'll be just spacing stuff.
+
+badges PR in last night and updated. happy with the performance but will have to address PR review.
+
+today needs to be the day we implement limiting messages to one per trial user. i imagine that will be mostly finished since the BE worked on it already.
+
+should be able to get order line items download done too.
+
+brand list view needs to get started as well.

@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       1421b4c0-d2ea-45e4-b206-11131c1f072e
+:END:
+#+title: daily-2024-04-10
+#+filetags: :daily:
+* Daily - Wednesday, April 10, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+ - country picker on hold
+ - on-call tickets

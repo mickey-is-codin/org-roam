@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       644796df-c06e-402e-af74-d8800c5b37c1
+:END:
+#+title: isa-id-field-preview-text
+#+filetags: :bug:
+* EDI Onboarding ISA ID Field Preview Text
+
+** Priority - P2
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1207005334545510][ticket link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+
+** Notes
+ - "Add your EDI Information"
+ - small copy change

@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       49bf8be6-2be1-4000-a0e5-e2a1a25918dd
+:END:
+#+title: fulfillment-csv-upload
+#+filetags: :asana-ticket:
+* Enable Fulfillment CSV Upload for SFCC
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1206815229551855/f][ticket link]]
+
+** DONE make fix PR
+** DONE merge fix PR
+
+** Thursday, March 21, 2024 Notes
+ - initial ticket notes
+   - shouldn't need any backend help
+   - goal is to enable the "fulfillments via CSV" feature
+   - only for brands with integration type: SFCC
+ - fulfillments via CSV feature
+   - ~pages/<storetype>/fulfillments/index.tsx~
+   - ~useImportTracking~
+ - data for integration type
+   - ~remotePlatform~ field on a shop
+   - ~WebShopifyShopRemotePlatformChoices.INTEGRATION_SETTING_TYPE_SFCC~
+ - terms
+   - wallace pointed me towards the ~useImportTracking~ modal
+   - 1) is that the right modal because the wording mentions "orders"?
+   - 2) where should a button to show this modal...go?

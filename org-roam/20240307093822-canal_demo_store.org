@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       39f8faab-e7d9-41de-bed9-aa410649c05d
+:END:
+#+title: canal-demo-store
+* Canal Demo Store
+
+** Links
+ - [[https://canal-demo.myshopify.com/][link to demo store]]
+ - [[https://www.notion.so/shopcanal/Demo-Environment-b98358d59b1d4929ac830e9ef15b9a79][link to info Notion page on demo store]]
+
+** Login Creds
+ - username: demo@shopcanal.com
+ - pw: canal1
+
+** Poke Around Notes

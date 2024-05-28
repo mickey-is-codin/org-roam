@@ -1,0 +1,89 @@
+:PROPERTIES:
+:ID:       7702b8ac-83ca-44aa-87be-3c42ed6ca669
+:END:
+#+title: bulk-proposals
+#+filetags: :asana-ticket:
+* Bulk proposals
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1206324342750276/f][ticket link]]
+
+** Tasks
+*** TODO complete ticket
+
+** Testing Checklist
+ - brand selection from list view
+ - adding sections
+ - copy in all sections
+ - global commission editing
+   - recommended values
+   - alter full table
+ - brands table
+   - bulk selection
+   - removing brand(s) via bulk action
+   - removing brand via icon
+   - adding brand(s)
+   - editing commission individually
+   - bulk editing commission
+ - modals
+   - warning when any commission is below recommended
+   - add message
+   - errors on proposal creation
+   - cancel/back modal
+   - non-dynamic shipping warning modal
+ - review created proposals
+   - view proposals from SUP?
+
+** Tuesday, May 14, 2024 Notes
+ - single supplier intention vs multiple suppliers
+   - Garrett has brought this up with design
+   - Katherine wants a feature flag for bulk proposals
+     - this is to avoid large bulk proposals
+ - Garrett conversation notes
+   -
+ - table difficulty
+   - list of tables
+     - brand list view itself ~useGetDiscoverableShops~
+       - paginated list of discoverable shops
+     - table of brands targeted by the proposal ~useGetLazyPaginatedBrands~
+       - paginated list of shops based on selected IDs
+     - table of brands that can be added in modal ~useGetAddableBrands~
+       - paginated list of shops not already in the proposal
+     - table of brands selected to be added in modal (subset selected from ~useGetAddableBrands~)
+       - unpaginated list of shops selected to add
+   - need to figure out /exactly/ how to form the ~useGetAddableBrands~ query
+
+** Monday, May 13, 2024 Notes
+ - relationship terms (shipping) requires single supplier, how do we deal with that?
+
+** Wednesday, May 8, 2024 Notes
+ - summary
+   - in "brands to explore" page SK can select lots of brands and make a proposal for all
+   - specifically conducive to list view
+   - current list view isn't even selectable
+   - actual proposal page should match existing one
+   - but at top of page is "customize per brand"
+   - this adds input on each brand
+   - button to add brands to proposal
+   - multi-select allows editing multiple commissions at once
+   - might be a new message modal that allows multiple or adjust current one
+   - redirect to inbox after
+ - BE notes
+   - [[https://github.com/shopcanal/canal/pull/8548][link to PR]]
+   - pretty sure it just adds mutation ~CreateMultiSupplierBulkProposalMutation~
+ - implementation notes
+   - should the bulk proposal form that appears on "Create proposals" be a page or modal?
+   - ~CreateProposalPage~ is used to render basically a full page
+   - seems so weird to me that this isn't a route
+   - ~ALL_SECTIONS~ constant for proposal sections
+     - seems like we're altering the definition of that
+     - might have to have something like ~ALL_SINGLE_BRAND_SECTIONS~ and ~ALL_MULTIPLE...~
+ - questions:
+   - new "your commission" section in proposal creation new?
+   - remove "products" section from proposal creation?
+ - Garrett discussion:
+   - commission should always be a section with Products
+   - commission should always be a section with Brands
+   - after my changes on this branch: COMBINE COMMISSION INTO PRODUCTS/BRANDS SECTIONS
+   - should be created a new version of ~CreateProposalPage~
+   - something like ~CreateMultiBrandProposalPage~

@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       b91af8f2-3443-4772-9ed9-12ad50248131
+:END:
+#+title: daily-2024-04-03
+#+filetags: :daily:
+* Daily - Wednesday, April 3, 2024
+
+** EOD Brain Dump
+ - bug fix that came up from on call
+   - PR is up
+   - need to reproduce
+ - country picker coming along
+   - want to get a prototype up for this soon
+ - Garrett assigned me a new ticket for brand to change commission
+ - talks with Chris about fixing read receipts
+
+** Standup Notes
+ - been working on foundations for country picker
+   - plan is to work on that in the background while on-call
+ - updated storybook stories
+   - sry, didn't know the protocol for updating those
+   - will make sure in the future i test that locally
+ - read receipts
+   - finally reproduced the issue Jess was seeing
+   - it's weird with the data model
+   - want to talk to a BE engineer about best way to ameliorate
+ - on-call starting today
+
+** Morning Brain Dump
+ - first order of business read receipts
+ - on call starts today
+ - working on country picker
+ - oh and need to update stories for panama components
+   - Logo
+   - Calendar

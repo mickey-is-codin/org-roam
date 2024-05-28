@@ -1,0 +1,49 @@
+:PROPERTIES:
+:ID:       b4d5cc12-0fc6-4c31-ac89-7b41f5cf312e
+:END:
+#+title: daily-2024-03-26
+#+filetags: :daily:
+* Daily - Tuesday, March 26, 2024
+
+** EOD Brain Dump
+ - read receipts seems to have gotten fixed by Chris
+   - but for that still need to add read receipts?
+ - badges stuff all finished except dismissing homepage banner
+   - waiting on Garrett for that
+ - feature flags PR is up
+
+** Conner Chat
+ - what makes you tick outside of work?
+ - how do you like how you're utilized at Canal?
+ - do you write code in your free time?
+ - do you picture yourself in SF longterm?
+ - what's your favorite video game / album / book?
+
+** Standup Notes
+ - read receipts
+   - spent some time identifying P2 where sample requests behave weird in container
+   - found a way to make them behave the same as proposals
+   - but it seems like it would need a BE change
+   - would also probably get read receipts in with that
+ - badges
+   - QA session went very well
+   - odd behavior where no mutations were working only on develop
+   - need to make a banner go away permanently, do we have a pattern for that?
+   - working on other easy fixes today
+   - finished with almost all of them
+ - some SFCC supplier PRs merged yesterday
+ - feature flags
+   - Conner made a new file and i want to support that
+
+** Morning Brain Dump
+gonna write a fun goodreads review for Jonathan Strange and Mr. Norrell first thing. also at some point want to do some work on the statement of work for EZ-Leasing...but honestly could just do that after work.
+
+Chris commented in the warroom for the read receipt issues.
+
+read receipt issues:
+ - container no read receipt on sample requests
+ - container not showing previews for messages after requests/proposals
+
+badges fixes need to go in this morning
+
+want to work on feature flags at some point

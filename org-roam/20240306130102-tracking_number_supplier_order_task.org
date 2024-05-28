@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       0bebcb50-695c-4f21-8a05-de435d034272
+:END:
+#+title: tracking-number-supplier-order-task
+#+filetags: :asana-ticket:
+* Add Tracking Number to Supplier Order
+
+[[https://app.asana.com/0/1199696369468912/1205969713055176][ticket link]]
+
+** DONE add supplier support
+
+** Summary
+similar to [[id:2e40ed66-412d-499b-9515-2ac0e85d28f4][asana-ticket-expose-customer-email]] but we need to extend this further to include:
+ - carrier service used to ship the item
+ - the tracking number sent out by that carrier service
+ - the fulfillment date of the order
+
+** Thursday, March 7, 2024
+*** Initial Fact-finding
+ - it looks like ~fulfillmentDate~ isn't present on the model
+ - asking Simon about this
+ - Simon is going to try to get a branch up
+*** Bookkeeping
+ - updated the ticket to ask Molly if i can make ticket blocked
+ - mentioned that Simon is working on a PR
+*** Assumption
+ - ~trackingNumbers~ and ~trackingUrls~ are arrays
+ - i'm going to posit that both are paired by index
+
+** Friday, March 8, 2024
+*** Current Status
+ - Simon's dump works great
+ - able to see that my changes are working for flattening
+ - still need to fix the date formatter
+ - still need to center the Contact button

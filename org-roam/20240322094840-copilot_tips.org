@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       f4a78181-ec8d-49a6-955f-6bdb35cf0254
+:END:
+#+title: copilot-tips
+* Copilot Tips

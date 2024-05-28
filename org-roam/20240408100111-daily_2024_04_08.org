@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       e0620886-49fe-47de-860a-aa8970416068
+:END:
+#+title: daily-2024-04-08
+#+filetags: :daily:
+* Daily - Monday, April 8, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+ - country picker
+ - on call
+   - don't think there are any active FE tasks there
+ - sup change fulfillment ticket unblocked
+
+** Morning Brain Dump
+continuing work on country picker.
+
+still on-call. should check if anything's come up for that but i think as of this weekend i'm clear.

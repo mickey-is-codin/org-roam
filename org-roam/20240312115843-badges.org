@@ -1,0 +1,169 @@
+:PROPERTIES:
+:ID:       2a70738a-b91c-459d-b2a8-8a1bf19ca637
+:END:
+#+title: badges
+#+filetags: :asana-ticket:
+* Badges
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1205550082839264][ticket link]]
+
+** Loom Link
+[[https://www.loom.com/share/7817e56b517c424db70c20dfbf069d99][loom link]]
+
+** Tasks
+*** DONE mutation to update partnership status
+*** DONE status block in profile
+*** DONE status block in profile editable
+*** DONE status block in profile expandable
+*** DONE badge applied to profile
+*** DONE create loom
+*** DONE don't show banner if supplier isn't you
+*** DONE banner still showing up when status set from homepage
+*** DONE badge not showing on default profile image
+*** DONE PR review
+*** DONE feature flag code
+*** DONE rebase after feature flags PR goes off
+*** DONE merge PR
+*** DONE final quick QA session when in develop
+*** DONE svg placement
+*** DONE feature flag in dev CRM
+*** DONE feature flag in prod CRM
+*** DONE fixes after QA session
+
+** QA Session Results
+ - [X] figure out why mutations not working on develop (ask...someone?)
+ - [X] homepage banner should be permanently dismissable (ask BE)
+ - [X] clicking homepage badge doesn't persist to modal (can't reproduce)
+ - [X] profile banner should be 40px below brand info section
+ - [X] partnership status text should be 475px
+ - [X] svg z-index for header
+ - [X] banner full width of homepage
+ - [X] modal on profile page closes before saving
+ - [X] partnership status bubble should be red
+
+** QA session
+   - URL: https://canal-qqi6b3lv5-canal.vercel.app
+   - develop SK login (feature flag enabled):
+     - username: cx+claire-sk-proposals.myshopify.com@shopcanal.com
+     - password: C#stExP@ssw0rd
+   - develop SUP login (feature flag disabled):
+     - username: cx+chris-sup-proposals.myshopify.com@shopcanal.com
+     - password: C#stExP@ssw0rd
+   - feature flags:
+     - turn on for SK and SUP
+   - behavior to test:
+     - SUP sees banner on homepage
+     - homepage banner clearing
+     - SUP sees banner on profile page
+     - badge modal behavior
+     - badge reasoning behavior
+     - logo update
+     - reasoning section update
+     - SK view SUP profile and see badge
+
+** Thursday, March 21, 2024 Notes
+ - feature flagging
+   - wondering if it would make sense to add the actual DB feature flag during QA
+   - that way i could ask Garrett and the design team which shops to enable for
+ - QA session
+
+** Wednesday, March 20, 2024 Notes
+ - feature flagging
+   - enabling locally via CMS
+   - need to ask a BE engineer if more needs to be done for that when merged
+   - simon-sk-6 should not see the feature
+   - simon-sk-5 should see the feature
+   - whoops i'm going about this wrong
+   - i should enable it for simon-sup-6
+   - then when i view simon-sup-6 it will show
+   - when i view simon-sup-16 it won't show
+
+** Tuesday, March 19, 2024 Notes
+ - mutation
+   - have the mutation working with no fragment
+   - need to see if i can return status
+   - though it seems like the hook should handle that
+ - restore/toast behavior
+   - trying to figure out the best way to handle this for a first pass
+   - my gut tells me conflicting things
+   - state probably shouldn't save to the server until the "restore/undo" modal goes away
+   - but want to start saving right away to make loading times short
+   - we can add an additional control that dismisses the banner on save
+   - then restore after that
+ - questions for PR
+   - where should constants go?
+   - where should hooks go?
+   - where should helper functions go?
+   - was mutation well-handled?
+
+** Monday, March 18, 2024 Notes
+ - badge down a pixel
+   - on Friday got the badge showing up but it's ever so slightly shifted down
+ - update:
+   - got badges displaying with modal on homepage
+   - need to figure out best modal practices for reproducibility
+   - need to figure out backend interactions
+   - perhaps extract something like a ~<BadgeStatusBanner~ component
+     - that could include the modal as well
+     - and could define whether or not the banner is dismissable
+
+** Friday, March 15, 2024 Notes
+ - going to just test out some components to see how they look...
+ - profile page banner
+   - looks like this should be in ~ShopProfilePageHeader~
+ - need to figure out how Yanni's SVG is supposed to work for this
+ - currently blocked by getting the SVG
+   - will just save that in the public directory
+   - then it looks like we can just nest an image inside it
+
+** Thursday, March 14, 2024 Notes
+ - think it makes sense to just add the subtasks as commits
+ - i believe we only want this on the supplier page
+ - how to manage permanently that the homepage banner dismissed?
+ - put the banner in profile above listed products
+ - path to supplier profile page: ~src/components/supplierapp/discover/SupplierProfilePreview/index.tsx~
+ - could try to use a ~Banner~ component
+ - Jess just showed me how to sort of trace components within Figma which should speed my searching up
+
+** Wednesday, March 13, 2024 Notes
+ - there are 3 subtasks within this. will probably have to make pages for tracking those
+   - edit/view badges on own profile
+   - view badges on other profiles
+   - homepage modal
+ - questions:
+   - what is the difference between a "badge" and a "tag"?
+     - it looks like we're more looking at something like tags
+     - probably not worth bringing up but eh
+   - seems like it would be fair to say that badges are like "statuses for shops"
+   - extremely explicit in this idea seems to be mimicking LinkedIn's "#open to hiring" badges
+   - is there any backend work that's been finished on this?
+   - this feature will in general require me to learn more about event-tracking within the app
+ - full badges workflow:
+   - from home page:
+     - dismissable version of the same banner petition
+     - both banners dismissed once filled out
+   - from profile page:
+     - banner displaying petition to add badges
+     - banner includes profile logo with badge added to it
+     - clicking a badge brings up a modal
+     - this modal lets you add a description and the badge to your profile
+     - "set your status"
+     - selecting a badge and confirming shows a toast message: "Status saved"
+     - status now shows with badge in profile along with edit pen
+     - text can overflow
+     - profile avatar now shows badge
+
+*** Jess Discussion
+my understanding of the workflow:
+ - on homepage a user sees a banner that is dismissable
+ - it's not there if they've already added badges for their profile
+ - on profile page user sees a banner until badges are added
+ - if a badge is clicked in the banner a modal opens
+ - the modal gives badge options and a description to update status
+ - updating badges causes editable view to show in banner section
+ - updating badges causes profile to include badge text
+
+questions:
+ - event tracking?
+ - "'open' does not get a profile logo badge"?

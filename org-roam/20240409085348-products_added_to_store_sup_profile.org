@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       156d32b2-e409-4608-b30a-cb26cbdb12b6
+:END:
+#+title: products-added-to-store-sup-profile
+#+filetags: :asana-ticket:
+* Products that were added to store should show up on SUP profile
+
+** Asana Link
+[[https://app.asana.com/0/1206745120406344/1207001642138829][ticket link]]
+
+** Loom Link
+[[][loom link]]
+
+** Tasks
+*** TODO submit PR
+*** TODO merge PR
+
+** Tuesday, April 9, 2024 Notes
+ - i think this came from QAing my uninstalled stuff
+ - likely just need to remove some conditional unrendering

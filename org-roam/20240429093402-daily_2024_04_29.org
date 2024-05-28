@@ -1,0 +1,66 @@
+:PROPERTIES:
+:ID:       0b2fd3ee-dfab-40d6-a476-4f107e1efd3c
+:END:
+#+title: daily-2024-04-29
+#+filetags: :daily:
+* Daily - Monday, April 29, 2024
+
+** EOD Brain Dump
+ - brand list being infuriating
+   - column width
+   - external links with prevent default
+ - everything else rebased and hopefully good to go
+
+** Standup Notes
+ - archive a sup
+   - finished
+   - think Simran's branch needs to be rebased
+ - new setting
+   - Chris branch needs to be merged
+ - product search
+   - should be all finished up
+   - will be in touch with Kimia
+ - noticed an issue where navigating to table pages causes URL spam
+ - Testim documentation
+ - out Thursday and Friday
+
+** Dispatch Orders Setting
+ - last i remember was needing to convert boolean to string
+ - Chris' PR for this is still not merged
+ - so i'm actually all set on it
+
+** Product Search
+ - need to check in with Kimia
+   - end of last week she fixed the "title" issue
+ - can probably locally do the wishlist removal
+ - figure out how to work around type issues
+ - need to remove wishlist on product description page
+ - need to make filters work
+ - need to make sorts work
+
+** Archiving Supplier
+ - odd behavior on my suppliers page: URL rapidly changing
+   - checking on develop branch (happening there)
+   - pulling develop then retrying (happening there)
+   - same thing in incognito window (happening there)
+   - on develop environment (happening there)
+   - i'll make a ticket and assign to myself before moving on
+ - i think Simran's branch will likely have to be rebased
+   - due to Alex Whittaker updating product search stuff from ripping out feature flags
+   - that will almost definitely fuck with my product search PR
+ - fuck, can't just replace the table
+   - Conner's suppliers table has different info
+ - ok this is done
+   - need to ask Chris or Simran to rebase
+   - then should be good to make a PR and merge
+
+** Morning Brain Dump
+ - tickets
+   - archive a SUP
+   - product search
+   - new setting
+ - need to update my board to bring things over to next sprint
+ - need to get Testim presentation ready for Wednesday
+ - need to schedule QA for archive
+ - need to schedule QA for product search
+ - discover brand list view QA issues

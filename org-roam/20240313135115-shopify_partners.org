@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       300ff7ef-2223-4108-9044-d044a5961271
+:END:
+#+title: shopify-partners
+* Shopify Partners
+
+** Test Stores?
+ - Simon said his go-to develop sk is: https://partners.shopify.com/1892775/stores/67778806064
+ - Simon said his go-to develop sup is: https://partners.shopify.com/1892775/stores/66496659730
+
+** Blah
+ - deployment going out and i want to login to an account on develop
+ - Simon said his go-to develop sk is: https://partners.shopify.com/1892775/stores/67778806064
+ - Simon said his go-to develop sup is: https://partners.shopify.com/1892775/stores/66496659730
+ - both of those links 404 for me
+ - going to partners.shopify.com
+ - asking me to create a partners account
+ - created one
+ - now at the actual homepage
+ - seeing one Development store
+ - Simon says i'm in the wrong org
+ - where orgs show up i just see "create partner account"
+
+Simon asked if i have access to Shopify partners so i figure having a note will be helpful for me being able to get up and running to more effectively test the app.
+
+Surya recommends creating 2 Shopify apps and 2 Shopify stores, then connecting a store to each app.
+
+i am just so confused. had to add a Partners account but now that i'm in that i'm seeing one store listed as Development. when i log into that i think i'm brought to one store. is that a supplier? is that an SK? who knows?
+
+Simon indicating that i might not be in the right org

@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       d28bd3f1-c13a-4e96-9e70-1f7cc1e183b4
+:END:
+#+title: daily-2024-05-22
+#+filetags: :daily:
+* Daily - Wednesday, May 22, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - need to schedule QA session for bulk proposals
+ - review and make sure no on-call bugs
+ - dip into my other tickets
+   - inbox categorization
+   - add a "sent" folder -- i think this is the only one not blocked by BE
+   - replace message templates
+   - your turn badge spacing
+   - ability to override shipping locations
+     - i keep thinking someone else owns this
+ - org-roam reading
+ - vim tutor reading
+ - random arrow ticket
+ - badges banner missing
+ - lowercase a P

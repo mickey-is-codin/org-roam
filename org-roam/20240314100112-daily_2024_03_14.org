@@ -1,0 +1,92 @@
+:PROPERTIES:
+:ID:       82961009-abdb-4af9-8aef-c6b8589e00ca
+:END:
+#+title: daily-2024-03-14
+#+filetags: :daily:
+* Daily - Thursday, March 14, 2024
+
+would be smart to get started on actual implementation for badges. while i'm blocked on banner for read receipts getting some code written for that would be very very smart.
+
+** EOD Brain Dump
+the fkng types aren't working again on the ~MessagesContainer~. need to address that, hopefully in a way that's graceful. the inheritance structure for this GraphQL code is a complete clusterfuck with all of the type borrowing that goes on uggh. this will be a good chance for me to do a rundown and figure out all of the types that are happening here and figure out the whole inheritance scheme. i think the ultimate answer will be that i have to split off my own new fragment for my work and not borrow any old ones.
+
+** Frontend Engineering Weekly
+ - permissions:
+   - set certain parts of the app off limits to people who don't need to be there
+   - include a predicate function based on the current ~session~ value
+   - ~CanalApp.tsx:322~
+   - if you reach that page from a button include a wrapper
+   - but just navigating they should just get bounced
+   - other place you get bounced from is a specific proposal
+   - that's page-by-page
+ - vercel graphql allow list
+   - no longer need to make a separate PR for your mutations
+   - anything coming from develop on vercel is allowlist-ed
+
+** BE Scoping Meeting
+ - my ticket came up that i made for Chris lol
+   - sounds like it should be easy it's a 5
+ - "install app"
+   - this was a clone of the one at the FE scoping meeting
+   - suppliers see a button that says "install app"
+   - and it directs them to install a storefront app
+   - ...what does this mean actually?
+ - datadog dashboard updates
+   - the office dashboard
+   - dashboard is meant to show if we're down
+   - but the status page should eventually take that over
+ - onboarding task list
+   - tasks to complete
+   - proposals to respond to
+   - etc
+ - trial plan users not message more than one brand
+   - this is also from the frontend ticket
+ - bulk add to store support masked selections
+ - add finances to Stripe
+   - most of our money is in bonds
+   - taking money out of there is bad
+   - not sure how putting money into stripe circumnavigates
+   - but it lets the bonds continue to compoud
+ - bulk proposal stuff
+   - similar to bulk add to store
+   - not exactly sure what's going on here
+ - override shipping locations for supplier profile
+   - this was in the frontend meeting too
+ - storefront settings
+   - show "fulfilled by our friends at"
+ - respond to messages via email
+   - would responding to the email actually hit the API?
+   - some sort of hook?
+   - mention of "inbound webhook"
+   - scoped to just messages?
+   - for sure that would be easiest at first
+   - people are really excited at proposal approval
+   - Garrett made a task for that right now
+ - accept proposal via button in email
+ - default relationship commission
+   - default value for that relationship
+   - apparently there are lots of defaults for commission
+
+** Brain Dump
+Chris got in touch last night about [[id:01413422-3bec-450b-b825-5c8e547794e2][asana-ticket-read-receipts]]. i'm still going through that and figuring out what needs to be done for the types. i think a good plan of attack for this morning would be to just iron out everything going on with read receipts up to the banner before i do anything else.
+
+the last thing that happened with read receipts yesterday was seeing read receipts on every message instead of the last one and i think that was just a scoping issue. perhaps starting over one more time wouldn't hurt.
+
+hopefully there's some movement on my [[id:0bebcb50-695c-4f21-8a05-de435d034272][asana-ticket-tracking-number-supplier-order-task]] ticket. ok cool Conner approved. not sure if i should wait on additional approvals but i'll bring it up at standup.
+
+** Standup Notes
+ - tracking number on supplier order PR is up
+   - approved by one person
+   - still not sure what ettiquette there is for that
+ - read receipts
+   - discussion yesterday around banner indicating that read receipts will happen
+   - have the UI finished up to the banner itself
+   - thanks to Chris for helping me get acquainted with the API!
+ - badges
+   - did some basic walkthroughs of the UI with Jess
+   - have not implemented much yet
+   - want to get plugging on this once read receipts are at a good stop
+ - order line items CSV download
+   - got S3 access so can actually download locally
+   - don't think there's a ticket yet for BE to convert REST endpoint to GQL
+   - is that something that i have license to create?

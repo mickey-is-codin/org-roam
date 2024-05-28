@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       e2fb9bf5-e989-45ef-bfcd-980fa8b38144
+:END:
+#+title: pending-relationships-display
+#+filetags: :asana-ticket:
+* Pending relationships display
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1207330132850852][ticket link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+
+** Thursday, May 16, 2024 Notes
+ - ticket description
+   - in suppliers view -> pending
+   - subcopy under brand name is blank
+   - only shows about tab and not partnership tab
+ - can't reproduce, seems to be working fine

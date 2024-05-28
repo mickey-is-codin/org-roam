@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       b6cb2fd7-1b55-4e27-b082-8713314fcd1e
+:END:
+#+title: brand-list-view
+#+filetags: :asana-ticket:
+* Brand List View
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1206413719935674][ticket link]]
+
+** Tasks
+*** DONE buttons column
+*** DONE feature flag code
+*** DONE merge PR
+*** DONE feature flag in dev CRM
+*** DONE feature flag in prod CRM
+
+** Thursday, March 21, 2024 Notes
+ - social media buttons column
+ - extra context from Garrett
+   - Garrett has not responded to this
+
+** Wednesday, March 20, 2024 Notes
+ - ticket only really includes a Figma link
+ - figma/design notes
+   - currently we just have a card view of this table
+   - we want to add an optional list view
+   - hmmm, is that something that exists elsewhere in the app?
+ - tomorrow search for ~ItemsTable.tsx~

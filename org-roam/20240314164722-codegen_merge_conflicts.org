@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       f6475e05-8854-4cf4-ab39-548dcb393024
+:END:
+#+title: codegen-merge-conflicts
+* Codegen Merge Conflicts
+
+idea page to make this not annoying anymore.
