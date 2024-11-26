@@ -1,0 +1,84 @@
+:PROPERTIES:
+:ID:       e9004fbd-07de-4d6b-8951-930a7f1ee382
+:END:
+#+title: daily-2024-10-24
+#+filetags: :daily:
+* Daily - Thursday, October 24, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+ - copy update for shipping modal
+ - copy update for payment cadence
+ - canal price segment event
+ - price setting figuring
+ - polaris logicking
+
+** Striked-Through Sale Price
+ -
+
+** Canal Price
+ - created [[id:a432345e-5479-4ba1-8131-834924180c8e][price-setting]]
+ - still an issue with Canal Price that Surya and Molly were discussing
+
+** Surya, Wally, Garrett Session ID Notes
+ - summary of issue
+   - when user is brought to standalone app for onboarding
+   - they should be logged in as admin user (i think?)
+   - currently they're not logged in as anyone
+   - so token not sharing for supplier accounts from embedded to standalone app
+ - Surya:
+   - we should link people out and then in standalone app create a new user
+   - link to a page that refers to the shop ID
+ - Wally:
+   - concern that a random person could get a shop ID and start making users
+ - Surya:
+   - how do we do basically that exact flow for BigCommerce?
+ - Wally:
+   - the way Shopify does
+   - Shopify lets people create users from within the embedded app experience
+   - while they are authed (as admin?) and the shop ID is defined
+   - random note: there is some Bearer token logic
+ - Garrett:
+   - what about WooCommerce?
+ - Wally:
+   - WooCommerce uses a different mutation
+   - shop doesn't exist when they get to the page
+   - it gets created along with the user when they fill out the form
+ - Surya:
+   - why can't they create an account in Shopify (embedded experience)?
+ - Wally:
+   - would have to make Polaris component signup flow
+ - Garrett:
+   - maybe we create a token on hitting "Connect Canal account"?
+
+** Supplier Canal Flow
+ - user/SUP searches for "Canal Supplier" app on Shopify app store
+ - install "Canal Supplier" app
+ - met with ~IncompleteEmbeddedSupplierApp~ (ft. Polaris components)
+ - hit "Connect Canal account"
+ - leads to ~/onboarding/shopify/supplier/account~
+   - =this is where we're having trouble=
+   - when we land on that route there's no trail to the shop ID
+   - Surya attempting to fix
+ - user is brought to standalone app where they complete onboarding
+ - user plays around in app
+ - any time they return to shopify admin "Canal Supplier" app they're met with ~CompleteEmbeddedSupplierApp~ (ft. Polaris components)
+
+** Shipping Modal Copy Ticket
+ - confusion
+   - what is the "shipping modal"?
+   - supposed to add new subcopy
+   - that copy seems to imply there is an input field
+   - "shipping modal" referenced elsewhere in Asana has no input:
+     - ~ShippingChangeModal~
+   - =left a ticket comment=
+ - context from Molly
+   - https://canalspace.slack.com/archives/C02920Q48HE/p1724695161504519?thread_ts=1724427983.632749&cid=C02920Q48HE
+   - need to make sure subcopy is aligned between onboarding, proposals, and desired terms
+ - thread notes
+   -
+
+** Morning Brain Dump
+ - really liking The Sin-Eater by Fiona MacLeod
+ - might try to figure out a path to helping document the app, make like a FE dev wiki

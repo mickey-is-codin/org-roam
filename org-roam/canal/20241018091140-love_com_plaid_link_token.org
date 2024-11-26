@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       fd5577b4-4496-4cd5-8143-e358b16dc14d
+:END:
+#+title: love-com-plaid-link-token
+#+filetags: :asana-ticket:
+* Love.com Plaid Link Token
+
+** Friday, October 18, 2024 Notes
+ - needed for modal to open:
+   - ~shouldOpenPlaid~
+   - ~plaidLinkToken~
+   - ~plaidLinkToken !== ''~
+ - getting plaid link token:
+   - just a BE query (~PlaidLinkToken~)
+ - token can be empty string:
+   - if user has non-verified account -> ~plaidVerifyMicrodepositsLinkToken~
+   - if user has verified account -> ~plaidLinkToken~
+   - so if either of the needed field doesn't exist we defalt to ~''~

@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       549c8ec8-ffdf-442a-8097-6d5016923dfc
+:END:
+#+title: daily-2024-11-03-24
+#+filetags: :daily:
+* Daily - Monday, November 4, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - Molly ticket from end of last week about "compare at" column
+ - session id stuff :(((()))
+ - on-call check-in
+ - buy flights for Holiday party
+ - back on documentation?
+ - clean up asana board
+ - gym expenses

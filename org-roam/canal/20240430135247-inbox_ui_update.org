@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       fa18fca4-b2ae-4d9b-8c16-f1ccaebf8684
+:END:
+#+title: inbox-ui-update
+#+filetags: :asana-ticket:
+* Inbox UI update
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1207031429615934][ticket link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+
+** Tuesday, April 30, 2024 Notes

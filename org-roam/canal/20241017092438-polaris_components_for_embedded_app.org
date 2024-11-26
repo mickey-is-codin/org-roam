@@ -1,0 +1,102 @@
+:PROPERTIES:
+:ID:       1bad8fc1-f4e0-47e7-b144-285243273d85
+:END:
+#+title: polaris-components-for-embedded-app
+* Polaris Components for Embedded App
+
+** Auth Changes Summary
+ - new shopify auth middleware added:
+   - in embedded app:
+     - JWT token refreshed before every request (set in cookies)
+     - JWT token set on request headers before every request
+   - in standalone app:
+     - JWT token checked before every request (get in cookies)
+     - if JWT token present set on request headers
+     - if JWT token not present don't set it on request headers
+ - link from non-onboarded embedded app to standalone app:
+   - ~{environment-aware-app-url-base}/onboarding/shopify/supplier/account~
+ - link from onboarded embedded app to standalone app:
+   - ~{environment-aware-app-url-base}/supplier~
+   - =this link refreshes JWT token before navigating=
+ - BE had to update ~settings.py~ to work locally:
+   - ~CANAL_APP_NAME_TO_PK~
+   - ~CANAL_APP_NAME_TO_URL~
+
+** Embedded App Workflow
+*** Not Onboarded
+ - user opens Shopify Admin
+ - we check for Canal session: they have none
+ - we give them a team admin login: ~admin+myshopifydomain.com@shopcanal.com~
+ - we check if they're onboarded: they are not (no ~canalContactEmail~, ~hasAgreedToToc~ is ~false~)
+ - since they're in embedded app they're met with ~IncompleteEmbeddedSupplierApp~
+ - user hits "Connect Canal account"
+ - we check their session for shop information (=TODO=)
+   - is there shop information exposed from Shopify or something to set on the session?
+ - we redirect them to standalone app at ~/onboarding/shopify/supplier/account~
+ - they complete onboarding and mess around in the standalone app
+*** Onboarded, Logged In
+ - user who is logged in to the standalone app in another tab opens Shopify Admin
+ - we check for Canal sessions: they have one
+ - we check if they're onboarded: they are
+ - they're met with ~CompleteEmbeddedSupplierApp~
+ - user hits "Go to Canal account"
+ - they're brought to the homepage of the standalone app
+*** Onboarded, Not Logged In
+ - users who is not logged in to the standalone app in another tab but is onboared opens Shopify Admin
+ - we check for Canal sessions: they have none
+ - =ony difference= we give them a team admin login: ~admin+myshopifydomain.com@shopcanal.com~
+ - we check if they're onboarded: they are
+ - they're met with ~CompleteEmbeddedSupplierApp~
+ - user hits "Go to Canal account"
+ - they're brought to the homepage of the standalone app
+
+** Questions
+ - when onboarding completes does it complete for the user as well as the team?
+
+** Random Notes
+ - if shop not onboarded, ~AppWrapper.tsx~ is what forces the redirect to onboarding
+ - onboarding complete definitions:
+   - supplier:
+     - shop has a name
+     - shop has an email
+     - team has agreed to TOS
+     - shop has set supplier commission
+   - retailer:
+     - shop has a name
+     - shop has an email
+     - team has agreed to TOS
+ - showing onboarding instead of embedded homepage
+   - nesting: ~<AppWrapper>~ -> ~<AppContainer>~ -> ~<CanalApp>~
+   - ~<AppWrapper~ runs effect that redirects to onboarding
+   - ~<CanalApp>~ displays embedded homepage
+   - we likely want this logic in ~_app.tsx~
+
+** Tuesday, October 29, 2024
+ - check embedded before onboarding compete
+ - figure out why we're redirecting to "shopkeep" onboarding
+ - map out onboarding/login logic
+ - flow:
+   - first open canal supplier app in shopify admin
+   - greeted with polaris connect to canal page
+   - hit "connect to canal"
+   - brought to standalone app supplier onboarding page
+     - * here we need to know what shop you came from *
+     - set session within FE before navigating to standalone
+   - complete onboarding and use standalone app
+   - visit app after onboarding
+   - important question: are you logged in?
+   - we assume you're logged in just by being in the embedded app
+   - but if you have a session we should use that session
+
+** Overall Goal
+Shopify has threatened to delist our app unless we use Polaris components to represent our app's embedded experience on the Shopify app.
+
+** TODO buttons and links
+
+** Questions
+ - when to show "not connected"/"complete"
+ - how to determine listed product counts?
+ - how to determine acceptance of terms & conditions?
+ - how to store/display illustration?
+ - how does uninstall work from unembedded app?
+ - supplier/shopkeep split?

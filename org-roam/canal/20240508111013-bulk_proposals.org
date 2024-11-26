@@ -1,0 +1,133 @@
+:PROPERTIES:
+:ID:       7702b8ac-83ca-44aa-87be-3c42ed6ca669
+:END:
+#+title: bulk-proposals
+#+filetags: :asana-ticket:
+* Bulk proposals
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1206324342750276/f][ticket link]]
+
+** Tasks
+*** TODO complete ticket
+
+** Testing Checklist
+ - brand selection from list view
+ - adding sections
+ - copy in all sections
+ - global commission editing
+   - recommended values
+   - alter full table
+ - brands table
+   - bulk selection
+   - removing brand(s) via bulk action
+   - removing brand via icon
+   - adding brand(s)
+   - editing commission individually
+   - bulk editing commission
+ - modals
+   - warning when any commission is below recommended
+   - add message
+   - errors on proposal creation
+   - cancel/back modal
+   - non-dynamic shipping warning modal
+ - review created proposals
+   - view proposals from SUP?
+
+** Fetching Considerations
+on the discover brands page we need to be able to select across pages. the only way to do this in the application is using ~useMaskedSelection~. the way this hook works is that it returns a and a boolean value. one state of the boolean represents a "select all" turned on and the other state represents the "select all" turned off. when the "select all" is off, the list just represents selected values that represent values ~included~ in the selection. when "select all" is off, the list represents unselected values that represent values ~excluded~ from the selection.
+
+based on this, we can include two fields in the ~discoverableShops~ query as well as the ~createMultiSupplierBulkProposal~ mutation: ~includedSupplierIds~ and ~excludedSupplierIds~. if ~includedSupplierIds~ is in the query, that means that a user has not hit "select all" and only a few values should be fetched. if ~excludedSupplierIds~ is in the query, that means the user /has/ hit "select all" and all values for the query should be returned except for any listed in ~excludedSupplierIds~. in addition to this ~createMultiSupplierBulkProposal~ needs a field for ~supFilters~ that allows it to know how ~discoverableShops~ was filtered so that when "select all" is toggled on, no shops are included that weren't in the discover results.
+
+the purpose of extending the ~discoverableShops~ query is that, based on the shops that are selected in the discover page, we have to open the Create Bulk Proposal page and show a table with the selected shops. if a user does not add or remove from that list of shops we just propagate the values for ~supFilters~ and ~includedSupplierIds~/~excludedSupplierIds~ on to the ~createMultiSupplierBulkProposal~ mutation and things should work ok.
+
+removing shops should be relatively easy. deleting from the table just removes from ~includedSupplierIds~ if "select all" was not used and adds to ~excludedSupplierIds~ if "select all" /was/ used.
+
+difficulty creeps in when we want to /add/ shops to the proposal. if "select all" was not used to create the bulk proposal then we have to add to ~includedSupplierIds~ via the modal. the modal should show a list of shops that are not already in the table in the Create Bulk Proposal page. this is so that you don't "double-add" a shop to the table. to fetch those unadded shops we can run the ~discoverableShops~ query setting the values in ~includedSupplierIds~ to be the args for the ~excludedSupplierIds~ param. if a user selects any of the table values, the ~includedSupplierIds~ list grows. otherwise if "select all" /was/ used to create the bulk proposal then the modal should open and show only the shops that are currently being excluded. so the query will supply values for ~includedSupplierIds~ using the existing table's values for ~excludedSupplierIds~.
+
+note that the behavior of the above modal assumes that the modal should only, at most, show all of the shops that showed up in discover results after ~supFilters~ was applied to the query. to show more shops than this would mean that using ~excludedSupplierIds~ to display the table on the Create Bulk Proposal page *would not work*.
+
+** Thursday, June 27, 2024 Notes
+ - Chris made updates to his branch:
+   - added ~shopsToInclude~ and ~shopsToExclude~ on discoverableShops query
+   - mutation accepts ~selectAllFilteredSups~
+   - mutation logic updated to handle non-null values for include/exclude at the same time
+
+** Wednesday, June 26, 2024 Notes
+ - getting my bearings after a while
+   - Chris made changes so that discover shops can be fetched "negatively"
+   - also so that bulk proposals can be created "negatively"
+   - all of this in the pursuit of being able to select multiple pages of brands
+
+** Thursday, June 20, 2024 Notes
+ - problem with multi page select:
+   - current implementation only lets you select a max of a single page of suppliers to add to proposal
+   - we need to be able to add potentially all suppliers in the discover view to a single proposal
+   - current use of panama-table makes this hard
+   - so i'm migrating to the new react-table table
+   - similar to bulk approval of products
+ - further issue:
+   - current method for fetching shops:
+     - ~discoverShops~ shows results to show in brand list view
+     - after selecting shops and opening create bulk proposal page...
+     - refetch shops based on selected ID via ~shopifyShops~
+     - fetch shops in "add shops" modal via ~discoverShops~ then manually filter
+   - not sure if ~shopifyShops~ full query will return same results as full ~discoverShops~ query
+ - solution proposing to Chris:
+   - include fields in ~discoverShops~: ~includedSupplierIds~ and ~excludedSupplierIds~
+   - first allows you to fetch only a small subset of the ~discoverShops~ query results
+   - second allows you to fetch all values that would show up in discover with a few excluded
+
+** Tuesday, May 14, 2024 Notes
+ - single supplier intention vs multiple suppliers
+   - Garrett has brought this up with design
+   - Katherine wants a feature flag for bulk proposals
+     - this is to avoid large bulk proposals
+ - Garrett conversation notes
+   -
+ - table difficulty
+   - list of tables
+     - brand list view itself ~useGetDiscoverableShops~
+       - paginated list of discoverable shops
+     - table of brands targeted by the proposal ~useGetLazyPaginatedBrands~
+       - paginated list of shops based on selected IDs
+     - table of brands that can be added in modal ~useGetAddableBrands~
+       - paginated list of shops not already in the proposal
+     - table of brands selected to be added in modal (subset selected from ~useGetAddableBrands~)
+       - unpaginated list of shops selected to add
+   - need to figure out /exactly/ how to form the ~useGetAddableBrands~ query
+
+** Monday, May 13, 2024 Notes
+ - relationship terms (shipping) requires single supplier, how do we deal with that?
+
+** Wednesday, May 8, 2024 Notes
+ - summary
+   - in "brands to explore" page SK can select lots of brands and make a proposal for all
+   - specifically conducive to list view
+   - current list view isn't even selectable
+   - actual proposal page should match existing one
+   - but at top of page is "customize per brand"
+   - this adds input on each brand
+   - button to add brands to proposal
+   - multi-select allows editing multiple commissions at once
+   - might be a new message modal that allows multiple or adjust current one
+   - redirect to inbox after
+ - BE notes
+   - [[https://github.com/shopcanal/canal/pull/8548][link to PR]]
+   - pretty sure it just adds mutation ~CreateMultiSupplierBulkProposalMutation~
+ - implementation notes
+   - should the bulk proposal form that appears on "Create proposals" be a page or modal?
+   - ~CreateProposalPage~ is used to render basically a full page
+   - seems so weird to me that this isn't a route
+   - ~ALL_SECTIONS~ constant for proposal sections
+     - seems like we're altering the definition of that
+     - might have to have something like ~ALL_SINGLE_BRAND_SECTIONS~ and ~ALL_MULTIPLE...~
+ - questions:
+   - new "your commission" section in proposal creation new?
+   - remove "products" section from proposal creation?
+ - Garrett discussion:
+   - commission should always be a section with Products
+   - commission should always be a section with Brands
+   - after my changes on this branch: COMBINE COMMISSION INTO PRODUCTS/BRANDS SECTIONS
+   - should be created a new version of ~CreateProposalPage~
+   - something like ~CreateMultiBrandProposalPage~

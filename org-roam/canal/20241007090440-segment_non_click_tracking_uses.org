@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       184d08cf-378a-499d-acff-828fa87b0b3a
+:END:
+#+title: segment-non-click-tracking-uses
+* Segment Uses Outside Click Tracking
+ - obviously it's used for click-tracking but Jess, Molly want to know if we do anything outside that with it
+ - segment even can be run any time
+ - they're certainly attached to ~onClick~ handlers a lot, but we use them for other things too
+ - worth mentioning that they don't indicate /clicking/ but can be attached to an action related to clicking
+   - often predicated on getting a BE response back
+ - examples:
+   - ~openShopkeepUrl~
+   - ~trackSupplierFinalStep~
+   - ~SHOPKEEP_MADE_SALE_IN_PAST_30_DAYS~
+   - ~trackCreateProposalPageLoaded~
+   - ~MOMENT_BANNER_VIEWED~
+   - ~SHOP_VIEWED_PARTNERSHIP_REQUEST_MESSAGE~
+   - ~SHOP_VIEWED_BRAND_WITH_PENDING_PARTNERSHIP~
+   - ~SHOPKEEP_SAW_UPGRADE_PLAN_MODAL~

@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       9d71f8d7-c950-4694-9cb4-d1f47978b197
+:END:
+#+title: my-suppliers-subcopy
+* My Suppliers/Retailers Subcopy
+
+wanted to get a document out to spread out all of the rules that we have for this page.
+
+** Rules
+ - if you are an SK viewing the “My Suppliers” page:
+   - if you have products approved and added to your store show ‘Products added to store’
+   - if you have available products but they aren’t added to store show ‘Add products to store’
+   - if you have a proposal out that is pending show ‘Products pending approval’
+   - otherwise show nothing
+ - if you are a SUP viewing the “My Retailers” page:
+   - if you have pending products show ‘Review proposal’
+   - if you have a pending partnership show ‘Partnership pending approval’
+   - if you have an existing, approved partnership and products approved but they’re not added to store show ‘Products not yet added to store’
+   - if you have an existing, approved partnership and products approved and added to store show ‘Products added to store’
+   - otherwise show nothing
+
+** Thursday, July 18, 2024 Notes
+ - Marisa filed a bug for this:
+   - =i see that this SUP has an active product with their SK but the left hand menu says "products not yet added to store"=

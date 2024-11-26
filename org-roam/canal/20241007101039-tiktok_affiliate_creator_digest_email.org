@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       d7bbaa8f-2655-4ea3-969f-8bf07417f1d3
+:END:
+#+title: tiktok-affiliate-creator-digest-email
+* TikTok Affiliate Creator Digest Email
+
+** Ticket Background
+ - email to send to tiktok affiliate users when they have a new creator to review
+ - send MWF a list of creators that the user has neither approved nor rejected
+ - if no new creators, don't send the email
+ - primary CTA leads to outreach table
+ - design ticket link: https://app.asana.com/0/1199696369468912/1208297007607393
+
+** Technical Implementation
+ - use emails repo?
+ - what does BE take care of?
+ - where does postmark come in?

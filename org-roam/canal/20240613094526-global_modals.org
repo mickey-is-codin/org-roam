@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       4b2b41e1-0fa5-4c63-9045-5fed86ee8ca6
+:END:
+#+title: global-modals
+* Global Modals
+
+** Types
+i would expect a string literal to only allow actual known modal names to be registered. similar to how we operate with feature flags.
+
+** Expected Interface
+#+begin_src javascript
+const [ isModalOpen, openModal, closeModal ] = useGlobalModals('acceptProposalTerms');
+#+end_src

@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       98e607c9-696c-4a2a-889e-fb8da48715ae
+:END:
+#+title: daily-2024-06-03
+#+filetags: :daily:
+* Daily - Monday, June 6, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - react 18 update
+ - bulk proposals
+   - another QA session?
+ - get back in touch with testim
+ - get in touch with Chris about sent inbox folder

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       4080bc65-7a76-4998-8539-ff7e8cc427a2
+:END:
+#+title: testing-prod-graphql
+* Testing Prod GraphQL
+
+ - log in to CMS
+ - search for clay+flip
+ - log in as
+ - go to graphql

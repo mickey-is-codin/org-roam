@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       bbef8541-0a64-4532-8030-e3fe6007dba9
+:END:
+#+title: personal-todo
+* Personal TODO
+
+** Monday, October 28, 2024
+*** TODO wedding
+**** TODO respond to planners
+**** TODO follow up with Tamer
+
+** Friday, October 25, 2024
+*** DONE planner call at 11AM eastern
+*** DONE send photos to Tamer
+
+** Thursday, October 24, 2024
+*** DONE wedding
+**** DONE respond to planners
+
+** Wednesday, October 23, 2024
+*** DONE research chair restoration
+*** DONE wedding
+**** DONE update spreadsheet (https://docs.google.com/spreadsheets/d/1pa5PuQ3J50-tfre0vEt8aAjERpgwzWadm4EKH16XY1s/edit?gid=0#gid=0)
+**** DONE setup notes

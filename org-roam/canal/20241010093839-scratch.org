@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       6286c074-fb64-4aa2-a1b3-3c9ec56308f0
+:END:
+#+title: scratch
+* Scratch
+
+** Documentation
+*** Things That I Could Document
+
+** Embedded App Stuff
+*** Wally, Surya, Garret Conversation Notes

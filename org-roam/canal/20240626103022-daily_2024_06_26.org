@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       394c6ebc-d818-43e5-917c-761f2538faf2
+:END:
+#+title: daily-2024-06-26
+#+filetags: :daily:
+* Daily - Wednesday, June 26, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Need from Chris
+ - expand query on my suppliers page to allow WISHLIST
+ - discoverableShops query allow included/excluded filters
+
+** Morning Brain Dump

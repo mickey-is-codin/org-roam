@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       2736ba65-1ea5-43c3-b759-e98c818ae108
+:END:
+#+title: testim-money-case
+* Tesim Money Case
+ - we have a philipino agency that we work with for 15 per hour
+   - if we use them 30 min a day
+   - quoted us at 3k a year to test the app
+ - lots of experience with other frameworks
+   - cypress
+   - playwright
+ - we would be under 500 runs a month
+ - lambdatest is $99/month
+   - how are you differentiated there
+ - frustration with working in testim already and getting screwed
+   - switching up pricing
+ - CEO joking about price increase with investor friends about quoting for 500 runs/month
+ - not wanting to waste resources on managing them, just want a simple software

@@ -1,0 +1,43 @@
+:PROPERTIES:
+:ID:       d3e4139b-ec9a-4e17-a45b-922ceeeb4f48
+:END:
+#+title: brand-list-view-improvements
+#+filetags: :asana-ticket:
+* Brand list view improvements
+
+** Asana Link
+[[][ticket link]]
+
+** Tasks
+*** DONE complete ticket
+
+** Thursday, May 30, 2024 Notes
+ - going to leave the last three tasks for this undone
+   - i think truncating values will solve most of Katherine's issues
+   - and table cell width is far more complicated than anything else
+   - still don't know what ticket this goes under though
+
+** Wednesday, May 29, 2024 Notes
+ - overview:
+   - [ ] product description should be two lines
+   - [ ] ellipse categories to give description more room (use designs for space)
+   - [ ] get all spacings right
+   - [X] loading state look more like a table
+   - [X] return policy button
+   - [X] limit categories to 3
+   - [X] should remember that it's in list view
+   - [X] hover state on brand values
+   - [X] row supposed to change colors on hover
+   - [X] gap between categories and table
+ - return policy modal
+   - condition for that to not open is invalid return policy URL or no return policy URL
+   - confirm that with Katherine
+ - remember grid or list view
+   - probably worth adding a URL param
+   - but that could be awkward with table state
+   - should ask Conner
+ - table hover state
+   - this was just disabled lol
+ - table loading state
+   - uggggh
+   - ended up doing something kind of awkwardly manual

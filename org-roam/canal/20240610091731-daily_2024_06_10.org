@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       3cdfcbdf-1a2f-4789-b9c0-683260e0fcde
+:END:
+#+title: daily-2024-06-10
+#+filetags: :daily:
+* Daily - Monday, June 10, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - bulk proposals
+ - sent inbox (read Chris' PR)
+ - testim discussion
+   - have a call this afternoon
+ - back arrow on nav
+
+Conner, Alex Kite, Simran let go on Friday. not going to comment much on that from an emotional standpoint but just need to be aware of what it could spell out for my workload and responsibilities. still bumping between sent folder in inbox and bulk proposals so want to get those finished and off my plate relatively soon. otherwise i don't have any major projects on my plate so might start looking into ways that the frontend could possibly help with the overall app speed performance that we've been looking for.

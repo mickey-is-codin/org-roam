@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       9cec82a5-c134-4f86-8f88-aa65b2d61dde
+:END:
+#+title: inbox-sent-folder
+#+filetags: :asana-ticket:
+* Inbox sent folder
+
+** Asana Link
+[[][ticket link]]
+
+** Tasks
+*** TODO complete ticket
+
+** Wednesday, May 29, 2024 Notes
+ - Jess asked for a spacing fix that's actually included in this ticket
+ - Chris needs to update the BE so that un-responded-to messages only show in sent folder

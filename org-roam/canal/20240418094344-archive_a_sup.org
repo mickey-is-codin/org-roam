@@ -1,0 +1,83 @@
+:PROPERTIES:
+:ID:       bc47fd0f-9338-4b9a-8034-dd8f4a867b18
+:END:
+#+title: archive-a-sup
+#+filetags: :asana-ticket:
+* Archive a SUP
+
+** Asana Link
+[[https://app.asana.com/0/home/1206724427991858/1206846760028440][ticket link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+
+** Wednesday, May 1, 2024 Notes
+ - copy change
+   - just need to change "Unarchive" to "Move from archive"
+ - all, active, pending tabs should not include archived SUPs
+   - i think these are BE updates needed entirely
+ - text on button change without refresh
+   - can't reproduce this at all so i think it should be fine
+
+
+** Tuesday, April 30, 2024 Notes
+ - kind of tough to change sidebar tabs
+ - need to make sure we re-fetch suppliers when archiving or removing from archive
+   - checking dev behavior
+   - yeah no dev doesn't re-fetch
+ - remove from suppliers should "unarchive" (done)
+ - archived should have archive icon (done)
+ - change active shops to filter out archived ones?
+   - definitely
+   - ah Simran already did this
+ - =need to ask BE to fix count of active to exclude archived=
+ - consideration:
+   - should removing from My Suppliers "unarchive"?
+   - archive information becomes useless at that point
+   - and if you add them back you wouldn't want them in the archive
+   - making exec decision on this
+
+** Wednesday, April 24, 2024 Notes
+ - Simran's branch name: ~simran/apr/archive_sup~
+ - what "Remove from My Suppliers" does:
+   - runs mutation ~toggleShowInMySupsView~
+   - Simran's PR removed this mutation i believe
+ - Simran conversation notes:
+   - archiving is going to just be another boolean
+   - "another" because previously ~shouldShowInMySuppliersView~ was there
+   - odd, seems that she removed that mutation
+   - the conversation would imply that she just updated an arg that could be sent to it
+   - ok no i'm dumb she said she would switch to the patch mutation
+   - so no need for this mutation to exist at all
+   - but which patch does she mean?
+   - ~spyglassSkSupRelationshipPatch~
+   - :hermmm:
+   - odd that ~spyglass...~ but oh well
+ - first step, add the ability to archive:
+   - "My Supplier" checkmark button
+   - should probably alter the hook ~useToggleShowInMySuppliersView~
+     - allow archiving as well as removal
+     - probably need to rename it
+ - important question!!:
+   - does this change imply the ability to archive a storefront too?
+   - kind of need it too with Simran's change?
+   - actually no that's not necessarily true
+   - but still have to alter that other hook
+ - wondering if Simran should update endpoint to only accept "other shop" id
+
+** Thursday, April 18, 2024 Notes
+ - likely need:
+   - mutation to archive the SUP
+   - conditional logic to check archive status on the shop
+ - interesting, functionality is an SK archiving a SUP
+   - so they're archiving the partnership itself
+ - visual
+   - clicking the "My Suppliers" checkmark button
+     - drops down to second "Archive" button
+   - My Suppliers page has an archive icon
+     - filters to show archived suppliers
+   - archived suppliers shouldn't show in any other tabs
+   - if archived, dropdown "Move from archive" and "Remove from My Suppliers"
+   - toast on action completes
+   - more button in My Suppliers table also allows "Unarchive" and "Remove from My Suppliers"

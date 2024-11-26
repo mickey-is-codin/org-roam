@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       4492a632-8d63-4294-9215-60113a7a8534
+:END:
+#+title: react-18-upgrade
+* React 18 Upgrade
+
+** Monday, June 3, 2024 Notes
+ - main issues seem to be around styled-components
+   - specifically, the ~attrs~ method

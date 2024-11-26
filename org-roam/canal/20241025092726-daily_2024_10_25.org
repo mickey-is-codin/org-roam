@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       df99b146-c007-4557-a793-84c8e20525de
+:END:
+#+title: daily-2024-10-25
+#+filetags: :daily:
+* Daily - Friday, October 25, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+ - update shipping modal mostly ready locally
+ - got Compare At column up
+ - made some quick changes for that
+ - have a couple of quick fix PRs that will clear my board
+ - want to get discussion going for embedded supplier experience
+
+** Shipping Modal Copy
+ - Garrett responded on ticket
+
+** Polaris Situation
+ - still need to figure out session sharing
+ - want to revive channel with Garrett, Surya, Wally
+
+** Morning Brain Dump

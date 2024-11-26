@@ -1,0 +1,39 @@
+:PROPERTIES:
+:ID:       77c0707d-5f0c-4cd6-8c74-f40b65984034
+:END:
+#+title: override-shipping-locations
+#+filetags: :asana-ticket:
+* Ability to override shipping locations for SUP profile
+
+** Asana Link
+[[https://app.asana.com/0/1206724427991868/1206798315795699][ticket link]]
+
+** Tasks
+*** DONE complete ticket
+
+** Summary
+currently shipping locations for a shop come from their Shopify profile. we need to add an ability to override that within the app. beyond that, we don't have a field to allow non-Shopify shops to designate where they ship to. goal is in profile previews to see "ships to (1/2/etc) countr(y/ies)".
+
+** Thursday, May 30, 2024 Notes
+ - Surya needs to add ~shipsTo~ to patch shopify shop input fields
+ - once that's done i should be able to get a PR up
+
+** Wednesday, May 29, 2024 Notes
+ - a bit confused by fields on ~shop~
+   - ~shipsTo~ and ~overrideShipsTo~
+   - need to get some background from BE on this
+
+** Thursday, April 18, 2024 Notes
+ - going to actually start out on this today
+ - i can do some of the UI but of course not actually make any of the network requests
+ - but can set up the CountryPickerModal to open with the ~useGetCountries~ data
+
+** Tuesday, April 16, 2024 Notes
+ - honestly this feels almost entirely blocked by BE
+ - should get in touch with Surya about what he needs to make BE work
+ - because the FE implementation will very much be dictated by what he comes up with
+*** Design Notes
+ - info on right side of shop profile
+ - bit confused how "Countries [brand] ships to" should show up
+ - update brand details modal has "Ship to countries" section with Edit button
+ - that opens Country Picker

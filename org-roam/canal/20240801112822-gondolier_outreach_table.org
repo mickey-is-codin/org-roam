@@ -1,0 +1,50 @@
+:PROPERTIES:
+:ID:       47d729c2-5a0b-4f68-9ce0-b510a1d9556b
+:END:
+#+title: gondolier-outreach-table
+* Gondolier Outreach Table
+
+** Spreadsheet Notes
+ - columns:
+   - Larroude Decision
+   - TikTok Handle
+   - Affiliate Center Profile
+   - Number of Followers
+   - Percent Audience Female
+   - GMV
+   - Last Message Received
+   - Preferred Product
+   - Included on Invoice Due
+   - Target Collaboration Invite Sent (Canal Internal)
+   - Canal Internal
+
+** Design Notes
+ - columns:
+   - Action
+     - checkmark/x to approve/deny creator for Larroude
+     - pay attention to state
+     - pay attention to resulting toasts
+   - Read/unread
+     - no title/header
+   - Handle
+     - profile picture
+     - name
+     - link
+   - Followers
+     - pretty self explanatory
+   - GMV
+     - money amout localized
+   - Last message received
+     - conditional longer than a week
+ - un-actioned rows are bold, include unread notification icon
+
+** Data Model Notes
+
+** Resolver Notes
+
+** Frontend Notes
+ - where should this table live in the codebase?
+   - ...new codebase?
+   - ~supplier~/~shopkeep~/~gondolier~?
+ - how should it be accessible within the app?
+ - does supplier/shopkeep come into play at all?

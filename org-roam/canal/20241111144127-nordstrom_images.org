@@ -1,0 +1,94 @@
+:PROPERTIES:
+:ID:       3694f1b5-cb4b-41af-8669-06bb0286dd13
+:END:
+#+title: nordstrom-images
+* Nordstrom Images
+
+** Tuesday, November 12, 2024
+   - sounds like Surya is in today, wants to improve pre-processing (reduce manual load)
+   - need to build manual tool no matter what
+   - Clay been working on endpoints, etc
+
+** Implementation Notes
+ - libraries:
+   - drag-n-drop: ~react-dnd~
+   - image cropping/basic editing: ??
+
+** Spec Notes
+ - URL: ~/shopkeep/edit-images/<supplier-id>~
+ - only visible in god-mode
+ - page should show, for a supplier, all products =approved= AND =added to store=
+ - each page is specific to a product
+   - display pool of images =product image pool=
+   - allow dragging to reorder in =product image pool=
+   - display section for each variant
+   - allow dragging to assign to =variant image set=
+   - allow dragging to reorder =variant image set=
+
+** Questions
+ - possible URL scheme? ~/shopkeep/edit-imaegs/<supplier-id>/<product-id>~
+
+** Nordstrom Image Guidelines
+ - first image white/gray background
+ - first image no text
+ - first image no lifestyle
+ - 2:3 aspect ratio
+ - minimum 3 images per variant
+
+** Team Discussion
+ - what it needs to do
+   - allow cropping
+   - allow restoring to image in history
+   - allow image reordering at product level
+   - allow image assigning to a variant
+   - allow image reordering at variant level
+   - allow deleting image
+ - go at a supplier level
+ - show every product they're approved for and added to store
+ - solutions:
+   - combination of what we've built and some external tool
+   - mirakl says "hey suppliers, you have to fix your images"
+     - Marisa has done this, started reaching out to suppliers
+   - godmode into nordstrom sk account and use the sk-side tool
+ - caveat
+   - we found with smart cropping turned on was just adding white borders to top/bottom
+   - so if we use smart cropping it'll have to be updated/fixed
+ - what we've done
+   - turned off "remove background" from first batch (smart cropping)
+   - hand curated images so far
+   - what Surya built got us easy images suppliers
+ - what is the problem?
+ - scale
+   - approved for 26,000 products
+   - Clay estimated something like 500...?
+   - every product has to have 3 images
+   - 78,000 images then
+   - roughly 40% of images seem ok
+   - so probably about 30,000 images need to be addressed
+   - something like 52 suppliers total
+ - questions:
+   - we've already built some things...are these accessible in the app?
+     - sounds like it but we're not using all of them
+
+
+
+** Possibly Useful Query
+#+begin_src
+    shopifyProducts(
+      shop_Id: $shopId
+      offset: $offsetIndex
+      first: $pageSize
+      filters: { tableFilterInput: $tableFilterInput }
+      orderBy: $orderByValue
+      sortByMostOrders: $sortByMostPopular
+      sortByHighestSkCommission: $sortByCommission
+      productsAvailableToAddToProposal: $proposalId
+    ) {
+      edges {
+        node {
+          ...SkDiscoverableSupplierProduct
+        }
+      }
+      totalCount
+    }
+#+end_src

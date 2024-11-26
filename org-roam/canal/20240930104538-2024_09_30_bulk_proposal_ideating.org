@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       f0f418e5-88c4-4ddd-9431-2bc209aa4a5e
+:END:
+#+title: 2024-09-30-bulk-proposal-ideating
+* Bulk Proposal Ideating - 9/30/24
+
+** Motivation
+product wants the "add brands" modal to be able to search all brands. i remember strongly that this is impossible based on table specs. i need to investigate to remember exactly why.
+
+** Setting/Context
+ - 14 suppliers in discover for Mickstopher Storefront
+ - discover page size: 10 - ~src/components/shopkeepapp/discover/results/constants.ts~
+ - bulk proposal brand table page size: 5 - ~src/components/shared/proposals/CreateBulkProposalPage/constants.ts~
+ - add brands modal page size: 10 - ~src/components/shared/proposals/ProposalForm/AddBrandsModal/index.tsx~
+
+** Current Code Review
+ - for ~ShopListViewItems~ page:
+   - ~shopIdsToInclude~:
+     - if "select all" (~selectionMaskValue~), empty list
+     - otherwise manually selected rows within single page
+   - ~shopIdsToExclude~:
+     - if "select all" (~selectionMaskValue~), manually *de-selected* rows within single page
+     - otherwise empty list
+ - for ~CreateBulkProposalPage~:
+   - just propagate values for ~shopIdsToInclude~ and ~shopIdsToExclude~
+   - ~onAddSuppliers~:
+     - just ~toggleSelection~ set those brand IDs to ~true~
+   - ~onRemoveSuppliers~:
+     - just ~toggleSelection~ set those brand IDs to ~false~
+   - note:
+     - these callbacks seem sort of naive/dangerous
+     - but we should be able to trust ~toggleSelection~ to be aware of ~selectionMaskValue~
+     - confirmed in the code
+
+** Fix TODO
+ - use ~usePaginatedQuery~ for ~useGetBulkProposalBrands~
+ - make new hook ~useGetAddableBrands~
+ - add search bar for use with ~useGetAddableBrands~

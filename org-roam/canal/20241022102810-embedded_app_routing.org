@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       a8031ed4-7949-4273-8960-65e2250a1f3c
+:END:
+#+title: embedded-app-routing
+* Embedded App Routing
+
+** Supplier App Buttons
+ - =go to canal account=
+   - local: ~localhost:3000/supplier/overview~
+   - develop: ~develop.shopcanal.com/supplier/overview~
+   - prod: ~app.shopcanal.com/supplier/overview~
+ - =manage availability=
+   - local: ~localhost:3000/supplier/listings~
+   - develop: ~develop.shopcanal.com/supplier/listings~
+   - prod: ~app.shopcanal.com/supplier/listings~
+ - =terms and conditions=
+   - environment independent
+   - ~shopcanal.com/terms-of-service~

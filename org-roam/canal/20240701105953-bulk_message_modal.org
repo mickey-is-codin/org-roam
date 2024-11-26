@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       9eabeeea-bb9e-4521-83da-fd10ff62876b
+:END:
+#+title: bulk-message-modal
+#+filetags: :asana-ticket:
+* Bulk Message Modal
+
+** Monday, July 1, 2024 Notes
+ -

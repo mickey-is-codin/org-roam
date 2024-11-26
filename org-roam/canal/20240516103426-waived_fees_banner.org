@@ -1,0 +1,46 @@
+:PROPERTIES:
+:ID:       1684083f-74ad-458f-8c52-fc16d6a66239
+:END:
+#+title: waived-fees-banner
+#+filetags: :asana-ticket:
+* Waived fees banner
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1207328942827028][ticket link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+
+** Thursday, May 16, 2024 Notes
+ - ticket background
+   - =AirMail has been seeing the [banner] even though they do technically have a monthly fee against their floor=
+     - hmmmmmm
+     - this seems like it could be a weird nuance
+     - perhaps the UI is working but has to take something new into account
+   - not showing up on the supplier's end when they actually do have waived fees
+     - this seems like more of a specific bug i guess?
+   - bringing up terms being the same
+   - seems to me like that wouldn't be pertinent information but idk
+   - Marisa thinks this could be a partnerships bug
+ - implementation
+   - how to determine banner:
+     - does a shop's list of referral shops include this shop?
+     - if so is the referral end date later than today?
+ - feature background
+   - i don't really know anything about this feature
+   - seems contextually that fees are waived and this banner shows up if you're referred
+   - ah so if you refer a shop then this banner should show up on that shop
+ - hmmmm i'm an adult, i can check the prod CMS right?
+   - though i might need like a spyglass link or something to see
+ - questions:
+   - Marisa: do supplier waived fees also work based on supplier referring someone?
+   - Marisa: in our app domain, does referring someone mean /all fees/ are waived?
+   - Marisa: if an SK sees waived fees banner for a SUP, should that SUP see it?
+ - question: how do supplier waived fees work?
+   - are we meant to check if the supplier has referred someone?
+   - this would be exactly the same and there's no issue in that case
+ - Marisa discussion:
+   - should base this on transaction fees being 0 instead of referrals
+   - Marisa thinks we should probably remove the banner in the SK app entirely
+   - [[https://canalspace.slack.com/archives/C02PXMNAZ29/p1715802645437049][Slack discussion of that]]

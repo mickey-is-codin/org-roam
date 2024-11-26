@@ -1,0 +1,123 @@
+:PROPERTIES:
+:ID:       6704d08e-6db1-4775-9033-23c8f88ccf18
+:END:
+#+title: product-availability-cell
+* Product Availability Cell
+
+just some quick specs for how product availability should show up. mainly used to display stock.
+
+** Product Level
+*** multiple variants: =250 in stock for 4 variants=
+*** single (or zero?) variants: =250 in stock=
+** Variant Level
+*** default: =50 in stock=
+** Agnostic
+*** unlisted: =Unlisted from Canal=
+*** paused: =Product paused=
+*** rescinded: =Product rescinded=
+
+
+
+** What Cursor Says About Availability Display
+#+begin_src markdown
+# How We Display Product Availability
+
+## Overview
+
+Our system determines how to display the availability of a product or its variants based on several factors. The display varies depending on whether we're showing a single product, multiple variants, or if the product is in a special state like being unlisted, paused, or rescinded.
+
+---
+
+## Display Differences Between Top-Level Products and Variants
+
+### Single Variant or No Variants
+- **Scenario:** The product has no variants or only one variant.
+- **Display:**
+  - **In Stock:**
+    - If inventory management is not enabled (`inventoryManagement` is `null`), we display **"In stock"**.
+    - Tooltip: *"Inventory tracked on a different platform."*
+  - **Exact Stock Count:**
+    - If inventory is managed and the stock count is above the threshold, we display **"X in stock"**, where **X** is the available quantity.
+  - **Out of Stock:**
+    - If the stock count is at or below the threshold and selling when out of stock is not allowed (`inventoryPolicy` is `"deny"`), we display **"Out of stock"** in a prominent color.
+  - **Backorder:**
+    - If the stock count is negative but backorders are allowed (`inventoryPolicy` is `"continue"`), we display the negative count with a tooltip explaining the backorder status.
+
+### Multiple Variants
+- **Scenario:** The product has multiple variants.
+- **Display:**
+  - **Aggregated Stock Count:**
+    - We sum the stock counts of all variants with inventory management enabled.
+    - Display **"X in stock for Y variants"**, where **X** is the total stock and **Y** is the number of variants.
+  - **In Stock Without Counts:**
+    - If the total stock is zero but at least one variant doesn't have inventory management, we display **"In stock"**.
+  - **Out of Stock:**
+    - If the total stock is at or below the threshold and no variants allow backorders, we display **"Out of stock"**.
+  - **Backorder:**
+    - If the total stock is negative and at least one variant allows backorders, we provide a tooltip explaining the backorder status.
+
+---
+
+## What We Display for Every Product State
+
+### Unlisted Products
+- **Condition:** `isUnlisted` is `true`.
+- **Display:** **"Unlisted from Canal"**
+- **Tooltip:** Information about the unlisted status and possibly a contact option for the supplier.
+
+### Paused Products
+- **Condition:** `isPaused` is `true`.
+- **Display:** **"Product paused"**
+- **Tooltip:** Details about why the product is paused and how to proceed.
+
+### Rescinded Products
+- **Condition:** `isRescinded` is `true`.
+- **Display:** **"Product rescinded"**
+- **Tooltip:** Explanation of the rescinded status with potential next steps.
+
+### Zero Variants Found
+- **Condition:** The product is expected to have variants, but `variants.length` is `0`.
+- **Display:** **"Zero variants found"**
+
+---
+
+## Edge Cases That Might Show Up
+
+- **Inventory Management Disabled:**
+  - If `inventoryManagement` is `null` for a product or variant, we consider it always **"In stock"**.
+  - Tooltip provides context that inventory is tracked elsewhere.
+
+- **Negative Inventory Counts:**
+  - When stock counts are negative and `inventoryPolicy` is `"continue"`, indicating backorders are accepted.
+  - We display the stock status with a tooltip about backordering.
+
+- **No Inventory Data:**
+  - If inventory data is missing entirely, we default to displaying **"In stock"** or handle it based on other available information.
+
+- **Threshold Differences:**
+  - The threshold for considering a product **"Out of stock"** may vary between suppliers and retailers (`isSupplierView` affects this).
+
+---
+
+## Logic for Displaying Aggregated Information
+
+- **Summing Variant Stocks:**
+  - We calculate the total available stock by adding up the stock counts of all managed variants.
+  - Variants without inventory management are not included in the sum but can affect the stock status display.
+
+- **Determining Stock Status:**
+  - **In Stock:**
+    - Total stock is above the threshold, or inventory management is disabled.
+  - **Out of Stock:**
+    - Total stock is at or below the threshold, and no variants allow backorders.
+  - **Backorder Possible:**
+    - Total stock is negative, but at least one variant allows selling when out of stock.
+
+- **Threshold Calculation:**
+  - We use the lowest value from `inventoryThresholds` to determine the threshold for stock warnings.
+  - For suppliers, we might set the threshold to zero, meaning any positive stock is considered **"In stock"**.
+
+---
+
+By applying this logic, we ensure that the availability display is informative, accurate, and provides necessary context to the user, whether they are a supplier or a retailer.
+#+end_src

@@ -1,0 +1,80 @@
+:PROPERTIES:
+:ID:       8a2b34c7-fe91-4472-ba40-dbcbf4857ce4
+:END:
+#+title: wedding-vendors
+* Wedding Vendors
+
+** Date
+*** Decision
+**** =10/10/25=
+** Church
+*** Decision
+**** =Holy Family=
+** Venue
+*** Decision
+**** =Bridgeport Art Center=
+** Caterer
+*** Options
+**** Butter and Vine
+**** Catered by Design
+*** Decision
+*** Call Notes
+** Planner
+*** Options
+**** Recommended by Kate's Planners
+***** Olive fine weddings
+****** DONE reach out
+***** CM planning co
+****** DONE reach out
+**** Recommended by Bridgeport
+***** Rosanna & Co
+****** DONE reach out
+***** Ohana events
+****** DONE reach out
+***** Anticipation events
+****** DONE reach out
+***** Clementine custom events
+****** DONE reach out
+***** Events to a T
+****** DONE reach out
+*** Blurb
+Hi there! My name is Mickey and my fiance and I just wanted to get in touch about possible planning services for our upcoming wedding. We're just about a year out and have begun some discussion with major vendors that have been recommended or enforced by our venue. However, as we move forward I think it will make sense for us to look into at least partial planning for the event to help with things like budget, timeline, etc. As for the actual vision of the wedding, Molly and I are both really excited to design this wedding and create a fun party for our family and friends that really represents us as people. We've started a pinterest board for the vibe we're looking for from the wedding that's mostly just a fun design collage at this point but hopefully that gives some basic overview for the stage we're at with this process. As for some logistics, we're excited to be planning the wedding in Chicago but we both live in NYC so will be doing sporadic trips back to Chicago for the planning process and meetings with vendors. Finally, our overall budget for the wedding is $100K and we're looking to get better estimates of each specific vendor that we consider with this overall budget in mind. We figure planning may help with some of the expectations and overall budgeting as we both don't have a ton of experience with expected costs for the various pieces of a wedding. Otherwise we look forward to chatting more and would love to set up some time to do a call and learn more!
+*** Call Notes
+**** Noelle (Olive) - 10/25/24 @ 11:00AM
+ - pre:
+   - day of/month of
+   - setup/breakdown of event
+   - timeline assistance
+     - planning timeline
+     - day of timeline
+   - budget assistance
+   - vendor recs
+   - streamlined vendor comms
+**** Carolyn (CM Planning) - 10/28/24 @ 4:15PM
+**** Julissa (Clementine) - 10/30/24 @ 4:30PM
+**** Danielle (Ohana) - 10/31/24 @ 3:00PM
+**** Elizabeth (Anticipation) -
+**** Rosanna (Rosanna & Co) -
+*** Decision
+** Photographer
+*** Options
+**** Indigo Lace
+**** Golden Hour
+*** Decision
+** DJ
+*** Options
+*** Decision
+** Transportation
+*** Decision
+** Accomodation
+*** Options
+*** Decision
+** Florist
+*** Options
+*** Decision
+** Outfits
+*** Options
+*** Decision
+** Decor
+*** Options
+*** Decision

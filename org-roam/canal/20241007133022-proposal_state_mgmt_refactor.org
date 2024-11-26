@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       53901087-9728-4992-9c63-f844391fe4a6
+:END:
+#+title: proposal-state-mgmt-refactor
+* Proposal State Management Refactor
+
+** Need
+ - currently changes to the proposal form are very difficult
+ - the state between sections is handled in a very awkward way
+ - consistent messaging b/wn FE and BE would make this flow more easily
+ - currently there is a bunch of repetitive code
+ - that code is hard to maintain/change
+ - and this is a frequently used/change requested area of the app
+
+** Proposal (for Proposals)
+ - possibly managed with reducers?
+   - similar to management used for tiktok affiliate campaign creation UI
+ - make proposals unique URL, not just local state
+ - better section state handling
+ - UI components/tools that let a dev make a page that "looks like a proposal" easily
+   - e.g., canal affiliate target collaborations

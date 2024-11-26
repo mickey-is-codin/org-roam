@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       6ecd4443-984f-43e2-9710-60026b5f7519
+:END:
+#+title: orders-attach-to-messages
+#+filetags: :asana-ticket:
+* Orders Attach to Messages
+
+** Monday, July 8, 2024 Notes
+ - having a bit of trouble with this because i'm not sure my local orders are realistic
+   - will ask Simon about stubbing these better
+ - need to figure out if search by customer can work
+ - perhaps this will be easier to just test in dev environment
+
+** Tuesday, July 2, 2024 Notes
+ - summary:
+   - dropdown allows you to select an order to attach to a message
+   - when sending a message from an order this auto-fills
+   - selecting an order pre-fills subject line
+ - questions:
+   - which orders should show up in the box?
+   - what surfaces should this be available on?
+     - from brand profile
+     - from order
+   - what surfaces should this not be available on?
+   - ~myOrders~ or ~shopifyOrders~?
+   - should both SKs and SUPs see this?

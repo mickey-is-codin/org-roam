@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       4e219248-b62d-47be-92d0-78ff3b19bf92
+:END:
+#+title: variants-modal
+#+filetags: :asana-ticket:
+* Variants Modal
+
+** Wednesday, July 31, 2024 Notes
+ - commissions
+   - overall shopkeep commission
+     - (supplier view) for some reason sk commission is just...different (26 my branch, 30 develop) ask Toby about this
+     - (shopkeep view) all looks good except i'm seeing a 0% where there's a N/A on develop
+   - your commission
+     - (supplier view) 69% on my branch, 65% on develop
+     - (shopkeep view) N/A there shouldn't be anything
+   - net earnings
+     - (supplier view) seems calculated similarly but percentages are different
+     - (shopkeep view) way too high. seems to be multiplying by 30 instead of by .30
+ - testing now that i know how table works
+   - BE: ~minSkCommissionAsPercentage~ and ~maxSkCommissionAsPercentage~ calculating across all shops,not just partner
+   - supplier view: commission is editable on activated product, "your commission" goes away
+   - supplier view: add button showing in actions on activated product
+
+** Thursday, June 20, 2024 Notes
+ - list of tables i can think of that need this:
+   - ~src/components/shared/partnerships/PartnershipProductsTable/index.tsx~
+   - ~src/components/supplierapp/listings/SupplierListingsTable/index.tsx~
+
+** Monday, June 17, 2024 Notes
+ - questions:
+   - remove the count of variants? and in availability column?
+   - where should this work? every products table?
+   - what is "list on canal"?

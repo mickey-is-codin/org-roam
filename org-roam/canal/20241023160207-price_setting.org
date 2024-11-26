@@ -1,0 +1,44 @@
+:PROPERTIES:
+:ID:       a432345e-5479-4ba1-8131-834924180c8e
+:END:
+#+title: price-setting
+* Price Setting
+
+** Shopify
+ - two fields to set =original price= on a given variant: =compare at price=, and =price=
+   - if =compare at price= is set
+     - =original price= of variant is =compare at price=
+     - =discount price= of variant is =price=
+   - if =compare at price= is not set
+     - =original price= of variant is =price=
+
+** Canal
+ - a combination of =original price=, =sale price syncing=, and =canal price= is used to calculate =default price=
+ - if =canal price= is on and =sale price syncing= is off (we don't sync sale price)
+   - =canal price= is calculated from =original price= and stored on =default price=
+ - if =canal price= is off and =sale price syncing= is off
+   - ?
+ - if =canal price= is off and =sale price syncing= is off
+   - ?
+ - if =canal price= is on and =sale price syncing= is on
+   - ?
+
+** Canal Price
+ - turned on if two fields are set:
+   - =round adjusted price to=
+   - =price adjustment percent=
+
+** Sale Price Syncing
+ - an override that allows Canal to use =discount price= instead of =original price=
+ - overridden if =default allow sup sale price passthrough= is set
+
+** Difference for SUPs and SKs
+*** SK
+ - =default price= is the price that a variant should be
+*** SUP
+ - =default price= is the price that a variant should be for an SK
+ - =price struct= is the =original price= of a variant
+   - no =sale price syncing= accounted for
+   - no =canal price= accounted for
+*** Questions
+ - can the BE send the same variant to an SK and a SUP with different =default price= values?

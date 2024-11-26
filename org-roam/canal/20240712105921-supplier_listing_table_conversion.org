@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       b9798fe0-534e-4fed-a5bc-076a26349f1e
+:END:
+#+title: supplier-listing-table-conversion
+#+filetags: :asana-ticket:
+* Supplier Listings Table Conversion
+
+** Action List Behavior/Actions
+ - if supplier has not listed on canal, just return a button cell that says "List"
+ - list of action items:
+   - edit product/variant details
+   - view in shopify
+   - pause selling
+   - resume selling
+   - unlist from canal
+ - list of modals:
+   - edit commission modal
+   - pause selling modal
+   - unlist modal
+   - add/edit products modal
+   - add/edit variants modal
+
+** Tuesday, July 16, 2024 Notes
+ - things to calculate:
+   - ~supplierCommissions~
+     - ~shopkeepCommission~ is ~overrideShopkeepCommission~ or ~approvedShopkeepCommission~ or ~defaultShopkeepCommission~
+     - fee is ~supServiceFee~ or ~SERVICE_FEE~
+     - result is ~1 - shopkeepCommission - fee~ for each variant
+     - =ultimately we get the min and max of these values=
+   - ~shopkeepEarningsRange~
+     - ~shopkeepCommission~ is ~overrideShopkeepCommission~ or ~approvedShopkeepCommission~ or ~defaultShopkeepCommission~
+     - result is ~priceStruct * shopkeepCommission~
+   - ~supplierEarningsRange~
+     - ~shopkeepCommission~ is ~overrideShopkeepCommission~ or ~approvedShopkeepCommission~ or ~defaultShopkeepCommission~
+     - fee is ~supServiceFee~ or ~SERVICE_FEE~
+     - result is ~priceStruct * (1 - shopkeepCommission - fee)~
+ - where this stuff is used
+   - commission column
+
+** Monday, July 15, 2024 Notes
+ - random intel: something is a variant if its ~variants~ field is undefined
+
+** Friday, July 12, 2024 Notes
+ - things to figure out:
+   - listing status

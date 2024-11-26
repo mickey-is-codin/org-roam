@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       0092bd4e-95c0-4fed-b87b-e62f91f0bdd6
+:END:
+#+title: dev-documentation-help
+* Dev Documentation for Canal
+
+** Problem Statement
+The Canal app has a ton of surfaces and many of them require quite a bit of insider knowledge to not only be able to understand and program within, but also to be able to faithfully reproduce issues. I'd like to create some sort of documentation that I (or any other developer, FE or BE) can refer to in certain situations.
+ - "There's a ticket for onboarding, how do I test onboarding locally again?"
+ - "I'm being asked to update something in the proposal workflow, which proposal component is which and how do i avoid repeating work?"
+ - "A shipping error has come up and shipping is something that only exists in prod in my brain, how do i reproduce or mock it locally or in dev?"

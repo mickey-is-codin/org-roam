@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       2efa33fa-a0da-4e4a-81a4-1d19ad67c12a
+:END:
+#+title: pisanello
+* Pisanello
+
+an artist from like the 1500's who did a gothic piece of St. George

@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       8adf9638-3f2c-4180-af68-3bdc6b0ba4b4
+:END:
+#+title: daily-2024-07-08
+#+filetags: :daily:
+* Daily - Monday, July 8, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Tickets
+ - [[id:6ecd4443-984f-43e2-9710-60026b5f7519][orders-attach-to-messages]]
+
+** Morning Brain Dump
+ - clean up
+   - variants modal PR feedback?
+   - bulk proposals PR merge?
+   - prompt Simon on dashed price in inventory
+ - tasks
+   - message things:
+     - attach orders to message
+     - send messages from orders page
+     - bulk message modal
+   - trawl the bug board?
+ - stuff to learn
+   - how orders work
+   - how product syncing works
+   - how payment works
+   - org-roam docs
+   - emacs help docs

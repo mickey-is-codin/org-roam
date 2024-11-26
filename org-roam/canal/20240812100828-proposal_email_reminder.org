@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       c83f1fa4-1b3c-4c35-b057-230f1532b547
+:END:
+#+title: proposal-email-reminder
+#+filetags: :asana-ticket:
+* Proposal Email Reminders
+
+** Monday, August 12, 2024 Notes
+ - task overview:
+   - change timing of ~ProposalExpiresSoonRecipientEmail~
+   - change timing of Kaili proposal follow up
+   - change copy of Kaili proposal follow up
+   - create another from-Kaili email
+ - questions/issues:
+   - i think BE ultimately needs to be who updates actual email send timings
+   - where is the "Kaili proposal follow up" email?
+   - where is ~ProposalExpiresSoonRecipientEmail~?
+   - think i have to be added to our Postmark account
+   - very likely that one or both of these templates just exist there online
+ - template names:
+   - ~ProposalExpirationAuto1~
+   - ~ProposalExpirationTeamMember1~
+   - ~ProposalExpirationAuto2~
+   - ~ProposalExpirationTeamMember2~
+   - ~ProposalExpirationAuto3~
+
+** Templates
+ - from canal: right when proposal is sent [no change] (don’t need to know)
+ - from kaili: 3 days later (~Kaili proposal follow up~, change copy, change name)
+ - from canal: 8 days later (~ProposalExpiresSoonRecipientEmail~)
+ - from kaili: 16 days later (New template created per subtask)
+ - from canal: 19 days later (~ProposalExpiresTomorrowRecipientEmail~)

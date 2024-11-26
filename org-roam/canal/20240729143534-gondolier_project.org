@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       8fc54aba-1c7c-4638-8271-c150ee361795
+:END:
+#+title: gondolier-project
+* Gondolier Project
+
+** Everything I Can Vomit
+the Canal team has been making money on bulk messaging tiktok creators on behalf of brands for campaigns. each outreach is essentially the brand sending a message with an offer for some free samples via a link. then the creator responds with their interest and what they would like for a free sample. additionally they respond with a link to their TikTok affiliate page. once the brand (meaning a member of the Canal team) has that info, they input it into a spreadsheet. from there someone who works with the brand goes into the spreadsheet and approves or declines the creator and Canal's part of the job is done.
+
+** MVP for Automating
+we need to create something that does this outreach in large batches. that means using some templating/formatting engine to send messages on behalf of a shop to, let's say, 100 creators within a single campaign. the MVP should then be able to do some basic follow-up to make sure that it gathers all the information needed to populate the "spreadsheet". once it has that information we can store it and display it to the brand who initiated the campaign in a table format similar to the spreadsheet.
+
+** Elements of UI
+at a minimum, if we work backwards we know the MVP needs to include a table similar to the spreadsheet that's being populated by the Canal team and reviewed by the client team. beyond that i'm not exactly sure what we need. the actual messaging should be accomplished by the backend. it seems to me that possibly the only user view that we would need to build is the outreach table.
+
+** Scope of MVP
+first order of business will probably be just recreating the manual spreadsheet. don't think this will even need to be linked up to anything to start? though i'm not sure if the sources for any of the information should at first come from actual operations on the BE.

@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       e7106064-7ebf-4201-ac31-43680e22ada0
+:END:
+#+title: proposals-refactor
+* Proposals Refactor
+
+** Needs Statement
+there are lots of areas in the app that we initiate and edit proposals. we're doing a lot of code repitition when we do this which means that things aren't standardized and reusable. what parts we're using that /are/ being reused are being reused more because of the arcane nature of their behavior and code rather than reusing them because they are useful. i think we should update the proposal flow so that, any time a designer asks us to add a proposal section to the app we are excited instead of scared!
+
+** UX Notes
+ - possible abstraction paradigm
+   - UI crossover between proposals and onboarding
+   - multi-step UI with multiple pages (onboarding, campaign creation)
+   - multi-section page (proposals, campaign creation)
+
+** Codebase Research
+*** UI Components
+**** Proposal (Multi-Section Page)
+***** ~<ProposalForm>~
+****** ~<InnerProposalForm>~
+******* ~<ProposalFormLayout>~
+******* ~<SectionsList>~
+******* ~<Section>~
+**** Onboarding (Multi-Step Pages)
+***** ~<ProgressStep>~
+*** Places That "Proposal UI" Shows Up
+ - ~<ProposalForm>~
+   - creating a proposal
+   - creating a "bulk" proposal
+   - creating a "counter" proposal
+   - "editing" a proposal
+   - "resending" a proposal
+   - "renegotiating" terms
+   - "renegotiating" products
+   - (kind of) canal affiliate campaign creation

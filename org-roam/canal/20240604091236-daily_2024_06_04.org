@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       57064571-1c30-47ff-aa7e-afdfb0bc26cf
+:END:
+#+title: daily-2024-06-04
+#+filetags: :daily:
+* Daily - Tuesday, June 4, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - Alex got React 18 update finished
+ - sent inbox discussion
+ - back to work on see more text component

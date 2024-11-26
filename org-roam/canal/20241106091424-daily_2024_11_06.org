@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       34ce6dd3-28dd-4938-a1ef-28b85767d13c
+:END:
+#+title: daily-2024-11-06
+#+filetags: :daily:
+* Daily - Wednesday, November 6, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+*** Localhost/Debugging:
+**** DONE uninstall/reinstall - ended up being related to ~CANAL_APP_NAME_TO_IS_SUPPLIER_APP~ in ~settings.py~
+*** Bugs:
+**** ~#p2-warroom-can_t-access-draft-proposal~
+***** DONE read through Wally's PRs
+***** TODO discussion with Wally for merging fix
+**** ~#p2-warroom-sup-removed-products-from-partnership-but-all-were-approved~
+***** TODO figure out what needs to be done here
+*** Polaris:
+**** TODO follow up with Toby
+**** TODO merge un-revert PR
+*** Canal Price:
+**** DONE questions for Surya
+**** TODO FE updates

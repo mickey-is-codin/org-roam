@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       f6c59a4d-dc40-4339-b39b-ece21694e4c1
+:END:
+#+title: all-products-listed-issue
+* All Products Listed During Onboarding
+
+"all products are listed on Canal even when only a few are selected in onboarding"
+
+** Notes
+ - should probably figure out debugging onboarding

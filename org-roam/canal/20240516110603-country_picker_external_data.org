@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       713a7fbd-313c-4b1f-87bc-4b6752c26ceb
+:END:
+#+title: country-picker-external-data
+#+filetags: :asana-ticket:
+* Country picker external data API
+
+** Asana Link
+[[https://app.asana.com/0/1199696369468912/1207304993609149][ticket link]]
+
+** Tasks
+*** DONE submit PR
+*** DONE merge PR
+
+** May 16, 2024 Notes
+ - goal is to make a ~countriesOnly~ mode
+ - i will also force the internal hook into the scope of this

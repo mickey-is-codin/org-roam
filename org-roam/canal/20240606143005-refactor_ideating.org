@@ -1,0 +1,52 @@
+:PROPERTIES:
+:ID:       c78bd207-29d4-40fd-803e-7398d8a6c934
+:END:
+#+title: refactor-ideating
+* Refactor Ideating
+
+** Thursday, June 6, 2024
+
+*** Spyglass Performance Profiling
+
+*** Overfetching Ideas
+
+*** DevEx Refactor Ideas
+
+*** General Performance
+**** Shopkeep Overview
+ - list of GQL queries:
+   - 1090ms: ~LoggedInMeShopAndTeam~
+   - 1350ms: ~GetShopkeepHasSaleInPast30Days~
+   - 1750ms: ~GetPersistedJson~
+   - 815ms: ~GetAllCommunicationContainers~
+   - 794ms: ~GetIntegrationSettings~
+   - 911ms: ~MyShopifyShopNavInfo~
+   - 969ms: ~GetLoggedInUserTeamsCount~
+   - 887ms: ~ShopkeepDailyInsightsLast30Days~
+   - 626ms: ~GetMyWishlistSuppliers~
+   - 705ms: ~GetMySuppliersCount~
+   - 757ms: ~GetLoggedInShopSkLaunchDate~
+   - 779ms: ~GetTotalCountForAllProductsWithInventoryAlerts~
+   - 1030ms: ~GetProposalsNeedingResponse~
+   - 1050ms: ~GetMessagesNeedingResponse~
+   - 1020ms: ~GetLoggedInShopAccountChecklist~
+   - 911ms: ~MyUnfulfilledOrdersCountAsSk~
+   - xxxms: ~GetMyWishlistSuppliers~
+   - 975ms: ~GetMyActiveSuppliers~
+   - 403ms: ~GetPersistedJson~
+   - 516ms: ~MyShopifyShopNavInfo~
+   - 743ms: ~GetMySuppliersCount~
+   - 839ms: ~GetLoggedInShopSkLaunchDate~
+   - 644ms: ~GetLoggedInShopId~
+   - 121ms: ~GetLoggedInShopAccountChecklist~
+   - 358ms: ~GetMySuppliersCount~
+   - 525ms: ~GetSkToSupRelationshipQuery~
+
+*** NextJS Ideas
+**** Middleware
+**** Server-Side Rendering
+**** New ~/app~ Router
+
+*** App Structure
+ - what's confusing or unclear to me when i need it in the app?
+   - hooks that exist

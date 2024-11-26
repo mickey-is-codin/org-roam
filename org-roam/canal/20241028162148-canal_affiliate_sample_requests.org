@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       80161284-4736-45b5-b1ea-c205bae629d3
+:END:
+#+title: canal-affiliate-sample-requests
+* Sample Requests
+
+** How Sample Requests Work
+
+** 10/28/24 Call Notes
+ - don't have all the APIs we thought we would have at this point
+ - 6 tabs
+   - each should be a table
+   - picturing an instantiation schema
+   - {isShippedTab && <ShipTabTable />}
+   - ShipTabTable = toAffiliateSampleRequestTable(shipTabColumns);

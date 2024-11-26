@@ -1,0 +1,48 @@
+:PROPERTIES:
+:ID:       8e0878de-e2aa-46d2-92fb-dbd4b43788bb
+:END:
+#+title: daily-2024-06-25-24
+#+filetags: :daily:
+* Daily - Tuesday, June 25, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Null Inventory Commission
+ - what could make commission show nothing:
+   - no value for ~maxSkCommissionAsPercentage~ and ~minSkCommissionAsPercentage~
+   - zero variants?
+
+** Homepage Widget and My Suppliers Page Queries
+ - homepage my suppliers widget:
+   - ~shopifyShops~
+ - my suppliers page:
+   - ~loggedInShopifyShop.connectedSupsForSk~
+ - issue:
+   - my suppliers page uses ~relationshipStatusAsSk~ for status filter
+   - can't supply "WISHLIST" to this field
+   - so until then can't do anything on the homepage
+ - files:
+   - ~src/components/overview/shopkeep/sections/MySuppliers/tables/WishlistTable.tsx~
+   - ~src/components/shopkeepapp/suppliers/MySuppliersPage.tsx~
+
+** Uninstalled Profile Issues
+ - the entire ~SupplierProfile~ component isn't rendering
+ - interesting lead on ~shopProfileContent~
+   - conditions:
+     - if you're in the shopkeep app show sup content
+     - if you're both shopkeep and sup app AND not on suppliers page AND not in list view show both content
+     - if you're looking at a supplier show sup app
+     - otherwise show sk content
+   - something has to be going weird here
+ - observation:
+   - if ~isASupProfile~ is ~false~ nothing shows up
+   - ~isASupProfile~ is determined via ~shop.appsInstalled~
+ - hypothesis:
+   - the entire point of this ticket is that the SUP uninstalled...
+   - this is returning false causing nothing to return
+   - we probably need to predicate ~isASupProfile~ on something else
+   - because we still need to show supplier information like the table
+
+** Morning Brain Dump

@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       7b518d7e-436c-4f97-9376-c65c083dbd1f
+:END:
+#+title: daily-2024-07-19
+#+filetags: :daily:
+* Daily - Friday, July 19, 2024
+
+** Inbox Language
+ - proposals to respond to
+   - should be: unread proposals, should include counter proposals
+ - messages about proposals
+   - should be: new messages on a thread that contains a proposal
+   - copy: unread messages about proposals
+ - inbox nav:
+   - proposals: should be first column
+   - all inbox: align with the "all" count in inbox
+   - all inbox -> all, put it first
+ - homepage:
+   - proposals to respond to:
+     - should be: unread proposals, should include counter proposals
+   - messages to respond to:
+     - should be same as all inbox and nav

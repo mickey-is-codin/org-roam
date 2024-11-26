@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       00dc3a4d-d9a1-4e85-ad1a-994e8562c4fc
+:END:
+#+title: misc-todo
+* Misc TODO
+
+** Tuesday, November 26, 2024
+*** Tickets
+**** DONE canal affiliate - approval pagination bug
+**** DONE canal price cleanup
+**** TODO canal affiliate - sample requests
+**** TODO attach orders to messages
+**** TODO make reseller sub-brands discoverable
+**** TODO block proposal approval til SUP enters return address
+
+** Monday, November 25, 2024
+*** Tickets
+**** DONE canal affiliate - approval pagination bug
+**** DONE canal price cleanup

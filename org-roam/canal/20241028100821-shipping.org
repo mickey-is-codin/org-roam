@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       084183e1-d303-4fc9-a457-399cdef295e9
+:END:
+#+title: shipping
+* Shipping
+
+** Shipping Relationship Copy
+*** Explanation Copy
+=How much will you charge your customer and contribute to the Supplier to cover shipping costs? If you do not plan to charge the shipping or cover costs, put a flat rate of $0.=
+*** Charge the Customer Copy
+ - =(Recommended) Supplier's dynamic rate=
+   - =Your customers are charged the shipping rate from the Supplier's website=
+ - =Custom flat rate=
+   - =Your customers are charged a flat rate for the Supplier's products=
+*** Pay the Supplier Copy
+ - =(Recommended) Supplier's dynamic rate=
+   - =You pay the Supplier the shipping rate from their website=
+ - =Custom flat rate=
+   - =You pay the Supplier a flat rate for their shipping costs=
+*** Notes
+ - shows up when SK makes proposal to SUP
+ - Supplier surfaces a rate that shipping for a given good truly /costs/
+ - Retailer can:
+   - let the customer pay that
+   - take the shipping cost out of the commission they make on the sale (?)
+
+** Initial Thoughts, Questions, Musings
+ - retailers sell stuff, suppliers...supply stuff
+ - so user buys something via retailer, then the thing is shipped via supplier
+ - shipping has a "dynamic" and a "static" option within the app
+ - dynamic/static nature of shipping is defined within proposals (SK -> SUP?)

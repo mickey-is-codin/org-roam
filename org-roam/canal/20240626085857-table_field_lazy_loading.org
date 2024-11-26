@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       08372777-86d2-46de-a0fb-a128c86fca0c
+:END:
+#+title: table-field-lazy-loading
+* Table Field Lazy Loading
+
+based on an idea i talked about with Katherine. she mentioned somehow loading in a table but lazily loading fields that color in detail for the table. current example is in the inventory table the ~variants~ field causes the table to load slowly. if we could load just that field lazily it might help things. want to do some small investigation to see if that would be helpful.

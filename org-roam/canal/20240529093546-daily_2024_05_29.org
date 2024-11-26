@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       8d00aeff-abd1-43ac-8653-196036e65c3e
+:END:
+#+title: daily-2024-05-29
+#+filetags: :daily:
+* Daily - Wednesday, May 29, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - jess ticket for inbox spacing
+   - pretty sure this is actually solved in the sent folder PR
+ - katherine ticket for brand list view
+ - bulk proposals get in touch with Chris
+ - override shipping location

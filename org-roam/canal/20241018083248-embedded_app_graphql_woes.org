@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       21e91602-5976-4445-bf44-5bd1cda3b9b4
+:END:
+#+title: embedded-app-graphql-woes
+* Embedded App GraphQL Woes
+
+** High-Level Background
+when developers open their storefronts on Shopify and try to view developer apps that they have created which point to local environments, they don't see the actual app show up. it's clear the Canal app is embedded due to the help chat icon appearing, but this is the only indication that the app is there.
+
+** Technical Background
+no requests from the FE are resolving
+
+** Technical Deep-Dive
+ - investigating requests
+   - ~loadSession~ within ~SessionProvider~ references ~fetchSessionFromAPI~
+   - ~fetchSessionFromAPI~ never resolves
+   - all it does is wrap ~client.query()~
+   - ~client~ is ~ApolloClient~
+   - ~ApolloClient.ts~ contains only one piece of environment-specific logic:
+     - if ~isEmbeddedApp && isShopifyEmbeddedApp~: ~httpLinkOpts.fetch = authenticatedFetch(app)~
+ - ~authenticatedFetch~:
+   - looks like this method is used to wrap every fetch/network reqeust that our app makes
+   - which could make it a likely candidate for issue here
+   - but worth considering if we are actually hitting the BE at all with this issue
+ - testing if we hit the BE:
+   -

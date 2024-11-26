@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       33bde1e0-2762-4ac0-82f6-0b502ac46e21
+:END:
+#+title: daily-2024-06-05
+#+filetags: :daily:
+* Daily - Wednesday, June 5, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Morning Brain Dump
+ - storybook for see more text

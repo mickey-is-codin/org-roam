@@ -1,0 +1,61 @@
+:PROPERTIES:
+:ID:       ec197342-1c60-4fb5-8cc7-35089ede1592
+:END:
+#+title: daily-2024-11-01
+#+filetags: :daily:
+* Daily - Friday, November 1, 2024
+
+** EOD Brain Dump
+
+** Standup Notes
+
+** Session Situation
+*** Reproducing/Notes
+ -
+
+** Active Proposal Products Showing "Add to Proposal"
+*** Reproducing
+*** Side Notes
+**** Partnership Weirdness
+ - until i added a product to a proposal the view of my supplier account was different
+ - only showed "available"
+ - now i see "partnership"
+ - though i think i do see the issue with "add to proposal"
+**** Weirdness with Pricing
+ - testing out some different configurations with variants, compare at price, etc
+ - ended up just cleaning up column value calculation logic
+**** Proposal View Product Table Numbers
+ - Current: =$NaN-$NaN=, Proposed: =$NaN-$NaN=
+ - had to update one of the ~getProductPriceFromVariants~ helper functions
+ - now one actually supports numeric returns on the ~amount~ field
+ - gonna clean up these invoking files a bit
+**** "Added to draft proposal - view"
+ - can't click on "View" button on product when it's in proposal from "My Suppliers"
+ - ~pointer-events: ${({ $isSwipeable }) => ($isSwipeable ? 'auto' : 'none')}~
+   - seems naive
+   - my guess is this is meant to prevent "dragging" items
+   - not only does this turn off "draggin" but also "clicking"
+ - ~isSwipeable~ is being set to ~false~
+   - that turns off ~pointer-events~
+ - ~isSwipeable={isSwipeable && maximumTranslationX > 0}~
+   - uhhh what is this trying to say?
+   - if an item isn't all the way to the right in the carousel?
+ - ~maxTranslationX~ seems to be the culprit
+ - ~maxTranslationX = innerCarouselWidth - containerWidth + (shouldCenterSelectedItem ? containerWidth - currentItemWidth : 0);~
+   - just "how far left an item can be moved?"
+   - seems like ~containerWidth~ and ~innerCarouselWidth~ should be switched, no?
+   - ~containerWidth - innerCarouselWidth + (shouldCenterSelectedItem ? containerWidth - currentItemWidth : 0);~
+ - ~containerWidth~
+   - width of the whole outer element: ~CarouselContainer~
+ - ~innerCarouselWidth~
+   - width of all items and the gaps between them i suppose
+   - ~memoizedItems.length * widthAndGap - itemGap~
+
+** Morning Brain Dump
+ - p2 for adding to proposal
+ - polaris session sharing woes
+ - need to clean up my roadmap
+ - orders in messages!
+ - affiliate work still blocked up
+ - eslint updates
+ - compose providers
